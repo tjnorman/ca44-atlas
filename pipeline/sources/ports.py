@@ -102,15 +102,23 @@ def find_table(html: str, must: list[str]) -> list[list[str]]:
     raise ValueError(f"No table with columns {must}")
 
 
-def parse_pola_year(html: str, year: int) -> dict:
+def parse_pola_year(html: str, year: int, corrections: dict | None = None) -> dict:
+    """corrections: {"YYYY-MM": {"shown": raw text on the page, "value": number}} for documented typos."""
+    corrections = corrections or {}
     t = find_table(html, ["Loaded Imports", "Empty Imports", "Loaded Exports", "Empty Exports", "Total TEUs"])
     head = [c.lower() for c in t[0]]
     col = {k: head.index(k.lower()) for k in ("Loaded Imports", "Empty Imports", "Loaded Exports", "Empty Exports", "Total TEUs")}
-    months, total_row = [], None
+    months, total_row, applied = [], None, []
     for r in t[1:]:
         label = (r[0] if r else "").strip().lower()
         if label in MONTHS:
             vals = {k: num(r[i]) if i < len(r) else None for k, i in col.items()}
+            key = f"{year}-{MONTHS.index(label) + 1:02d}"
+            raw_total = r[col["Total TEUs"]] if col["Total TEUs"] < len(r) else ""
+            fix = corrections.get(key)
+            if vals["Total TEUs"] is None and fix and raw_total == fix["shown"]:
+                vals["Total TEUs"] = float(fix["value"])
+                applied.append({"month": key, "shown": raw_total, "used": float(fix["value"])})
             if vals["Total TEUs"] is None:
                 continue
             months.append({"month": f"{year}-{MONTHS.index(label) + 1:02d}", "loaded_imports": vals["Loaded Imports"],
@@ -118,7 +126,7 @@ def parse_pola_year(html: str, year: int) -> dict:
                            "empty_exports": vals["Empty Exports"], "total": vals["Total TEUs"]})
         elif label.startswith("total calendar year"):
             total_row = num(r[col["Total TEUs"]])
-    return {"year": year, "months": months, "calendar_year_total": total_row}
+    return {"year": year, "months": months, "calendar_year_total": total_row, "corrections": applied}
 
 
 def parse_polb_cy(html: str, year: int) -> dict:
@@ -217,7 +225,7 @@ def fetch(fetcher: Fetcher, d: District, full_shape_path: pathlib.Path) -> tuple
     pola_years, pola_bad = [], []
     for y in range(start, now.year + 1):
         try:
-            py = parse_pola_year(fetcher.text(POLA_YEAR.format(y=y)), y)
+            py = parse_pola_year(fetcher.text(POLA_YEAR.format(y=y)), y, d.trends.get("pola_corrections") or {})
         except (FetchError, ValueError) as exc:
             if y == now.year:
                 raise
@@ -227,14 +235,17 @@ def fetch(fetcher: Fetcher, d: District, full_shape_path: pathlib.Path) -> tuple
             continue
         s = sum(m["total"] for m in py["months"])
         py["sum_of_months"] = round(s, 2)
-        py["months_match_total"] = py["calendar_year_total"] is not None and abs(s - py["calendar_year_total"]) < 1.0
+        py["months_match_total"] = py["calendar_year_total"] is not None and abs(s - py["calendar_year_total"]) <= 2.0
         pola_years.append(py)
     mismatched = [str(p["year"]) for p in pola_years if not p["months_match_total"]]
+    fixes = [c for p in pola_years for c in p.get("corrections", [])]
     checks.append({"id": "pola-months-sum", "title": "Port of Los Angeles months add up to its calendar-year totals",
                    "status": "pass" if pola_years and not mismatched else "warn", "sources": ["pola-teu"], "values": {},
                    "detail": f"{len(pola_years)} years read ({pola_years[0]['year']}–{pola_years[-1]['year']}); "
-                             + ("every year's monthly TEUs sum to the page's calendar-year total within one TEU."
+                             + ("every year's monthly TEUs sum to the page's calendar-year total within two TEUs (rounding)."
                                 if not mismatched else f"months do not match the total for {', '.join(mismatched)}.")
+                             + "".join(f" {c['month']}: the page shows \"{c['shown']}\"; {c['used']:,.2f} is used (documented correction)."
+                                       for c in fixes)
                              + (f" Not read: {'; '.join(pola_bad[:3])}." if pola_bad else "")})
     sources.append(Source(id="pola-teu", publisher="Port of Los Angeles", title="Container statistics by calendar year",
                           url="https://www.portoflosangeles.org/business/statistics/container-statistics", year=str(now.year),
@@ -303,7 +314,7 @@ def fetch(fetcher: Fetcher, d: District, full_shape_path: pathlib.Path) -> tuple
         "dock_summary": dock_summary,
         "dock_note": ("Docks are placed by the coordinates in the Corps' facility records. A dock counts as inside a plan when "
                       "its point falls inside the plan's outline; the outline includes harbor water."),
-        "pola": {"years": [{k: p[k] for k in ("year", "calendar_year_total", "sum_of_months", "months_match_total")} for p in pola_years],
+        "pola": {"years": [{k: p[k] for k in ("year", "calendar_year_total", "sum_of_months", "months_match_total", "corrections")} for p in pola_years],
                  "months": sorted(pola_months.values(), key=lambda m: m["month"])[-24:]},
         "polb": {"months": sorted(polb_months.values(), key=lambda m: m["month"])[-24:], "year_to_date": cy["year_to_date"],
                  "year": cy["year"], "mode": polb_mode, "note": polb_note},

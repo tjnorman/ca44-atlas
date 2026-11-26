@@ -130,3 +130,12 @@ def test_laus_series_ids_and_gaps():
     assert city_series("06", "44000") == "LAUCT064400000000003" and len(city_series("06", "44000")) == 20
     assert county_series("06", "037") == "LAUCN060370000000003" and state_series("06") == "LAUST060000000000003"
     assert missing_months([{"date": "2025-09"}, {"date": "2025-11"}]) == ["2025-10"]
+
+
+def test_pola_documented_correction():
+    from pipeline.sources.ports import parse_pola_year
+    html = POLA_HTML.replace("824,323.25", "824.,323.25")
+    p = parse_pola_year(html, 2026, {"2026-02": {"shown": "824.,323.25", "value": 824323.25}})
+    assert len(p["months"]) == 2 and p["corrections"][0]["used"] == 824323.25
+    p2 = parse_pola_year(html, 2026, {})
+    assert len(p2["months"]) == 1

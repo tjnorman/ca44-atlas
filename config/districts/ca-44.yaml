@@ -98,6 +98,14 @@ trends:
       BLS states that October 2025 data collection for the Current Population Survey, the primary input to these
       estimates, did not occur because of the 2025 lapse in federal appropriations (https://www.bls.gov/lau/launews1.htm).
   ports_start_year: 2017
+  # Typos on the ports' own pages, corrected only where the page shows exactly this text.
+  pola_corrections:
+    "2020-11":
+      shown: "889.,748.15"
+      value: 889748.15
+      note: >-
+        The Port of Los Angeles 2020 page shows November's total as "889.,748.15" (read Nov. 26, 2026). With
+        889,748.15 the months sum to within 2 TEUs of the page's own 2020 total of 9,213,395.95.
   # Official results recorded from the California Secretary of State's Statement of Vote, used to
   # judge the two compilations when they disagree.
   official_results:

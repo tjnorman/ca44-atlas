@@ -98,23 +98,26 @@
   },
   "laus": {
    "status": "ok",
-   "updated": "2026-11-26T23:22:58+00:00",
+   "updated": "2026-11-26T23:29:14+00:00",
    "error": null,
    "sources": [
     "bls-laus"
    ]
   },
   "ports": {
-   "status": "missing",
-   "updated": null,
-   "error": "FetchError: HTTP 403 for https://thehelm.polb.com/stellar_custom_table/table102: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;thehelm&#46;polb&#46;com&#47;stellar&#95;custom&#95;table&#47;t",
-   "sources": [],
-   "attempted": "2026-11-26T23:22:59+00:00"
+   "status": "ok",
+   "updated": "2026-11-26T23:29:15+00:00",
+   "error": null,
+   "sources": [
+    "usace-docks",
+    "pola-teu",
+    "polb-teu"
+   ]
   }
  },
  "district": "ca-44",
  "name": "California's 44th Congressional District",
- "built_at": "2026-11-26T23:25:51+00:00",
- "requests": 5342,
- "requests_from_cache": 4792
+ "built_at": "2026-11-26T23:29:26+00:00",
+ "requests": 13,
+ "requests_from_cache": 0
 }

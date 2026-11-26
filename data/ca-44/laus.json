@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-26T23:22:59+00:00",
+ "generated_at": "2026-11-26T23:29:15+00:00",
  "sources": [
   {
    "id": "bls-laus",
@@ -6823,10 +6823,13 @@
     }
    ]
   },
-  "latest_month": "2026-10",
+  "latest_month": "2026-09",
   "gap_months": [
    "2025-10"
   ],
+  "gap_notes": {
+   "2025-10": "BLS states that October 2025 data collection for the Current Population Survey, the primary input to these estimates, did not occur because of the 2025 lapse in federal appropriations (https://www.bls.gov/lau/launews1.htm)."
+  },
   "seasonally_adjusted": false,
   "series_ids": {
    "44000:rate": "LAUCT064400000000003",

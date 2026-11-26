@@ -392,7 +392,7 @@
   "live_proxy": null,
   "congress": 119
  },
- "built_at": "2026-11-26T23:25:51+00:00",
+ "built_at": "2026-11-26T23:29:26+00:00",
  "headline": [
   {
    "id": "population",
@@ -486,12 +486,12 @@
  },
  "members_count": 8,
  "unemployment": {
-  "month": "2026-10",
-  "month_label": "October 2026",
+  "month": "2026-09",
+  "month_label": "September 2026",
   "county_min": null,
   "county_max": null,
-  "state": 4.9,
-  "us": 3.9
+  "state": 5.1,
+  "us": 4.0
  },
  "latest_election": {
   "year": 2022,
@@ -618,6 +618,32 @@
    "apa": "Office of the Clerk, U.S. House of Representatives. (2026). Roll call votes, 115th to 119th Congresses (2017 to 2026) [Data set]. Retrieved November 26, 2026, from https://clerk.house.gov/Votes"
   },
   {
+   "id": "polb-teu",
+   "publisher": "Port of Long Beach",
+   "title": "Port statistics: container trade in TEUs",
+   "url": "https://polb.com/business/port-statistics/",
+   "year": "2026",
+   "kind": "Data set",
+   "query": "https://thehelm.polb.com/stellar_custom_table/table102; https://thehelm.polb.com/stellar_custom_table/table100",
+   "vintage": null,
+   "accessed": "2026-11-26",
+   "notes": "The port describes its latest numbers as preliminary estimates. The port's tables refused the automated build (HTTP 403 for https://thehelm.polb.com/stellar_custom_table/t...). Figures were recorded by hand from the port's tables on 2026-11-26; review by 2026-12-31.",
+   "apa": "Port of Long Beach. (2026). Port statistics: container trade in TEUs [Data set]. Retrieved November 26, 2026, from https://polb.com/business/port-statistics/"
+  },
+  {
+   "id": "pola-teu",
+   "publisher": "Port of Los Angeles",
+   "title": "Container statistics by calendar year",
+   "url": "https://www.portoflosangeles.org/business/statistics/container-statistics",
+   "year": "2026",
+   "kind": "Data set",
+   "query": "https://www.portoflosangeles.org/business/statistics/container-statistics/historical-teu-statistics-YYYY",
+   "vintage": null,
+   "accessed": "2026-11-26",
+   "notes": "TEUs (twenty-foot equivalent units) reported by the port; the latest month may be revised.",
+   "apa": "Port of Los Angeles. (2026). Container statistics by calendar year [Data set]. Retrieved November 26, 2026, from https://www.portoflosangeles.org/business/statistics/container-statistics"
+  },
+  {
    "id": "congress-legislators",
    "publisher": "The @unitedstates project",
    "title": "congress-legislators: Members of the United States Congress, 1789 to present",
@@ -629,6 +655,19 @@
    "accessed": "2026-11-26",
    "notes": "Public-domain data maintained by volunteers and cross-checked against the Clerk of the House.",
    "apa": "The @unitedstates project. (2026). congress-legislators: Members of the United States Congress, 1789 to present [Data set]. Retrieved November 26, 2026, from https://github.com/unitedstates/congress-legislators"
+  },
+  {
+   "id": "usace-docks",
+   "publisher": "U.S. Army Corps of Engineers; Bureau of Transportation Statistics",
+   "title": "Navigation Facilities (Dock), National Transportation Atlas Database",
+   "url": "https://services7.arcgis.com/n1YM8pTrFmm7L4hs/ArcGIS/rest/services/Docks/FeatureServer/0",
+   "year": "2026",
+   "kind": "Data set",
+   "query": "https://services7.arcgis.com/n1YM8pTrFmm7L4hs/ArcGIS/rest/services/Docks/FeatureServer/0/query (Port of Los Angeles, CA; Port of Long Beach, CA)",
+   "vintage": null,
+   "accessed": "2026-11-26",
+   "notes": "Dock locations, operators, and purposes as recorded by the Corps' Navigation and Civil Works Decision Support Center.",
+   "apa": "U.S. Army Corps of Engineers; Bureau of Transportation Statistics. (2026). Navigation Facilities (Dock), National Transportation Atlas Database [Data set]. Retrieved November 26, 2026, from https://services7.arcgis.com/n1YM8pTrFmm7L4hs/ArcGIS/rest/services/Docks/FeatureServer/0"
   },
   {
    "id": "bls-laus",
@@ -788,8 +827,8 @@
   }
  ],
  "integrity": {
-  "total": 28,
-  "pass": 26,
+  "total": 32,
+  "pass": 30,
   "warn": 1,
   "skip": 1,
   "ok": true
@@ -806,8 +845,8 @@
   "votes": "2026-11-26T23:23:17+00:00",
   "colleges": "2026-11-26T23:25:44+00:00",
   "broadcast": "2026-11-26T23:25:48+00:00",
-  "laus": "2026-11-26T23:22:58+00:00",
-  "ports": null
+  "laus": "2026-11-26T23:29:14+00:00",
+  "ports": "2026-11-26T23:29:15+00:00"
  },
  "status": {
   "plans": "ok",
@@ -822,6 +861,6 @@
   "colleges": "ok",
   "broadcast": "ok",
   "laus": "ok",
-  "ports": "missing"
+  "ports": "ok"
  }
 }

@@ -358,6 +358,9 @@ def fetch(fetcher: Fetcher, d: District, out_dir: pathlib.Path) -> tuple[dict, l
     with tempfile.TemporaryDirectory() as wd:
         wdp = pathlib.Path(wd)
         outlines = dissolve(shp, {p["id"]: blocks[p["id"]] for p in plans_cfg}, wdp)
+        # Full-resolution outlines, for testing whether a point (a college, a dock) is inside a plan.
+        (out_dir / "district.full.geojson.json").write_text(
+            json.dumps({f"plan_{pid}": fc for pid, fc in outlines.items()}, separators=(",", ":")))
         year_now = datetime.now(timezone.utc).year
         places_fc = county_fc = None
         place_codes = {r["place"] for pid in plans_out for r in plans_out[pid]["places"] if r["place"]}

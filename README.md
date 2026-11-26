@@ -29,6 +29,9 @@ The CA-44 Atlas therefore builds the district up from census blocks, tracts, and
 - **Population and land** for each plan: sums of 2020 census blocks.
 - **Cities and places**: each block's place code from the 2020 Census.
 - **ACS figures for the 2021 lines**: the Census Bureau's own district tabulation.
+- **Unemployment**: BLS monthly series for each city in either plan (whole-city figures).
+- **Ports**: Corps of Engineers dock locations tested against each plan, and each port's own
+  monthly container counts.
 - **ACS figures for the new lines**: an estimate by the atlas from census tracts, labeled "est.",
   with its error measured against the Census Bureau's figures for the 2021 lines.
 
@@ -46,11 +49,13 @@ Optional secrets for GitHub Actions: `CENSUS_API_KEY` and `FEC_API_KEY`.
 
 ## Not yet built
 
-Unemployment and jobs for cities, Port of Los Angeles and Long Beach records, Caltrans projects,
+Jobs by industry for cities, Port budgets and Harbor Commission records, Caltrans projects,
 state election results for the 2026 general election (after certification), and Los Angeles
 neighborhood boundaries within the city's part of the district.
 
 ## License
 
-Code: MIT (see [LICENSE](LICENSE)). Federal data in `data/` is in the public domain; cite the
-primary sources listed in each data file.
+Code: MIT (see [LICENSE](LICENSE)). Text and compiled tables: CC BY 4.0 (see
+[LICENSE-CONTENT.md](LICENSE-CONTENT.md)). Federal records are in the public domain; port-reported
+figures and compiled election results keep their publishers' terms. Cite the primary sources listed
+in each data file.

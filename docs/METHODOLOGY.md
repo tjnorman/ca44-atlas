@@ -48,6 +48,22 @@ Every figure names the plan it describes.
   2026, a test run on the 2020-2024 release reproduced the 2021-lines population within 0.09%, poverty
   within 0.05 points, and homeownership within 0.03 points.
 
+## Work
+
+Monthly unemployment comes from the Bureau of Labor Statistics' Local Area Unemployment Statistics, not
+seasonally adjusted. BLS publishes cities of 25,000 or more people, counties, states, and the nation, but no
+congressional districts. The atlas lists every city in either plan that BLS publishes; city figures describe the
+whole city. The latest month is preliminary.
+
+## Ports
+
+- **Docks:** U.S. Army Corps of Engineers navigation facility records (National Transportation Atlas Database).
+  Each dock's coordinates are tested against both plans' full-resolution outlines, which include harbor water.
+  The records' own congressional district fields name older Congresses and are not used.
+- **Containers:** each port's own monthly TEU reports (Port of Los Angeles calendar-year pages; Port of Long Beach
+  calendar-year and 25-month tables). Checks: months sum to each port's year totals, and the two Long Beach
+  tables agree. Long Beach calls its latest figures preliminary.
+
 ## Representation, elections, and money
 
 - **Member:** congress-legislators (unitedstates project) checked against the Clerk of the House.

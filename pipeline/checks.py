@@ -183,9 +183,11 @@ def run(d: District, data: dict[str, dict | None], notes: list[dict], extra: lis
     else:
         out.append(skip("roll-calls", t, "roll calls", ["clerk-votes"]))
 
-    # 11. Unemployment data current for every county
+    # 11. Unemployment data current for every county (county-based districts only)
     t = "Every county has unemployment data through the same latest month"
-    if laus and geo:
+    if d.raw.get("geography") == "plans":
+        pass
+    elif laus and geo:
         last = {c["short_name"]: (laus["series"].get(c["county_fips"]) or [{}])[-1].get("date") for c in geo["counties"]}
         newest = max((v for v in last.values() if v), default=None)
         if newest is None:
@@ -226,7 +228,7 @@ def run(d: District, data: dict[str, dict | None], notes: list[dict], extra: lis
     if d.raw.get("geography") == "plans":
         # County-based checks do not apply to a district built from census blocks; the plans source
         # contributes its own geography checks. The ACS share check is restated for the state's size.
-        county_ids = {"county-list", "pop-2020", "whole-county-pop", "land-area", "acs-share", "pep-base", "laus-current"}
+        county_ids = {"county-list", "pop-2020", "whole-county-pop", "land-area", "acs-share", "pep-base"}
         out = [c for c in out if c["id"] not in county_ids]
         n = int(d.raw.get("districts_in_state") or 1)
         t = f"The district holds about one {n}th of {d.state_name}'s people, as its {n} equal districts should"

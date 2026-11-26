@@ -86,3 +86,47 @@ def test_canonical_names_fixes_accents_and_damage():
     assert {r["candidates"][0]["name"] for r in res} == {"Nanette Diaz Barragán"}
     assert res[0]["candidates"][0]["original_name"].startswith("Nanette Diaz Barrag")
     assert surname("Nanette Diaz Barragán") == surname("NANETTE DIAZ BARRAGAN")
+
+
+POLA_HTML = """<table><tr><td></td><td></td></tr></table><table>
+<tr><td></td><td>Loaded Imports</td><td>Empty Imports</td><td>Total Imports</td><td>Loaded Exports</td><td>Empty Exports</td><td>Total Exports</td><td>Total TEUs</td><td>Prior Year Change</td></tr>
+<tr><td>January</td><td>421,593.75</td><td>115.00</td><td>421,708.75</td><td>104,297.00</td><td>285,994.50</td><td>390,291.50</td><td>812,000.25</td><td>-12.14%</td></tr>
+<tr><td>February</td><td>433,812.25</td><td>17.25</td><td>433,829.50</td><td>116,633.25</td><td>273,860.50</td><td>390,493.75</td><td>824,323.25</td><td>2.86%</td></tr>
+<tr><td>March</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>Total Calendar Year 2026</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1,636,323.50</td><td>1%</td></tr>
+<tr><td>Total Fiscal Year 2026/27 (FY in progress)</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>9</td><td>1%</td></tr></table>"""
+
+POLB_CY_HTML = """<table><tr><th>Month</th><th>Loaded Inbound</th><th>Loaded Outbound</th><th>Empties Inbound</th><th>Empties Outbound</th><th>Total</th></tr>
+<tr><td>January</td><td>409,818</td><td>99,478</td><td>16,273</td><td>322,197</td><td>847,765</td></tr>
+<tr><td>February</td><td>368,060</td><td>97,422</td><td>15,618</td><td>286,426</td><td>767,525</td></tr>
+<tr><td>March</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>Year-to-Date</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1,615,290</td></tr>
+<tr><td>YTD % Change</td><td>6.4%</td><td>8.4%</td><td>5.1%</td><td>1.3%</td><td>4.7%</td></tr></table>"""
+
+POLB_RECENT_HTML = """<table><tr><th>Date</th><th>Loaded Inbound</th><th>Loaded Outbound</th><th>Total Loaded</th><th>Empty Inbound</th><th>Empty Outbound</th><th>Total Empties</th><th>Total</th></tr>
+<tr><td>Feb 2026</td><td>368,060</td><td>97,422</td><td>465,482</td><td>15,618</td><td>286,426</td><td>302,044</td><td>767,525</td></tr>
+<tr><td>Jan 2026</td><td>409,818</td><td>99,478</td><td>509,296</td><td>16,273</td><td>322,197</td><td>338,470</td><td>847,765</td></tr></table>"""
+
+
+def test_parse_pola_year():
+    from pipeline.sources.ports import parse_pola_year
+    p = parse_pola_year(POLA_HTML, 2026)
+    assert [m["month"] for m in p["months"]] == ["2026-01", "2026-02"]
+    assert p["months"][0]["loaded_imports"] == 421593.75 and p["calendar_year_total"] == 1636323.5
+    assert abs(sum(m["total"] for m in p["months"]) - p["calendar_year_total"]) < 1
+
+
+def test_parse_polb_tables():
+    from pipeline.sources.ports import parse_polb_cy, parse_polb_recent
+    cy = parse_polb_cy(POLB_CY_HTML, 2026)
+    assert len(cy["months"]) == 2 and cy["year_to_date"] == 1615290
+    assert cy["months"][1]["empty_exports"] == 286426
+    rec = parse_polb_recent(POLB_RECENT_HTML)
+    assert [m["month"] for m in rec] == ["2026-01", "2026-02"] and rec[1]["total"] == 767525
+
+
+def test_laus_series_ids_and_gaps():
+    from pipeline.sources.laus import city_series, county_series, missing_months, state_series
+    assert city_series("06", "44000") == "LAUCT064400000000003" and len(city_series("06", "44000")) == 20
+    assert county_series("06", "037") == "LAUCN060370000000003" and state_series("06") == "LAUST060000000000003"
+    assert missing_months([{"date": "2025-09"}, {"date": "2025-11"}]) == ["2025-10"]

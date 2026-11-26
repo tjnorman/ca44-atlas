@@ -22,7 +22,7 @@ function srcLink(id) {
 }
 
 async function main() {
-  const names = ["summary", "plans", "acs", "acs_plan", "integrity", "legislators", "elections", "fec", "votes", "usaspending", "irs", "colleges", "broadcast", "manifest"];
+  const names = ["summary", "plans", "acs", "acs_plan", "laus", "ports", "integrity", "legislators", "elections", "fec", "votes", "usaspending", "irs", "colleges", "broadcast", "manifest"];
   const raw = Object.fromEntries(await Promise.all(names.map(async (n) => [n, await get(n)])));
   const topo = await fetch(`${BASE}geo/district.topo.json`).then((r) => (r.ok ? r.json() : null)).catch(() => null);
   const S = raw.summary || {};
@@ -38,11 +38,13 @@ async function main() {
   const label = (pid) => (pid === primary ? "New lines" : "2021 lines");
 
   drawGlance(S, P, D(raw.acs), D(raw.legislators));
-  drawMap(topo, P);
+  drawMap(topo, P, D(raw.ports));
   drawOverlap(P);
   drawPlans(P);
   drawPlaces(P);
   drawPeople(D(raw.acs), D(raw.acs_plan), P);
+  drawWork(D(raw.laus));
+  drawPorts(D(raw.ports));
   drawSeat(D(raw.legislators), D(raw.elections), D(raw.votes), D(raw.fec));
   drawMoney(D(raw.usaspending), D(raw.irs));
   drawInstitutions(D(raw.colleges), D(raw.broadcast), P);
@@ -64,7 +66,7 @@ async function main() {
     $("#glance").innerHTML = cells.slice(0, 4).map(([n, l, s]) => `<div class="stat"><div class="num">${n}</div><div class="lab">${l}</div><div class="moe">${s}</div></div>`).join("");
   }
 
-  function drawMap(topo, P) {
+  function drawMap(topo, P, ports) {
     const el = $("#map");
     if (!topo || !window.d3 || !window.topojson) { el.innerHTML = '<p class="sub">Map data unavailable.</p>'; return; }
     const W = 900, H = 820;
@@ -99,7 +101,13 @@ async function main() {
       placed.push(box);
       g.append("text").attr("class", "plabel").attr("x", x).attr("y", y + 4).text(p.name);
     }
-    $("#map-legend").innerHTML = `<span><i class="swatch"></i>New lines (from Jan. 3, 2027)</span><span><i class="swatch old"></i>2021 lines (through Jan. 3, 2027)</span><span>Gray lines: city and place boundaries (Census cartographic boundary file). Each label sits at the population center of that place\'s part of the district; places with more than 10,000 residents in either version.</span>`;
+    if (ports?.docks?.length) {
+      svg.append("g").selectAll("circle").data(ports.docks.filter((x) => x.lon != null)).join("circle")
+        .attr("class", (x) => `dock dock-${x.port}`).attr("r", 2.6)
+        .attr("cx", (x) => proj([x.lon, x.lat])[0]).attr("cy", (x) => proj([x.lon, x.lat])[1])
+        .append("title").text((x) => `${x.name} (${x.port === "pola" ? "Port of Los Angeles" : "Port of Long Beach"})`);
+    }
+    $("#map-legend").innerHTML = (ports?.docks?.length ? `<span><i class="dot-k pola"></i>Port of Los Angeles docks</span><span><i class="dot-k polb"></i>Port of Long Beach docks</span>` : "") + `<span><i class="swatch"></i>New lines (from Jan. 3, 2027)</span><span><i class="swatch old"></i>2021 lines (through Jan. 3, 2027)</span><span>Gray lines: city and place boundaries (Census cartographic boundary file). Each label sits at the population center of that place\'s part of the district; places with more than 10,000 residents in either version.</span>`;
     document.querySelectorAll("#plan-toggle button").forEach((b) => b.addEventListener("click", () => {
       document.querySelectorAll("#plan-toggle button").forEach((x) => x.classList.toggle("on", x === b));
       const show = b.dataset.show;
@@ -176,6 +184,69 @@ async function main() {
     } else {
       $("#method-table").innerHTML = '<p class="sub">The method check did not run in this build.</p>';
     }
+  }
+
+  function spark(points, key = "rate") {
+    const pts = (points || []).filter((p) => p[key] != null).slice(-48);
+    if (pts.length < 2) return "";
+    const W = 120, H = 26, vals = pts.map((p) => p[key]);
+    const lo = Math.min(...vals), hi = Math.max(...vals), span = hi - lo || 1;
+    const d = pts.map((p, i) => `${i ? "L" : "M"}${(i / (pts.length - 1) * W).toFixed(1)},${(H - 2 - (p[key] - lo) / span * (H - 4)).toFixed(1)}`).join("");
+    return `<svg class="spark" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-hidden="true"><path d="${d}"/></svg>`;
+  }
+
+  function drawWork(laus) {
+    if (!laus) { $("#laus-table").innerHTML = '<p class="sub">Unemployment data not available in this build.</p>'; return; }
+    const m = laus.latest_month;
+    const [y, mm] = m.split("-").map(Number);
+    const prev = `${y - 1}-${String(mm).padStart(2, "0")}`;
+    const at = (s, date) => (s || []).find((p) => p.date === date);
+    const monthName = new Date(y, mm - 1, 15).toLocaleDateString("en-US", { month: "long", year: "numeric" });
+    $("#work-lede").innerHTML = `Monthly unemployment for the cities in either version of the district, ${esc(monthName)}, not seasonally adjusted. `
+      + "City rates describe whole cities; the Bureau of Labor Statistics publishes no figures for congressional districts.";
+    const tags = (r) => (r.in_plans || []).map((pid) => `<span class="tag ${pid === primary ? "new" : "old"}">${label(pid)}</span>`).join("");
+    const row = (name, s, extra = "") => {
+      const a = at(s, m), b = at(s, prev);
+      const ch = a?.rate != null && b?.rate != null ? a.rate - b.rate : null;
+      return [name + extra, a?.rate != null ? pct(a.rate) : "n/a", b?.rate != null ? pct(b.rate) : "n/a",
+        ch == null ? "n/a" : `${ch >= 0 ? "+" : "−"}${Math.abs(ch).toFixed(1)} pts`, a?.labor_force != null ? int(a.labor_force) : "", spark(s)];
+    };
+    const rows = laus.places.filter((p) => p.published).map((p) => row(`${esc(p.name)} ${tags(p)}`, laus.series[p.place]));
+    for (const [k, v] of Object.entries(laus.series)) if (k.startsWith("county:")) rows.push(row("<b>Los Angeles County</b>", v));
+    rows.push(row("<b>California</b>", laus.series.state), row("<b>United States</b>", laus.series.us));
+    $("#laus-table").innerHTML = table(["Area", esc(monthName), "A year earlier", "Change", "Labor force", "Last four years"], rows, [1, 2, 3, 4]);
+    const np = laus.places.filter((p) => !p.published).map((p) => esc(p.name));
+    $("#laus-note").innerHTML = `Bureau of Labor Statistics, Local Area Unemployment Statistics ${srcLink("bls-laus")}. ${esc(laus.scope_note)}`
+      + (np.length ? ` BLS publishes no monthly series for ${np.join(", ")}.` : "")
+      + (laus.gap_months?.length ? ` No estimates exist for ${laus.gap_months.join(", ")}.` : "")
+      + " The latest month is preliminary.";
+  }
+
+  function drawPorts(pd) {
+    if (!pd) { $("#ports-kpis").innerHTML = '<p class="sub">Port data not available in this build.</p>'; return; }
+    const m = pd.latest_common_month;
+    const name = (k) => (k === "pola" ? "Port of Los Angeles" : "Port of Long Beach");
+    const mon = m ? new Date(+m.slice(0, 4), +m.slice(5) - 1, 15).toLocaleDateString("en-US", { month: "long", year: "numeric" }) : "";
+    const last = (k) => (pd[k].months || []).find((x) => x.month === m);
+    const ds = pd.dock_summary || {};
+    $("#ports-lede").innerHTML = `The Port of Los Angeles and the Port of Long Beach share San Pedro Bay. Container counts are the ports' own monthly reports, through ${esc(mon)}.`;
+    const yt = (k) => pd.ytd?.[k] || {};
+    const chg = (k) => (yt(k).this_year && yt(k).last_year ? 100 * (yt(k).this_year / yt(k).last_year - 1) : null);
+    const kpi = (k) => `<div class="stat"><div class="num">${int(last(k)?.total)}</div><div class="lab">TEUs at the ${name(k)}, ${esc(mon)}</div>`
+      + `<div class="moe">Year to date ${int(yt(k).this_year)}${chg(k) == null ? "" : ` (${chg(k) >= 0 ? "+" : "−"}${Math.abs(chg(k)).toFixed(1)}% from a year earlier)`}</div></div>`;
+    const both = (last("pola")?.total || 0) + (last("polb")?.total || 0);
+    $("#ports-kpis").innerHTML = kpi("pola") + kpi("polb") + `<div class="stat"><div class="num">${int(both)}</div><div class="lab">TEUs at both ports, ${esc(mon)}</div><div class="moe">A TEU is one twenty-foot container or its equivalent</div></div>`;
+    const months = [...new Set([...(pd.pola.months || []), ...(pd.polb.months || [])].map((x) => x.month))].sort().reverse().slice(0, 12);
+    const get = (k, mo) => (pd[k].months || []).find((x) => x.month === mo);
+    $("#teu-months").innerHTML = table(["Month", "Los Angeles", "Long Beach", "Both"], months.map((mo) => {
+      const a = get("pola", mo)?.total, b = get("polb", mo)?.total;
+      return [new Date(+mo.slice(0, 4), +mo.slice(5) - 1, 15).toLocaleDateString("en-US", { month: "short", year: "numeric" }), int(a), int(b), a != null && b != null ? int(a + b) : "n/a"];
+    }), [1, 2, 3]);
+    $("#teu-note").innerHTML = `Port of Los Angeles container statistics ${srcLink("pola-teu")}; Port of Long Beach container trade ${srcLink("polb-teu")}, whose latest figures the port calls preliminary. Includes loaded and empty containers.`;
+    $("#docks-table").innerHTML = table(["Port", "Docks listed", "In new lines", "In 2021 lines", "In neither"],
+      ["pola", "polb"].filter((k) => ds[k]).map((k) => [name(k), int(ds[k].docks), int(ds[k][`in_${primary}`]), int(ds[k][`in_${other}`]), int(ds[k].outside_all)]), [1, 2, 3, 4]);
+    $("#docks-note").innerHTML = `U.S. Army Corps of Engineers navigation facility records ${srcLink("usace-docks")}. ${esc(pd.dock_note)}`;
+    $("#pola-years").innerHTML = table(["Calendar year", "TEUs"], (pd.pola.years || []).slice().reverse().map((y) => [y.year + (y.year === +m?.slice(0, 4) ? " (to date)" : ""), int(y.calendar_year_total)]), [1]);
   }
 
   function drawSeat(leg, ele, votes, fec) {

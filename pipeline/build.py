@@ -15,9 +15,9 @@ from . import checks as checks_mod
 from .config import DATA_ROOT, ROOT, District
 from .http import Fetcher
 from .provenance import dataset
-from .sources import acs, acs_plan, broadcast, colleges, elections, fec, irs, legislators, plans, usaspending, votes
+from .sources import acs, acs_plan, broadcast, colleges, elections, fec, irs, laus, legislators, plans, ports, usaspending, votes
 
-DEFAULT_ORDER = ["plans", "legislators", "acs", "acs_plan", "usaspending", "irs", "elections", "fec", "votes", "colleges", "broadcast"]
+DEFAULT_ORDER = ["plans", "legislators", "acs", "acs_plan", "laus", "ports", "usaspending", "irs", "elections", "fec", "votes", "colleges", "broadcast"]
 
 
 def data_dir(d: District) -> pathlib.Path:
@@ -55,7 +55,8 @@ def order_for(d: District) -> list[str]:
 def annotate_plans(records: list[dict], shape_path: pathlib.Path) -> None:
     """Mark which district plans contain each record with a lat/lon (districts drawn as several plans)."""
     from .geo import contains
-    raw = load_json(shape_path) or {}
+    full = shape_path.parent / "district.full.geojson.json"
+    raw = load_json(full) or load_json(shape_path) or {}
     shapes = {k[5:]: [f["geometry"] for f in v["features"]] for k, v in raw.items() if k.startswith("plan_")}
     for r in records:
         if r.get("lat") is None or r.get("lon") is None:
@@ -138,6 +139,8 @@ def run(d: District, only: list[str] | None = None) -> dict:
         "colleges": lambda: colleges.fetch(f, d, out / "geo" / "district.simple.geojson.json"),
         "broadcast": lambda: broadcast.fetch(f, d, out / "geo" / "district.simple.geojson.json", county_names(), communities()),
 
+        "laus": lambda: laus.fetch(f, d, plans_data()),
+        "ports": lambda: ports.fetch(f, d, out / "geo" / "district.full.geojson.json"),
         "elections": lambda: elections.fetch(f, d),
         "fec": lambda: fec.fetch(f, d),
         "votes": lambda: votes.fetch(f, d, (data.get("legislators") or {}).get("data", {}).get("terms", [])),
@@ -189,7 +192,9 @@ def run(d: District, only: list[str] | None = None) -> dict:
                (c["id"].startswith("ssa-") and "ssa" not in (only or [])) or \
                (c["id"].split("-")[0] in ("bef", "pop", "land", "equal", "places") and "plans" not in (only or [])) or \
                (c["id"].startswith("acs-method") and "acs_plan" not in (only or [])) or \
-               (c["id"] in ("election-sources-agree", "election-names") and "elections" not in (only or []))
+               (c["id"] in ("election-sources-agree", "election-names") and "elections" not in (only or [])) or \
+               (c["id"] == "laus-current" and "laus" not in (only or [])) or \
+               (c["id"].split("-")[0] in ("pola", "polb") and "ports" not in (only or []))
         if c["id"] not in run_ids and only and kept:
             results.insert(0, c)
     integrity = {"generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),

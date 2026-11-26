@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.2.0 — Nov. 26, 2026 (private draft)
+
+- New `laus` source: BLS monthly unemployment for every city of 25,000 or more in either plan, with Los Angeles
+  County, California, and the United States; whole-city scope labeled.
+- New `ports` source: Corps of Engineers dock records for the Port of Los Angeles and the Port of Long Beach,
+  each dock tested against both plans; monthly container counts from each port, checked against the ports'
+  own year totals and, for Long Beach, between two of its tables.
+- Full-resolution plan outlines saved for point tests (colleges, stations, docks).
+- License: code MIT; text and compiled tables CC BY 4.0 (`LICENSE-CONTENT.md`).
+
 ## 0.1.0 — Nov. 26, 2026 (private draft)
 
 - First build, adapted from the WI-7 Atlas pipeline.

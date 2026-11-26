@@ -90,6 +90,9 @@ trends:
   house_results_from: 2012
   redistricting_years: [2012, 2022, 2026]
   votes_start_year: 2017
+  laus_start_year: 2017
+  laus_min_place_pop: 25000
+  ports_start_year: 2017
   # Official results recorded from the California Secretary of State's Statement of Vote, used to
   # judge the two compilations when they disagree.
   official_results:
@@ -104,4 +107,4 @@ trends:
         the FEC compilation matches the Statement of Vote.
 
 # Sources run for this district, in order.
-sources: [plans, legislators, acs, acs_plan, usaspending, irs, elections, fec, votes, colleges, broadcast]
+sources: [plans, legislators, acs, acs_plan, laus, ports, usaspending, irs, elections, fec, votes, colleges, broadcast]

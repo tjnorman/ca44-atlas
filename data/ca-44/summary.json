@@ -76,7 +76,9 @@
       "type": "city",
       "pop_in_district": 170039,
       "pop_place": 3898747,
-      "share_of_place": 0.04361375590670541
+      "share_of_place": 0.04361375590670541,
+      "label_lon": -118.2883,
+      "label_lat": 33.76858
      },
      {
       "place": "43000",
@@ -85,7 +87,9 @@
       "type": "city",
       "pop_in_district": 118161,
       "pop_place": 466742,
-      "share_of_place": 0.2531612753941149
+      "share_of_place": 0.2531612753941149,
+      "label_lon": -118.18812,
+      "label_lat": 33.85315
      },
      {
       "place": "11530",
@@ -94,7 +98,9 @@
       "type": "city",
       "pop_in_district": 95558,
       "pop_place": 95558,
-      "share_of_place": 1.0
+      "share_of_place": 1.0,
+      "label_lon": -118.26159,
+      "label_lat": 33.83496
      },
      {
       "place": "73080",
@@ -103,7 +109,9 @@
       "type": "city",
       "pop_in_district": 92726,
       "pop_place": 92726,
-      "share_of_place": 1.0
+      "share_of_place": 1.0,
+      "label_lon": -118.20141,
+      "label_lat": 33.94614
      },
      {
       "place": "44574",
@@ -112,7 +120,9 @@
       "type": "city",
       "pop_in_district": 67265,
       "pop_place": 67265,
-      "share_of_place": 1.0
+      "share_of_place": 1.0,
+      "label_lon": -118.2017,
+      "label_lat": 33.92371
      },
      {
       "place": "24477",
@@ -121,7 +131,9 @@
       "type": "CDP",
       "pop_in_district": 61983,
       "pop_place": 61983,
-      "share_of_place": 1.0
+      "share_of_place": 1.0,
+      "label_lon": -118.24594,
+      "label_lat": 33.96879
      },
      {
       "place": "36056",
@@ -130,7 +142,9 @@
       "type": "city",
       "pop_in_district": 54883,
       "pop_place": 54883,
-      "share_of_place": 1.0
+      "share_of_place": 1.0,
+      "label_lon": -118.21528,
+      "label_lat": 33.97903
      },
      {
       "place": "55618",
@@ -139,7 +153,9 @@
       "type": "city",
       "pop_in_district": 53733,
       "pop_place": 53733,
-      "share_of_place": 1.0
+      "share_of_place": 1.0,
+      "label_lon": -118.16382,
+      "label_lat": 33.89732
      },
      {
       "place": "84144",
@@ -148,7 +164,9 @@
       "type": "CDP",
       "pop_in_district": 22870,
       "pop_place": 22870,
-      "share_of_place": 1.0
+      "share_of_place": 1.0,
+      "label_lon": -118.29323,
+      "label_lat": 33.82387
      },
      {
       "place": "83402",
@@ -157,7 +175,9 @@
       "type": "CDP",
       "pop_in_district": 15214,
       "pop_place": 15214,
-      "share_of_place": 1.0
+      "share_of_place": 1.0,
+      "label_lon": -118.22238,
+      "label_lat": 33.96793
      },
      {
       "place": null,
@@ -175,7 +195,9 @@
       "type": "city",
       "pop_in_district": 222,
       "pop_place": 222,
-      "share_of_place": 1.0
+      "share_of_place": 1.0,
+      "label_lon": -118.19501,
+      "label_lat": 33.9953
      }
     ],
     "acs_est": {
@@ -227,7 +249,9 @@
       "type": "city",
       "pop_in_district": 202169,
       "pop_place": 466742,
-      "share_of_place": 0.43314936303139634
+      "share_of_place": 0.43314936303139634,
+      "label_lon": -118.18213,
+      "label_lat": 33.83929
      },
      {
       "place": "44000",
@@ -236,7 +260,9 @@
       "type": "city",
       "pop_in_district": 170039,
       "pop_place": 3898747,
-      "share_of_place": 0.04361375590670541
+      "share_of_place": 0.04361375590670541,
+      "label_lon": -118.2883,
+      "label_lat": 33.76858
      },
      {
       "place": "11530",
@@ -245,7 +271,9 @@
       "type": "city",
       "pop_in_district": 95558,
       "pop_place": 95558,
-      "share_of_place": 1.0
+      "share_of_place": 1.0,
+      "label_lon": -118.26159,
+      "label_lat": 33.83496
      },
      {
       "place": "73080",
@@ -254,7 +282,9 @@
       "type": "city",
       "pop_in_district": 92726,
       "pop_place": 92726,
-      "share_of_place": 1.0
+      "share_of_place": 1.0,
+      "label_lon": -118.20141,
+      "label_lat": 33.94614
      },
      {
       "place": "44574",
@@ -263,7 +293,9 @@
       "type": "city",
       "pop_in_district": 67265,
       "pop_place": 67265,
-      "share_of_place": 1.0
+      "share_of_place": 1.0,
+      "label_lon": -118.2017,
+      "label_lat": 33.92371
      },
      {
       "place": "55618",
@@ -272,7 +304,9 @@
       "type": "city",
       "pop_in_district": 53733,
       "pop_place": 53733,
-      "share_of_place": 1.0
+      "share_of_place": 1.0,
+      "label_lon": -118.16382,
+      "label_lat": 33.89732
      },
      {
       "place": "39892",
@@ -281,7 +315,9 @@
       "type": "city",
       "pop_in_district": 33259,
       "pop_place": 82496,
-      "share_of_place": 0.40315894103956557
+      "share_of_place": 0.40315894103956557,
+      "label_lon": -118.1461,
+      "label_lat": 33.85204
      },
      {
       "place": "84144",
@@ -290,7 +326,9 @@
       "type": "CDP",
       "pop_in_district": 22870,
       "pop_place": 22870,
-      "share_of_place": 1.0
+      "share_of_place": 1.0,
+      "label_lon": -118.29323,
+      "label_lat": 33.82387
      },
      {
       "place": "04982",
@@ -299,7 +337,9 @@
       "type": "city",
       "pop_in_district": 15277,
       "pop_place": 79190,
-      "share_of_place": 0.19291577219345876
+      "share_of_place": 0.19291577219345876,
+      "label_lon": -118.14221,
+      "label_lat": 33.87613
      },
      {
       "place": null,
@@ -352,7 +392,7 @@
   "live_proxy": null,
   "congress": 119
  },
- "built_at": "2026-11-26T23:04:32+00:00",
+ "built_at": "2026-11-26T23:07:40+00:00",
  "headline": [
   {
    "id": "population",
@@ -735,13 +775,13 @@
   }
  ],
  "integrity": {
-  "total": 27,
-  "pass": 26,
+  "total": 25,
+  "pass": 24,
   "skip": 1,
   "ok": true
  },
  "freshness": {
-  "plans": "2026-11-26T22:27:58+00:00",
+  "plans": "2026-11-26T23:07:20+00:00",
   "legislators": "2026-11-26T22:28:19+00:00",
   "acs": "2026-11-26T22:28:28+00:00",
   "acs_plan": "2026-11-26T22:29:25+00:00",

@@ -392,7 +392,7 @@
   "live_proxy": null,
   "congress": 119
  },
- "built_at": "2026-11-26T23:33:25+00:00",
+ "built_at": "2026-11-26T23:35:24+00:00",
  "headline": [
   {
    "id": "population",
@@ -627,7 +627,7 @@
    "query": "https://thehelm.polb.com/stellar_custom_table/table102; https://thehelm.polb.com/stellar_custom_table/table100",
    "vintage": null,
    "accessed": "2026-11-26",
-   "notes": "The port describes its latest numbers as preliminary estimates. The port's tables refused the automated build (HTTP 403 for https://thehelm.polb.com/stellar_custom_table/t...). Figures were recorded by hand from the port's tables on 2026-11-26; review by 2026-12-31.",
+   "notes": "The port describes its latest numbers as preliminary estimates. The port's statistics tables refuse automated readers, so these figures were recorded by hand from the tables on 2026-11-26 (next review by 2026-12-31).",
    "apa": "Port of Long Beach. (2026). Port statistics: container trade in TEUs [Data set]. Retrieved November 26, 2026, from https://polb.com/business/port-statistics/"
   },
   {
@@ -845,7 +845,7 @@
   "colleges": "2026-11-26T23:25:44+00:00",
   "broadcast": "2026-11-26T23:25:48+00:00",
   "laus": "2026-11-26T23:29:14+00:00",
-  "ports": "2026-11-26T23:33:12+00:00"
+  "ports": "2026-11-26T23:35:13+00:00"
  },
  "status": {
   "plans": "ok",

@@ -1,0 +1,769 @@
+{
+ "plans": {
+  "primary": "cd120",
+  "overlap": {
+   "a": "cd120",
+   "b": "cd119",
+   "pop_both": 624349,
+   "pop_only_a": 133360,
+   "pop_only_b": 133602,
+   "blocks_both": 5492,
+   "places_only_a": [
+    {
+     "place": "24477",
+     "name": "Florence-Graham",
+     "pop": 61983
+    },
+    {
+     "place": "36056",
+     "name": "Huntington Park",
+     "pop": 54883
+    },
+    {
+     "place": "83402",
+     "name": "Walnut Park",
+     "pop": 15214
+    },
+    {
+     "place": "43000",
+     "name": "Long Beach",
+     "pop": 1058
+    },
+    {
+     "place": "82422",
+     "name": "Vernon",
+     "pop": 222
+    }
+   ],
+   "places_only_b": [
+    {
+     "place": "43000",
+     "name": "Long Beach",
+     "pop": 85066
+    },
+    {
+     "place": "39892",
+     "name": "Lakewood",
+     "pop": 33259
+    },
+    {
+     "place": "04982",
+     "name": "Bellflower",
+     "pop": 15277
+    }
+   ]
+  },
+  "plans": {
+   "cd120": {
+    "id": "cd120",
+    "label": "Proposition 50 lines (120th Congress, from Jan. 3, 2027)",
+    "short": "new lines",
+    "congress": 120,
+    "effective": "2027-01-03",
+    "first_election": 2026,
+    "last_election": null,
+    "law": "AB 604 (Aguiar-Curry), Chapter 96, Statutes of 2025, put into effect by Proposition 50, approved by California voters on Nov. 4, 2025, for the 2026 through 2030 elections.",
+    "primary": true,
+    "pop_2020": 757709,
+    "land_sq_mi": 88.8101567269974,
+    "water_sq_mi": 25.44516816003855,
+    "blocks": 6672,
+    "places": [
+     {
+      "place": "44000",
+      "name": "Los Angeles city",
+      "short": "Los Angeles",
+      "type": "city",
+      "pop_in_district": 170039,
+      "pop_place": 3898747,
+      "share_of_place": 0.04361375590670541
+     },
+     {
+      "place": "43000",
+      "name": "Long Beach city",
+      "short": "Long Beach",
+      "type": "city",
+      "pop_in_district": 118161,
+      "pop_place": 466742,
+      "share_of_place": 0.2531612753941149
+     },
+     {
+      "place": "11530",
+      "name": "Carson city",
+      "short": "Carson",
+      "type": "city",
+      "pop_in_district": 95558,
+      "pop_place": 95558,
+      "share_of_place": 1.0
+     },
+     {
+      "place": "73080",
+      "name": "South Gate city",
+      "short": "South Gate",
+      "type": "city",
+      "pop_in_district": 92726,
+      "pop_place": 92726,
+      "share_of_place": 1.0
+     },
+     {
+      "place": "44574",
+      "name": "Lynwood city",
+      "short": "Lynwood",
+      "type": "city",
+      "pop_in_district": 67265,
+      "pop_place": 67265,
+      "share_of_place": 1.0
+     },
+     {
+      "place": "24477",
+      "name": "Florence-Graham CDP",
+      "short": "Florence-Graham",
+      "type": "CDP",
+      "pop_in_district": 61983,
+      "pop_place": 61983,
+      "share_of_place": 1.0
+     },
+     {
+      "place": "36056",
+      "name": "Huntington Park city",
+      "short": "Huntington Park",
+      "type": "city",
+      "pop_in_district": 54883,
+      "pop_place": 54883,
+      "share_of_place": 1.0
+     },
+     {
+      "place": "55618",
+      "name": "Paramount city",
+      "short": "Paramount",
+      "type": "city",
+      "pop_in_district": 53733,
+      "pop_place": 53733,
+      "share_of_place": 1.0
+     },
+     {
+      "place": "84144",
+      "name": "West Carson CDP",
+      "short": "West Carson",
+      "type": "CDP",
+      "pop_in_district": 22870,
+      "pop_place": 22870,
+      "share_of_place": 1.0
+     },
+     {
+      "place": "83402",
+      "name": "Walnut Park CDP",
+      "short": "Walnut Park",
+      "type": "CDP",
+      "pop_in_district": 15214,
+      "pop_place": 15214,
+      "share_of_place": 1.0
+     },
+     {
+      "place": null,
+      "name": "Unincorporated area outside any census place",
+      "short": "Other unincorporated",
+      "type": "unincorporated",
+      "pop_in_district": 5055,
+      "pop_place": null,
+      "share_of_place": null
+     },
+     {
+      "place": "82422",
+      "name": "Vernon city",
+      "short": "Vernon",
+      "type": "city",
+      "pop_in_district": 222,
+      "pop_place": 222,
+      "share_of_place": 1.0
+     }
+    ],
+    "acs_est": {
+     "hs_plus_pct": 69.62277631458025,
+     "bachelors_plus_pct": 18.86560960514388,
+     "population": 742148.3552186419,
+     "median_age": null,
+     "under_18_pct": 23.440901751048425,
+     "age_65_plus_pct": 13.343581214344836,
+     "median_household_income": null,
+     "per_capita_income": null,
+     "poverty_pct": 15.235994443015976,
+     "veterans_pct": 2.463638092529539,
+     "median_home_value": null,
+     "median_gross_rent": null,
+     "owner_occupied_pct": 47.12342692162571,
+     "seasonal_homes_pct": 0.48868041202755447,
+     "broadband_pct": 91.4726399326887,
+     "no_internet_pct": 6.39252212960885,
+     "uninsured_pct": 11.78795028363965,
+     "labor_force_pct": 63.14547568305663,
+     "unemployment_acs_pct": 7.67228190224131,
+     "work_from_home_pct": 8.066743164050035,
+     "households": 217560.2556980512,
+     "avg_household_size": null,
+     "housing_units": 225186.62538595835,
+     "mean_commute_min": 29.927550395982653
+    }
+   },
+   "cd119": {
+    "id": "cd119",
+    "label": "2021 Citizens Redistricting Commission lines (118th and 119th Congresses)",
+    "short": "2021 lines",
+    "congress": 119,
+    "effective": "2023-01-03",
+    "first_election": 2022,
+    "last_election": 2024,
+    "law": "Drawn by the California Citizens Redistricting Commission, certified Dec. 27, 2021; used for the 2022 and 2024 elections and the 118th and 119th Congresses.",
+    "primary": false,
+    "pop_2020": 757951,
+    "land_sq_mi": 91.16466521901086,
+    "water_sq_mi": 25.53136623913747,
+    "blocks": 6816,
+    "places": [
+     {
+      "place": "43000",
+      "name": "Long Beach city",
+      "short": "Long Beach",
+      "type": "city",
+      "pop_in_district": 202169,
+      "pop_place": 466742,
+      "share_of_place": 0.43314936303139634
+     },
+     {
+      "place": "44000",
+      "name": "Los Angeles city",
+      "short": "Los Angeles",
+      "type": "city",
+      "pop_in_district": 170039,
+      "pop_place": 3898747,
+      "share_of_place": 0.04361375590670541
+     },
+     {
+      "place": "11530",
+      "name": "Carson city",
+      "short": "Carson",
+      "type": "city",
+      "pop_in_district": 95558,
+      "pop_place": 95558,
+      "share_of_place": 1.0
+     },
+     {
+      "place": "73080",
+      "name": "South Gate city",
+      "short": "South Gate",
+      "type": "city",
+      "pop_in_district": 92726,
+      "pop_place": 92726,
+      "share_of_place": 1.0
+     },
+     {
+      "place": "44574",
+      "name": "Lynwood city",
+      "short": "Lynwood",
+      "type": "city",
+      "pop_in_district": 67265,
+      "pop_place": 67265,
+      "share_of_place": 1.0
+     },
+     {
+      "place": "55618",
+      "name": "Paramount city",
+      "short": "Paramount",
+      "type": "city",
+      "pop_in_district": 53733,
+      "pop_place": 53733,
+      "share_of_place": 1.0
+     },
+     {
+      "place": "39892",
+      "name": "Lakewood city",
+      "short": "Lakewood",
+      "type": "city",
+      "pop_in_district": 33259,
+      "pop_place": 82496,
+      "share_of_place": 0.40315894103956557
+     },
+     {
+      "place": "84144",
+      "name": "West Carson CDP",
+      "short": "West Carson",
+      "type": "CDP",
+      "pop_in_district": 22870,
+      "pop_place": 22870,
+      "share_of_place": 1.0
+     },
+     {
+      "place": "04982",
+      "name": "Bellflower city",
+      "short": "Bellflower",
+      "type": "city",
+      "pop_in_district": 15277,
+      "pop_place": 79190,
+      "share_of_place": 0.19291577219345876
+     },
+     {
+      "place": null,
+      "name": "Unincorporated area outside any census place",
+      "short": "Other unincorporated",
+      "type": "unincorporated",
+      "pop_in_district": 5055,
+      "pop_place": null,
+      "share_of_place": null
+     }
+    ],
+    "acs_est": {
+     "hs_plus_pct": 75.72273494928073,
+     "bachelors_plus_pct": 23.590287434706262,
+     "population": 744079.1490278575,
+     "median_age": null,
+     "under_18_pct": 22.631967547787625,
+     "age_65_plus_pct": 14.20471455261201,
+     "median_household_income": null,
+     "per_capita_income": null,
+     "poverty_pct": 13.596432309542305,
+     "veterans_pct": 3.0992073736082117,
+     "median_home_value": null,
+     "median_gross_rent": null,
+     "owner_occupied_pct": 51.28911128744322,
+     "seasonal_homes_pct": 0.5141377391565863,
+     "broadband_pct": 92.56355694836436,
+     "no_internet_pct": 5.393317537359312,
+     "uninsured_pct": 9.9971300896996,
+     "labor_force_pct": 63.606736753391935,
+     "unemployment_acs_pct": 7.155720114492763,
+     "work_from_home_pct": 9.731653502789193,
+     "households": 229131.70130147762,
+     "avg_household_size": null,
+     "housing_units": 237697.7395678952,
+     "mean_commute_min": 29.396539768607
+    }
+   }
+  }
+ },
+ "district": {
+  "id": "ca-44",
+  "name": "California's 44th Congressional District",
+  "short_name": "CA-44",
+  "tagline": "California's 44th Congressional District, counted.",
+  "state": "California",
+  "publisher": "Thomas J. Norman",
+  "site_url": "",
+  "repo": "tjnorman/ca44-atlas",
+  "live_proxy": null,
+  "congress": 119
+ },
+ "built_at": "2026-11-26T23:02:41+00:00",
+ "headline": [
+  {
+   "id": "population",
+   "label": "People",
+   "value": 733168.0,
+   "display": "733,168",
+   "source": "acs1",
+   "note": "ACS 2025 1-year estimate",
+   "moe": 18856.0
+  },
+  {
+   "id": "income",
+   "label": "Median household income",
+   "value": 89628.0,
+   "display": "$89,628",
+   "source": "acs1",
+   "note": "ACS 2025 1-year estimate",
+   "moe": 2780.0
+  },
+  {
+   "id": "age",
+   "label": "Median age",
+   "value": 38.5,
+   "display": "38.5",
+   "source": "acs1",
+   "note": "ACS 2025 1-year estimate",
+   "moe": 0.9
+  },
+  {
+   "id": "veterans",
+   "label": "Adults who are veterans",
+   "value": 3.325843789176856,
+   "display": "3.3%",
+   "source": "acs1",
+   "note": "",
+   "moe": null
+  },
+  {
+   "id": "broadband",
+   "label": "Households with broadband",
+   "value": 95.93052738336714,
+   "display": "95.9%",
+   "source": "acs1",
+   "note": "",
+   "moe": null
+  },
+  {
+   "id": "federal",
+   "label": "Federal awards, FY2026",
+   "value": 513021155.34000003,
+   "display": "$513.0 million",
+   "source": "usaspending",
+   "note": "Obligations by place of performance",
+   "moe": null
+  },
+  {
+   "id": "income_tax",
+   "label": "Federal individual income tax, 2023",
+   "value": 2457968000.0,
+   "display": "$2.46 billion",
+   "source": "irs-soi-cd",
+   "note": "Total tax liability on individual returns; not all federal taxes",
+   "moe": null
+  },
+  {
+   "id": "pop_2020_new",
+   "label": "People in 2020, new lines",
+   "value": 757709,
+   "display": "757,709",
+   "source": "census-pl",
+   "note": "2020 Census blocks in the plan",
+   "moe": null
+  },
+  {
+   "id": "land_new",
+   "label": "Square miles of land, new lines",
+   "value": 88.8101567269974,
+   "display": "88.8",
+   "source": "census-tiger-blocks",
+   "note": "Sum of 2020 census blocks",
+   "moe": null
+  }
+ ],
+ "member": {
+  "bioguide": "B001300",
+  "name": "Nanette Diaz Barragán",
+  "last_name": "Barragán",
+  "party": "Democrat",
+  "start": "2025-01-03",
+  "end": "2027-01-03"
+ },
+ "members_count": 8,
+ "unemployment": {
+  "month": null,
+  "month_label": null,
+  "county_min": null,
+  "county_max": null,
+  "state": null,
+  "us": null
+ },
+ "latest_election": {
+  "year": 2022,
+  "total_votes": 138714,
+  "candidates": [
+   {
+    "name": "Nanette Diaz Barragan",
+    "party": "Democrat",
+    "votes": 100160,
+    "pct": 72.20612194875788,
+    "writein": false
+   },
+   {
+    "name": "Paul Jones",
+    "party": "Republican",
+    "votes": 38554,
+    "pct": 27.793878051242125,
+    "writein": false
+   }
+  ],
+  "new_lines": true,
+  "source": "fec-results"
+ },
+ "votes": {
+  "missed_pct": 3.206997084548105,
+  "house_missed_pct": 3.2490719104987913,
+  "with_party_majority_pct": 98.49397590361446,
+  "on_winning_side_pct": 39.1566265060241,
+  "votes_cast": 664,
+  "yes_no_votes_while_held": 686
+ },
+ "counties": [],
+ "sources": [
+  {
+   "id": "fcc-queries",
+   "publisher": "Federal Communications Commission, Media Bureau",
+   "title": "AM Query, FM Query, and TV Query: licensed broadcast stations",
+   "url": "https://www.fcc.gov/media/radio/am-query",
+   "year": "2026",
+   "kind": "Data set",
+   "query": "https://transition.fcc.gov/fcc-bin/fmq?state=CA&serv=FM&status=L&list=4 (and amq, tvq)",
+   "vintage": null,
+   "accessed": "2026-11-26",
+   "notes": "Licensing records as of the retrieval date; the FCC updates them continuously. The output has no column names, so each row's layout is checked before use. Coordinates are transmitter sites.",
+   "apa": "Federal Communications Commission, Media Bureau. (2026). AM Query, FM Query, and TV Query: licensed broadcast stations [Data set]. Retrieved November 26, 2026, from https://www.fcc.gov/media/radio/am-query"
+  },
+  {
+   "id": "fec-results",
+   "publisher": "Federal Election Commission",
+   "title": "Federal Elections: Election results for the U.S. Senate and the U.S. House of Representatives (2018, 2020, 2022)",
+   "url": "https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/",
+   "year": "2023",
+   "kind": "Data set",
+   "query": "https://www.fec.gov/resources/cms-content/documents/federalelectionsYYYY.xlsx",
+   "vintage": null,
+   "accessed": "2026-11-26",
+   "notes": "Official, certified results as reported by state election offices.",
+   "apa": "Federal Election Commission. (2023). Federal Elections: Election results for the U.S. Senate and the U.S. House of Representatives (2018, 2020, 2022) [Data set]. Retrieved November 26, 2026, from https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/"
+  },
+  {
+   "id": "irs-soi-cd",
+   "publisher": "Internal Revenue Service, Statistics of Income Division",
+   "title": "Individual income tax returns: Congressional district data, tax year 2023",
+   "url": "https://www.irs.gov/statistics/soi-tax-stats-data-by-congressional-district-2023",
+   "year": "2026",
+   "kind": "Data set",
+   "query": "https://www.irs.gov/pub/irs-soi/23incd.csv",
+   "vintage": "Tax year 2023",
+   "accessed": "2026-11-26",
+   "notes": "Totals from individual income tax returns (Form 1040) filed during the following calendar year. The IRS assigns returns to districts by the ZIP code on the return. Amounts are published in thousands of dollars. This is not all federal tax: employer payroll taxes, corporate, excise, and estate taxes are not published by congressional district.",
+   "apa": "Internal Revenue Service, Statistics of Income Division. (2026). Individual income tax returns: Congressional district data, tax year 2023 [Data set]. Retrieved November 26, 2026, from https://www.irs.gov/statistics/soi-tax-stats-data-by-congressional-district-2023"
+  },
+  {
+   "id": "medsl-house",
+   "publisher": "MIT Election Data and Science Lab",
+   "title": "U.S. House 1976-2018 (constituency returns)",
+   "url": "https://github.com/MEDSL/constituency-returns",
+   "year": "2019",
+   "kind": "Data set",
+   "query": "https://raw.githubusercontent.com/MEDSL/constituency-returns/HEAD/1976-2018-house.csv",
+   "vintage": null,
+   "accessed": "2026-11-26",
+   "notes": "Compiled from official state results. General elections only; special elections excluded.",
+   "apa": "MIT Election Data and Science Lab. (2019). U.S. House 1976-2018 (constituency returns) [Data set]. Retrieved November 26, 2026, from https://github.com/MEDSL/constituency-returns"
+  },
+  {
+   "id": "nces-ipeds-hd",
+   "publisher": "National Center for Education Statistics",
+   "title": "Integrated Postsecondary Education Data System (IPEDS): Institutional Characteristics directory file, HD2024",
+   "url": "https://nces.ed.gov/ipeds/use-the-data",
+   "year": "2025",
+   "kind": "Data set",
+   "query": "https://nces.ed.gov/ipeds/datacenter/data/HD2024.zip",
+   "vintage": "HD2024",
+   "accessed": "2026-11-26",
+   "notes": "The directory of institutions that take part in federal student aid programs. An institution appears once, at its main address; branch campuses that do not report separately are not listed.",
+   "apa": "National Center for Education Statistics. (2025). Integrated Postsecondary Education Data System (IPEDS): Institutional Characteristics directory file, HD2024 [Data set]. Retrieved November 26, 2026, from https://nces.ed.gov/ipeds/use-the-data"
+  },
+  {
+   "id": "clerk-members",
+   "publisher": "Office of the Clerk, U.S. House of Representatives",
+   "title": "Member data (XML)",
+   "url": "https://clerk.house.gov/xml/lists/MemberData.xml",
+   "year": "2026",
+   "kind": "Data set",
+   "query": null,
+   "vintage": null,
+   "accessed": "2026-11-26",
+   "notes": null,
+   "apa": "Office of the Clerk, U.S. House of Representatives. (2026). Member data (XML) [Data set]. Retrieved November 26, 2026, from https://clerk.house.gov/xml/lists/MemberData.xml"
+  },
+  {
+   "id": "clerk-votes",
+   "publisher": "Office of the Clerk, U.S. House of Representatives",
+   "title": "Roll call votes, 115th to 119th Congresses (2017 to 2026)",
+   "url": "https://clerk.house.gov/Votes",
+   "year": "2026",
+   "kind": "Data set",
+   "query": "https://clerk.house.gov/evs/2017/rollNNN.xml",
+   "vintage": null,
+   "accessed": "2026-11-26",
+   "notes": null,
+   "apa": "Office of the Clerk, U.S. House of Representatives. (2026). Roll call votes, 115th to 119th Congresses (2017 to 2026) [Data set]. Retrieved November 26, 2026, from https://clerk.house.gov/Votes"
+  },
+  {
+   "id": "congress-legislators",
+   "publisher": "The @unitedstates project",
+   "title": "congress-legislators: Members of the United States Congress, 1789 to present",
+   "url": "https://github.com/unitedstates/congress-legislators",
+   "year": "2026",
+   "kind": "Data set",
+   "query": "https://raw.githubusercontent.com/unitedstates/congress-legislators/main/legislators-current.yaml",
+   "vintage": null,
+   "accessed": "2026-11-26",
+   "notes": "Public-domain data maintained by volunteers and cross-checked against the Clerk of the House.",
+   "apa": "The @unitedstates project. (2026). congress-legislators: Members of the United States Congress, 1789 to present [Data set]. Retrieved November 26, 2026, from https://github.com/unitedstates/congress-legislators"
+  },
+  {
+   "id": "census-bef-119",
+   "publisher": "U.S. Census Bureau",
+   "title": "119th Congressional District block equivalency files",
+   "url": "https://www.census.gov/geographies/mapping-files/2025/dec/rdo/119-congressional-district-bef.html",
+   "year": "2024",
+   "kind": "Data set",
+   "query": "https://www2.census.gov/programs-surveys/decennial/rdo/mapping-files/2025/119-congressional-district-befs/cd119.zip (NationalCD119.txt)",
+   "vintage": "119th Congress",
+   "accessed": "2026-11-26",
+   "notes": "Whole 2020 census blocks assigned to each district of the plan, as submitted by the state.",
+   "apa": "U.S. Census Bureau. (2024). 119th Congressional District block equivalency files [Data set]. Retrieved November 26, 2026, from https://www.census.gov/geographies/mapping-files/2025/dec/rdo/119-congressional-district-bef.html"
+  },
+  {
+   "id": "census-bef-120",
+   "publisher": "U.S. Census Bureau",
+   "title": "120th Congressional District block equivalency files",
+   "url": "https://www.census.gov/geographies/mapping-files/2027/dec/rdo/120-congressional-district-bef.html",
+   "year": "2026",
+   "kind": "Data set",
+   "query": "https://www2.census.gov/programs-surveys/decennial/rdo/mapping-files/2027/120-congressional-district-befs/cd120.zip (CD120_06.txt)",
+   "vintage": "120th Congress",
+   "accessed": "2026-11-26",
+   "notes": "Whole 2020 census blocks assigned to each district of the plan, as submitted by the state.",
+   "apa": "U.S. Census Bureau. (2026). 120th Congressional District block equivalency files [Data set]. Retrieved November 26, 2026, from https://www.census.gov/geographies/mapping-files/2027/dec/rdo/120-congressional-district-bef.html"
+  },
+  {
+   "id": "census-pl",
+   "publisher": "U.S. Census Bureau",
+   "title": "2020 Census Redistricting Data (Public Law 94-171) Summary File",
+   "url": "https://www2.census.gov/programs-surveys/decennial/2020/data/01-Redistricting_File--PL_94-171/California/ca2020.pl.zip",
+   "year": "2021",
+   "kind": "Data set",
+   "query": "https://www2.census.gov/programs-surveys/decennial/2020/data/01-Redistricting_File--PL_94-171/California/ca2020.pl.zip",
+   "vintage": "2020 Census",
+   "accessed": "2026-11-26",
+   "notes": "Block, place, county, and state population counts as of April 1, 2020.",
+   "apa": "U.S. Census Bureau. (2021). 2020 Census Redistricting Data (Public Law 94-171) Summary File [Data set]. Retrieved November 26, 2026, from https://www2.census.gov/programs-surveys/decennial/2020/data/01-Redistricting_File--PL_94-171/California/ca2020.pl.zip"
+  },
+  {
+   "id": "census-cd119",
+   "publisher": "U.S. Census Bureau",
+   "title": "2020 Census, 119th Congressional District Summary File",
+   "url": "https://api.census.gov/data/2020/dec/cd119",
+   "year": "2023",
+   "kind": "Data set",
+   "query": "https://api.census.gov/data/2020/dec/cd119?get=P1_001N",
+   "vintage": "2020 Census",
+   "accessed": "2026-11-26",
+   "notes": "Population as tabulated by the Census Bureau for the plan.",
+   "apa": "U.S. Census Bureau. (2023). 2020 Census, 119th Congressional District Summary File [Data set]. Retrieved November 26, 2026, from https://api.census.gov/data/2020/dec/cd119"
+  },
+  {
+   "id": "acs1",
+   "publisher": "U.S. Census Bureau",
+   "title": "American Community Survey 1-year estimates, 2025: Detailed tables",
+   "url": "https://api.census.gov/data/2025/acs/acs1",
+   "year": "2026",
+   "kind": "Data set",
+   "query": "https://api.census.gov/data/2025/acs/acs1?get=...&for=congressional district:44&in=state:06",
+   "vintage": "ACS 2025 1-year",
+   "accessed": "2026-11-26",
+   "notes": "District, California, and United States figures; margins of error at 90% confidence.",
+   "apa": "U.S. Census Bureau. (2026). American Community Survey 1-year estimates, 2025: Detailed tables [Data set]. Retrieved November 26, 2026, from https://api.census.gov/data/2025/acs/acs1"
+  },
+  {
+   "id": "acs5",
+   "publisher": "U.S. Census Bureau",
+   "title": "American Community Survey 5-year estimates, 2020-2024: Detailed tables",
+   "url": "https://api.census.gov/data/2024/acs/acs5",
+   "year": "2025",
+   "kind": "Data set",
+   "query": "https://api.census.gov/data/2024/acs/acs5?get=...&for=county:*&in=state:06",
+   "vintage": "ACS 2020-2024 5-year",
+   "accessed": "2026-11-26",
+   "notes": "County figures (5-year estimates are the most reliable for small counties).",
+   "apa": "U.S. Census Bureau. (2025). American Community Survey 5-year estimates, 2020-2024: Detailed tables [Data set]. Retrieved November 26, 2026, from https://api.census.gov/data/2024/acs/acs5"
+  },
+  {
+   "id": "acs5-tracts",
+   "publisher": "U.S. Census Bureau",
+   "title": "American Community Survey 5-year estimates, 2020-2024: Detailed tables, census tracts",
+   "url": "https://api.census.gov/data/2024/acs/acs5",
+   "year": "2025",
+   "kind": "Data set",
+   "query": "https://api.census.gov/data/2024/acs/acs5?get=...&for=tract:*&in=state:06 county:037",
+   "vintage": "ACS 2020-2024 5-year",
+   "accessed": "2026-11-26",
+   "notes": "Tract figures combined by the atlas using 2020 block populations; the result is an estimate by the atlas, not a Census Bureau tabulation.",
+   "apa": "U.S. Census Bureau. (2025). American Community Survey 5-year estimates, 2020-2024: Detailed tables, census tracts [Data set]. Retrieved November 26, 2026, from https://api.census.gov/data/2024/acs/acs5"
+  },
+  {
+   "id": "census-cb",
+   "publisher": "U.S. Census Bureau",
+   "title": "Cartographic Boundary Files, 2025: places and counties (1:500,000)",
+   "url": "https://www2.census.gov/geo/tiger/GENZ2025/shp/cb_2025_06_place_500k.zip",
+   "year": "2025",
+   "kind": "Data set",
+   "query": "https://www2.census.gov/geo/tiger/GENZ2025/shp/cb_2025_06_place_500k.zip",
+   "vintage": "2025",
+   "accessed": "2026-11-26",
+   "notes": "City and county outlines for the map.",
+   "apa": "U.S. Census Bureau. (2025). Cartographic Boundary Files, 2025: places and counties (1:500,000) [Data set]. Retrieved November 26, 2026, from https://www2.census.gov/geo/tiger/GENZ2025/shp/cb_2025_06_place_500k.zip"
+  },
+  {
+   "id": "census-gaz",
+   "publisher": "U.S. Census Bureau",
+   "title": "Gazetteer Files: 119th Congressional Districts",
+   "url": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_119CDs_national.zip",
+   "year": "2025",
+   "kind": "Data set",
+   "query": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_119CDs_national.zip",
+   "vintage": null,
+   "accessed": "2026-11-26",
+   "notes": "Land and water area by district.",
+   "apa": "U.S. Census Bureau. (2025). Gazetteer Files: 119th Congressional Districts [Data set]. Retrieved November 26, 2026, from https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_119CDs_national.zip"
+  },
+  {
+   "id": "census-tiger-blocks",
+   "publisher": "U.S. Census Bureau",
+   "title": "TIGER/Line Shapefiles, 2020 census tabulation blocks (P.L. 94-171 release)",
+   "url": "https://www2.census.gov/geo/tiger/TIGER2020PL/LAYER/TABBLOCK/2020/tl_2020_06037_tabblock20.zip",
+   "year": "2020",
+   "kind": "Data set",
+   "query": "https://www2.census.gov/geo/tiger/TIGER2020PL/LAYER/TABBLOCK/2020/tl_2020_06037_tabblock20.zip",
+   "vintage": "2020",
+   "accessed": "2026-11-26",
+   "notes": "Block outlines with land and water area; district outlines are these blocks dissolved.",
+   "apa": "U.S. Census Bureau. (2020). TIGER/Line Shapefiles, 2020 census tabulation blocks (P.L. 94-171 release) [Data set]. Retrieved November 26, 2026, from https://www2.census.gov/geo/tiger/TIGER2020PL/LAYER/TABBLOCK/2020/tl_2020_06037_tabblock20.zip"
+  },
+  {
+   "id": "usaspending",
+   "publisher": "U.S. Department of the Treasury, Bureau of the Fiscal Service",
+   "title": "USAspending.gov award obligations by place of performance",
+   "url": "https://www.usaspending.gov/search",
+   "year": "2026",
+   "kind": "Data set",
+   "query": "https://api.usaspending.gov/api/v2/search/spending_over_time/ (place of performance CA-44, current district lines)",
+   "vintage": null,
+   "accessed": "2026-11-26",
+   "notes": "Obligations are commitments to spend, reported by agencies and revised over time. Awards are placed by where the work happens. Some payments to individuals are reported only at county or state level and are not included in district totals.",
+   "apa": "U.S. Department of the Treasury, Bureau of the Fiscal Service. (2026). USAspending.gov award obligations by place of performance [Data set]. Retrieved November 26, 2026, from https://www.usaspending.gov/search"
+  }
+ ],
+ "integrity": {
+  "total": 26,
+  "pass": 24,
+  "fail": 1,
+  "skip": 1,
+  "ok": false
+ },
+ "freshness": {
+  "plans": "2026-11-26T22:27:58+00:00",
+  "legislators": "2026-11-26T22:28:19+00:00",
+  "acs": "2026-11-26T22:28:28+00:00",
+  "acs_plan": "2026-11-26T22:29:25+00:00",
+  "usaspending": "2026-11-26T22:29:42+00:00",
+  "irs": "2026-11-26T22:29:44+00:00",
+  "elections": "2026-11-26T22:29:46+00:00",
+  "fec": null,
+  "votes": "2026-11-26T22:29:50+00:00",
+  "colleges": "2026-11-26T23:02:36+00:00",
+  "broadcast": "2026-11-26T23:02:38+00:00"
+ },
+ "status": {
+  "plans": "ok",
+  "legislators": "ok",
+  "acs": "ok",
+  "acs_plan": "ok",
+  "usaspending": "ok",
+  "irs": "ok",
+  "elections": "ok",
+  "fec": "missing",
+  "votes": "ok",
+  "colleges": "ok",
+  "broadcast": "ok"
+ }
+}

@@ -1,0 +1,180 @@
+{
+ "generated_at": "2026-11-26T22:29:49+00:00",
+ "sources": [
+  {
+   "id": "medsl-house",
+   "publisher": "MIT Election Data and Science Lab",
+   "title": "U.S. House 1976-2018 (constituency returns)",
+   "url": "https://github.com/MEDSL/constituency-returns",
+   "year": "2019",
+   "kind": "Data set",
+   "query": "https://raw.githubusercontent.com/MEDSL/constituency-returns/HEAD/1976-2018-house.csv",
+   "vintage": null,
+   "accessed": "2026-11-26",
+   "notes": "Compiled from official state results. General elections only; special elections excluded.",
+   "apa": "MIT Election Data and Science Lab. (2019). U.S. House 1976-2018 (constituency returns) [Data set]. Retrieved November 26, 2026, from https://github.com/MEDSL/constituency-returns"
+  },
+  {
+   "id": "fec-results",
+   "publisher": "Federal Election Commission",
+   "title": "Federal Elections: Election results for the U.S. Senate and the U.S. House of Representatives (2018, 2020, 2022)",
+   "url": "https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/",
+   "year": "2023",
+   "kind": "Data set",
+   "query": "https://www.fec.gov/resources/cms-content/documents/federalelectionsYYYY.xlsx",
+   "vintage": null,
+   "accessed": "2026-11-26",
+   "notes": "Official, certified results as reported by state election offices.",
+   "apa": "Federal Election Commission. (2023). Federal Elections: Election results for the U.S. Senate and the U.S. House of Representatives (2018, 2020, 2022) [Data set]. Retrieved November 26, 2026, from https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/"
+  }
+ ],
+ "district": "ca-44",
+ "source_module": "elections",
+ "data": {
+  "results": [
+   {
+    "year": 2012,
+    "total_votes": 165898,
+    "candidates": [
+     {
+      "name": "Janice Hahn",
+      "party": "Democrat",
+      "votes": 99909,
+      "pct": 60.22314916394411,
+      "writein": false
+     },
+     {
+      "name": "Laura Richardson",
+      "party": "Democrat",
+      "votes": 65989,
+      "pct": 39.77685083605589,
+      "writein": false
+     }
+    ],
+    "new_lines": true,
+    "source": "medsl-house"
+   },
+   {
+    "year": 2014,
+    "total_votes": 68862,
+    "candidates": [
+     {
+      "name": "Janice Hahn",
+      "party": "Democrat",
+      "votes": 59670,
+      "pct": 86.65156399756034,
+      "writein": false
+     },
+     {
+      "name": "Adam Shbeita",
+      "party": "Peace And Freedom",
+      "votes": 9192,
+      "pct": 13.348436002439662,
+      "writein": false
+     }
+    ],
+    "new_lines": false,
+    "source": "medsl-house"
+   },
+   {
+    "year": 2016,
+    "total_votes": 178413,
+    "candidates": [
+     {
+      "name": "Nanette Diaz Barrag�___�__�n",
+      "party": "Democrat",
+      "votes": 93124,
+      "pct": 52.19574806768565,
+      "writein": false
+     },
+     {
+      "name": "Isadore Hall III",
+      "party": "Democrat",
+      "votes": 85289,
+      "pct": 47.80425193231435,
+      "writein": false
+     }
+    ],
+    "new_lines": false,
+    "source": "medsl-house"
+   },
+   {
+    "year": 2018,
+    "total_votes": 143322,
+    "candidates": [
+     {
+      "name": "Nanette Diaz Barragán",
+      "party": "Democrat",
+      "votes": 97944,
+      "pct": 68.33842675932516,
+      "writein": false
+     },
+     {
+      "name": "Aja L. Brown",
+      "party": "Democrat",
+      "votes": 45378,
+      "pct": 31.661573240674844,
+      "writein": false
+     }
+    ],
+    "new_lines": false,
+    "source": "fec-results"
+   },
+   {
+    "year": 2020,
+    "total_votes": 206036,
+    "candidates": [
+     {
+      "name": "Nanette Diaz Barragan",
+      "party": "Democrat",
+      "votes": 139661,
+      "pct": 67.7847560620474,
+      "writein": false
+     },
+     {
+      "name": "Analilia Joya",
+      "party": "Democrat",
+      "votes": 66375,
+      "pct": 32.21524393795259,
+      "writein": false
+     }
+    ],
+    "new_lines": false,
+    "source": "fec-results"
+   },
+   {
+    "year": 2022,
+    "total_votes": 138714,
+    "candidates": [
+     {
+      "name": "Nanette Diaz Barragan",
+      "party": "Democrat",
+      "votes": 100160,
+      "pct": 72.20612194875788,
+      "writein": false
+     },
+     {
+      "name": "Paul Jones",
+      "party": "Republican",
+      "votes": 38554,
+      "pct": 27.793878051242125,
+      "writein": false
+     }
+    ],
+    "new_lines": true,
+    "source": "fec-results"
+   }
+  ],
+  "redistricting_years": [
+   2012,
+   2022,
+   2026
+  ],
+  "fec_years": [
+   2018,
+   2020,
+   2022
+  ],
+  "latest_year": 2022
+ }
+}

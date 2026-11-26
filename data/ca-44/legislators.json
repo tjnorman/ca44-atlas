@@ -1,0 +1,327 @@
+{
+ "generated_at": "2026-11-26T22:28:28+00:00",
+ "sources": [
+  {
+   "id": "congress-legislators",
+   "publisher": "The @unitedstates project",
+   "title": "congress-legislators: Members of the United States Congress, 1789 to present",
+   "url": "https://github.com/unitedstates/congress-legislators",
+   "year": "2026",
+   "kind": "Data set",
+   "query": "https://raw.githubusercontent.com/unitedstates/congress-legislators/main/legislators-current.yaml",
+   "vintage": null,
+   "accessed": "2026-11-26",
+   "notes": "Public-domain data maintained by volunteers and cross-checked against the Clerk of the House.",
+   "apa": "The @unitedstates project. (2026). congress-legislators: Members of the United States Congress, 1789 to present [Data set]. Retrieved November 26, 2026, from https://github.com/unitedstates/congress-legislators"
+  },
+  {
+   "id": "clerk-members",
+   "publisher": "Office of the Clerk, U.S. House of Representatives",
+   "title": "Member data (XML)",
+   "url": "https://clerk.house.gov/xml/lists/MemberData.xml",
+   "year": "2026",
+   "kind": "Data set",
+   "query": null,
+   "vintage": null,
+   "accessed": "2026-11-26",
+   "notes": null,
+   "apa": "Office of the Clerk, U.S. House of Representatives. (2026). Member data (XML) [Data set]. Retrieved November 26, 2026, from https://clerk.house.gov/xml/lists/MemberData.xml"
+  }
+ ],
+ "district": "ca-44",
+ "source_module": "legislators",
+ "data": {
+  "current": {
+   "bioguide": "B001300",
+   "name": "Nanette Diaz Barragán",
+   "last_name": "Barragán",
+   "party": "Democrat",
+   "start": "2025-01-03",
+   "end": "2027-01-03"
+  },
+  "members": [
+   {
+    "bioguide": "B000236",
+    "name": "Jim Bates",
+    "last_name": "Bates",
+    "start": "1983-01-03",
+    "end": "1991-01-03",
+    "parties": [
+     "Democrat"
+    ],
+    "terms": 4
+   },
+   {
+    "bioguide": "C000994",
+    "name": "Randall Cunningham",
+    "last_name": "Cunningham",
+    "start": "1991-01-03",
+    "end": "1993-01-03",
+    "parties": [
+     "Republican"
+    ],
+    "terms": 1
+   },
+   {
+    "bioguide": "M000306",
+    "name": "Alfred McCandless",
+    "last_name": "McCandless",
+    "start": "1993-01-05",
+    "end": "1995-01-03",
+    "parties": [
+     "Republican"
+    ],
+    "terms": 1
+   },
+   {
+    "bioguide": "B000622",
+    "name": "Sonny Bono",
+    "last_name": "Bono",
+    "start": "1995-01-04",
+    "end": "1998-01-05",
+    "parties": [
+     "Republican"
+    ],
+    "terms": 2
+   },
+   {
+    "bioguide": "B001228",
+    "name": "Mary Bono Mack",
+    "last_name": "Bono Mack",
+    "start": "1998-04-21",
+    "end": "2003-01-03",
+    "parties": [
+     "Republican"
+    ],
+    "terms": 3
+   },
+   {
+    "bioguide": "C000059",
+    "name": "Ken Calvert",
+    "last_name": "Calvert",
+    "start": "2003-01-07",
+    "end": "2013-01-03",
+    "parties": [
+     "Republican"
+    ],
+    "terms": 5
+   },
+   {
+    "bioguide": "H001063",
+    "name": "Janice Hahn",
+    "last_name": "Hahn",
+    "start": "2013-01-03",
+    "end": "2016-12-04",
+    "parties": [
+     "Democrat"
+    ],
+    "terms": 2
+   },
+   {
+    "bioguide": "B001300",
+    "name": "Nanette Diaz Barragán",
+    "last_name": "Barragán",
+    "start": "2017-01-03",
+    "end": "2027-01-03",
+    "parties": [
+     "Democrat"
+    ],
+    "terms": 5
+   }
+  ],
+  "terms": [
+   {
+    "bioguide": "B000236",
+    "name": "Jim Bates",
+    "last_name": "Bates",
+    "party": "Democrat",
+    "start": "1983-01-03",
+    "end": "1985-01-03"
+   },
+   {
+    "bioguide": "B000236",
+    "name": "Jim Bates",
+    "last_name": "Bates",
+    "party": "Democrat",
+    "start": "1985-01-03",
+    "end": "1987-01-03"
+   },
+   {
+    "bioguide": "B000236",
+    "name": "Jim Bates",
+    "last_name": "Bates",
+    "party": "Democrat",
+    "start": "1987-01-06",
+    "end": "1989-01-03"
+   },
+   {
+    "bioguide": "B000236",
+    "name": "Jim Bates",
+    "last_name": "Bates",
+    "party": "Democrat",
+    "start": "1989-01-03",
+    "end": "1991-01-03"
+   },
+   {
+    "bioguide": "C000994",
+    "name": "Randall Cunningham",
+    "last_name": "Cunningham",
+    "party": "Republican",
+    "start": "1991-01-03",
+    "end": "1993-01-03"
+   },
+   {
+    "bioguide": "M000306",
+    "name": "Alfred McCandless",
+    "last_name": "McCandless",
+    "party": "Republican",
+    "start": "1993-01-05",
+    "end": "1995-01-03"
+   },
+   {
+    "bioguide": "B000622",
+    "name": "Sonny Bono",
+    "last_name": "Bono",
+    "party": "Republican",
+    "start": "1995-01-04",
+    "end": "1997-01-03"
+   },
+   {
+    "bioguide": "B000622",
+    "name": "Sonny Bono",
+    "last_name": "Bono",
+    "party": "Republican",
+    "start": "1997-01-07",
+    "end": "1998-01-05"
+   },
+   {
+    "bioguide": "B001228",
+    "name": "Mary Bono Mack",
+    "last_name": "Bono Mack",
+    "party": "Republican",
+    "start": "1998-04-21",
+    "end": "1999-01-03"
+   },
+   {
+    "bioguide": "B001228",
+    "name": "Mary Bono Mack",
+    "last_name": "Bono Mack",
+    "party": "Republican",
+    "start": "1999-01-06",
+    "end": "2001-01-03"
+   },
+   {
+    "bioguide": "B001228",
+    "name": "Mary Bono Mack",
+    "last_name": "Bono Mack",
+    "party": "Republican",
+    "start": "2001-01-03",
+    "end": "2003-01-03"
+   },
+   {
+    "bioguide": "C000059",
+    "name": "Ken Calvert",
+    "last_name": "Calvert",
+    "party": "Republican",
+    "start": "2003-01-07",
+    "end": "2005-01-03"
+   },
+   {
+    "bioguide": "C000059",
+    "name": "Ken Calvert",
+    "last_name": "Calvert",
+    "party": "Republican",
+    "start": "2005-01-04",
+    "end": "2007-01-03"
+   },
+   {
+    "bioguide": "C000059",
+    "name": "Ken Calvert",
+    "last_name": "Calvert",
+    "party": "Republican",
+    "start": "2007-01-04",
+    "end": "2009-01-03"
+   },
+   {
+    "bioguide": "C000059",
+    "name": "Ken Calvert",
+    "last_name": "Calvert",
+    "party": "Republican",
+    "start": "2009-01-06",
+    "end": "2011-01-03"
+   },
+   {
+    "bioguide": "C000059",
+    "name": "Ken Calvert",
+    "last_name": "Calvert",
+    "party": "Republican",
+    "start": "2011-01-05",
+    "end": "2013-01-03"
+   },
+   {
+    "bioguide": "H001063",
+    "name": "Janice Hahn",
+    "last_name": "Hahn",
+    "party": "Democrat",
+    "start": "2013-01-03",
+    "end": "2015-01-03"
+   },
+   {
+    "bioguide": "H001063",
+    "name": "Janice Hahn",
+    "last_name": "Hahn",
+    "party": "Democrat",
+    "start": "2015-01-06",
+    "end": "2016-12-04"
+   },
+   {
+    "bioguide": "B001300",
+    "name": "Nanette Diaz Barragán",
+    "last_name": "Barragán",
+    "party": "Democrat",
+    "start": "2017-01-03",
+    "end": "2019-01-03"
+   },
+   {
+    "bioguide": "B001300",
+    "name": "Nanette Diaz Barragán",
+    "last_name": "Barragán",
+    "party": "Democrat",
+    "start": "2019-01-03",
+    "end": "2021-01-03"
+   },
+   {
+    "bioguide": "B001300",
+    "name": "Nanette Diaz Barragán",
+    "last_name": "Barragán",
+    "party": "Democrat",
+    "start": "2021-01-03",
+    "end": "2023-01-03"
+   },
+   {
+    "bioguide": "B001300",
+    "name": "Nanette Diaz Barragán",
+    "last_name": "Barragán",
+    "party": "Democrat",
+    "start": "2023-01-03",
+    "end": "2025-01-03"
+   },
+   {
+    "bioguide": "B001300",
+    "name": "Nanette Diaz Barragán",
+    "last_name": "Barragán",
+    "party": "Democrat",
+    "start": "2025-01-03",
+    "end": "2027-01-03"
+   }
+  ],
+  "clerk": {
+   "statedistrict": "CA44",
+   "bioguide": "B001300",
+   "name": "Nanette Diaz Barragán",
+   "party": "D",
+   "vacant": false
+  },
+  "first_term_start": "1983-01-03"
+ }
+}

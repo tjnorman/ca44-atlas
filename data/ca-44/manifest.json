@@ -1,0 +1,105 @@
+{
+ "sources": {
+  "plans": {
+   "status": "ok",
+   "updated": "2026-11-26T22:27:58+00:00",
+   "error": null,
+   "sources": [
+    "census-bef-120",
+    "census-bef-119",
+    "census-pl",
+    "census-tiger-blocks",
+    "census-cb",
+    "census-cd119",
+    "census-gaz"
+   ]
+  },
+  "legislators": {
+   "status": "ok",
+   "updated": "2026-11-26T22:28:19+00:00",
+   "error": null,
+   "sources": [
+    "congress-legislators",
+    "clerk-members"
+   ]
+  },
+  "acs": {
+   "status": "ok",
+   "updated": "2026-11-26T22:28:28+00:00",
+   "error": null,
+   "sources": [
+    "acs1",
+    "acs5"
+   ]
+  },
+  "acs_plan": {
+   "status": "ok",
+   "updated": "2026-11-26T22:29:25+00:00",
+   "error": null,
+   "sources": [
+    "acs5-tracts"
+   ]
+  },
+  "usaspending": {
+   "status": "ok",
+   "updated": "2026-11-26T22:29:42+00:00",
+   "error": null,
+   "sources": [
+    "usaspending"
+   ]
+  },
+  "irs": {
+   "status": "ok",
+   "updated": "2026-11-26T22:29:44+00:00",
+   "error": null,
+   "sources": [
+    "irs-soi-cd"
+   ]
+  },
+  "elections": {
+   "status": "ok",
+   "updated": "2026-11-26T22:29:46+00:00",
+   "error": null,
+   "sources": [
+    "medsl-house",
+    "fec-results"
+   ]
+  },
+  "fec": {
+   "status": "missing",
+   "updated": null,
+   "error": "FetchError: HTTP 403 for https://api.open.fec.gov/v1/candidates/totals/?api_key=REDACTED&election_year=2022&office=H&state=CA&district=44&per_page=100&sort=-receipts&election_full=true: {\n  \"error\": {\n    \"code\": \"API_KEY_INVALID\",\n    \"message\": \"An invalid api_key was supplied. Get one at https://api.data.gov/signup/\"\n  }\n}",
+   "sources": [],
+   "attempted": "2026-11-26T22:29:49+00:00"
+  },
+  "votes": {
+   "status": "ok",
+   "updated": "2026-11-26T22:29:50+00:00",
+   "error": null,
+   "sources": [
+    "clerk-votes"
+   ]
+  },
+  "colleges": {
+   "status": "ok",
+   "updated": "2026-11-26T23:02:36+00:00",
+   "error": null,
+   "sources": [
+    "nces-ipeds-hd"
+   ]
+  },
+  "broadcast": {
+   "status": "ok",
+   "updated": "2026-11-26T23:02:38+00:00",
+   "error": null,
+   "sources": [
+    "fcc-queries"
+   ]
+  }
+ },
+ "district": "ca-44",
+ "name": "California's 44th Congressional District",
+ "built_at": "2026-11-26T23:02:41+00:00",
+ "requests": 5329,
+ "requests_from_cache": 0
+}

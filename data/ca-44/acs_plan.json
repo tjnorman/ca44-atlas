@@ -1,0 +1,559 @@
+{
+ "generated_at": "2026-11-26T22:29:42+00:00",
+ "sources": [
+  {
+   "id": "acs5-tracts",
+   "publisher": "U.S. Census Bureau",
+   "title": "American Community Survey 5-year estimates, 2020-2024: Detailed tables, census tracts",
+   "url": "https://api.census.gov/data/2024/acs/acs5",
+   "year": "2025",
+   "kind": "Data set",
+   "query": "https://api.census.gov/data/2024/acs/acs5?get=...&for=tract:*&in=state:06 county:037",
+   "vintage": "ACS 2020-2024 5-year",
+   "accessed": "2026-11-26",
+   "notes": "Tract figures combined by the atlas using 2020 block populations; the result is an estimate by the atlas, not a Census Bureau tabulation.",
+   "apa": "U.S. Census Bureau. (2025). American Community Survey 5-year estimates, 2020-2024: Detailed tables, census tracts [Data set]. Retrieved November 26, 2026, from https://api.census.gov/data/2024/acs/acs5"
+  }
+ ],
+ "district": "ca-44",
+ "source_module": "acs_plan",
+ "data": {
+  "vintage": {
+   "acs5": 2024
+  },
+  "method": "Tract ACS 5-year counts weighted by each tract's share of 2020 Census population inside the plan, then summed. Medians and averages are not estimated.",
+  "not_estimated": [
+   "median_age",
+   "median_household_income",
+   "per_capita_income",
+   "median_home_value",
+   "median_gross_rent",
+   "avg_household_size"
+  ],
+  "plans": {
+   "cd120": {
+    "metrics": {
+     "hs_plus_pct": 69.62277631458025,
+     "bachelors_plus_pct": 18.86560960514388,
+     "population": 742148.3552186419,
+     "median_age": null,
+     "under_18_pct": 23.440901751048425,
+     "age_65_plus_pct": 13.343581214344836,
+     "median_household_income": null,
+     "per_capita_income": null,
+     "poverty_pct": 15.235994443015976,
+     "veterans_pct": 2.463638092529539,
+     "median_home_value": null,
+     "median_gross_rent": null,
+     "owner_occupied_pct": 47.12342692162571,
+     "seasonal_homes_pct": 0.48868041202755447,
+     "broadband_pct": 91.4726399326887,
+     "no_internet_pct": 6.39252212960885,
+     "uninsured_pct": 11.78795028363965,
+     "labor_force_pct": 63.14547568305663,
+     "unemployment_acs_pct": 7.67228190224131,
+     "work_from_home_pct": 8.066743164050035,
+     "households": 217560.2556980512,
+     "avg_household_size": null,
+     "housing_units": 225186.62538595835,
+     "mean_commute_min": 29.927550395982653
+    },
+    "moe": {
+     "population": 9333.228795978896,
+     "households": 2154.543603817556,
+     "housing_units": 2097.228875650232
+    },
+    "race": [
+     {
+      "id": "white",
+      "label": "White",
+      "pct": 7.897663471769025
+     },
+     {
+      "id": "aian",
+      "label": "American Indian and Alaska Native",
+      "pct": 0.098903239254942
+     },
+     {
+      "id": "hispanic",
+      "label": "Hispanic or Latino (any race)",
+      "pct": 71.15491969344816
+     },
+     {
+      "id": "two_plus",
+      "label": "Two or more races",
+      "pct": 2.0979059511564406
+     },
+     {
+      "id": "asian",
+      "label": "Asian",
+      "pct": 9.380273571765468
+     },
+     {
+      "id": "black",
+      "label": "Black or African American",
+      "pct": 8.581559175358022
+     },
+     {
+      "id": "other",
+      "label": "Some other race",
+      "pct": 0.3153987711842722
+     },
+     {
+      "id": "nhpi",
+      "label": "Native Hawaiian and Pacific Islander",
+      "pct": 0.4733761260636821
+     }
+    ],
+    "industry": [
+     {
+      "id": "health_ed",
+      "label": "Health care, social assistance, and education",
+      "short": "Health care and education",
+      "workers": 71623.77819540042,
+      "pct": 20.86461070883628
+     },
+     {
+      "id": "manufacturing",
+      "label": "Manufacturing",
+      "short": "Manufacturing",
+      "workers": 39896.265627062145,
+      "pct": 11.622118687651618
+     },
+     {
+      "id": "retail",
+      "label": "Retail",
+      "short": "Retail",
+      "workers": 36927.65260322207,
+      "pct": 10.757336674635972
+     },
+     {
+      "id": "arts_food",
+      "label": "Arts, recreation, lodging, and food service",
+      "short": "Recreation, lodging, and food",
+      "workers": 31790.523648890172,
+      "pct": 9.260847680424977
+     },
+     {
+      "id": "construction",
+      "label": "Construction",
+      "short": "Construction",
+      "workers": 26221.77436466559,
+      "pct": 7.63862404355576
+     },
+     {
+      "id": "professional",
+      "label": "Professional, scientific, and administrative services",
+      "short": "Professional services",
+      "workers": 36466.34364418466,
+      "pct": 10.622953483895104
+     },
+     {
+      "id": "transport",
+      "label": "Transportation, warehousing, and utilities",
+      "short": "Transportation and utilities",
+      "workers": 36457.77211281058,
+      "pct": 10.620456524508086
+     },
+     {
+      "id": "ag_mining",
+      "label": "Agriculture, forestry, fishing, and mining",
+      "short": "Farming, forestry, and mining",
+      "workers": 1632.756797676072,
+      "pct": 0.47563582687271766
+     },
+     {
+      "id": "finance",
+      "label": "Finance, insurance, and real estate",
+      "short": "Finance and real estate",
+      "workers": 13091.314050853718,
+      "pct": 3.8136102034857804
+     },
+     {
+      "id": "public_admin",
+      "label": "Public administration",
+      "short": "Public administration",
+      "workers": 11887.915386119039,
+      "pct": 3.4630500222185634
+     },
+     {
+      "id": "other_services",
+      "label": "Other services",
+      "short": "Other services",
+      "workers": 18940.677183743064,
+      "pct": 5.517579021346784
+     },
+     {
+      "id": "wholesale",
+      "label": "Wholesale trade",
+      "short": "Wholesale trade",
+      "workers": 13282.914129887973,
+      "pct": 3.8694249225854316
+     },
+     {
+      "id": "information",
+      "label": "Information",
+      "short": "Information",
+      "workers": 5059.078367652325,
+      "pct": 1.4737521999829286
+     }
+    ],
+    "age_bands": [
+     {
+      "id": "0-17",
+      "label": "Under 18",
+      "male": 88333.52225921194,
+      "female": 85632.7445346118,
+      "pct": 23.440901751048425
+     },
+     {
+      "id": "18-24",
+      "label": "18 to 24",
+      "male": 37471.83958746096,
+      "female": 33803.09922870298,
+      "pct": 9.603866708721045
+     },
+     {
+      "id": "25-44",
+      "label": "25 to 44",
+      "male": 106683.76324969964,
+      "female": 105752.37918763752,
+      "pct": 28.624484706262272
+     },
+     {
+      "id": "45-64",
+      "label": "45 to 64",
+      "male": 90444.46389449586,
+      "female": 94997.37476729741,
+      "pct": 24.987165619623433
+     },
+     {
+      "id": "65-74",
+      "label": "65 to 74",
+      "male": 28425.0922545786,
+      "female": 32805.27740073145,
+      "pct": 8.250421795689512
+     },
+     {
+      "id": "75+",
+      "label": "75 and older",
+      "male": 15418.518817230182,
+      "female": 22380.280036983666,
+      "pct": 5.093159418655326
+     }
+    ],
+    "tracts_used": 191,
+    "tracts_partly_inside": 15
+   },
+   "cd119": {
+    "metrics": {
+     "hs_plus_pct": 75.72273494928073,
+     "bachelors_plus_pct": 23.590287434706262,
+     "population": 744079.1490278575,
+     "median_age": null,
+     "under_18_pct": 22.631967547787625,
+     "age_65_plus_pct": 14.20471455261201,
+     "median_household_income": null,
+     "per_capita_income": null,
+     "poverty_pct": 13.596432309542305,
+     "veterans_pct": 3.0992073736082117,
+     "median_home_value": null,
+     "median_gross_rent": null,
+     "owner_occupied_pct": 51.28911128744322,
+     "seasonal_homes_pct": 0.5141377391565863,
+     "broadband_pct": 92.56355694836436,
+     "no_internet_pct": 5.393317537359312,
+     "uninsured_pct": 9.9971300896996,
+     "labor_force_pct": 63.606736753391935,
+     "unemployment_acs_pct": 7.155720114492763,
+     "work_from_home_pct": 9.731653502789193,
+     "households": 229131.70130147762,
+     "avg_household_size": null,
+     "housing_units": 237697.7395678952,
+     "mean_commute_min": 29.396539768607
+    },
+    "moe": {
+     "population": 9332.809023730199,
+     "households": 2239.4197534154714,
+     "housing_units": 2186.2182001737583
+    },
+    "race": [
+     {
+      "id": "white",
+      "label": "White",
+      "pct": 12.502884046097932
+     },
+     {
+      "id": "aian",
+      "label": "American Indian and Alaska Native",
+      "pct": 0.12657823569405713
+     },
+     {
+      "id": "hispanic",
+      "label": "Hispanic or Latino (any race)",
+      "pct": 61.42105167022719
+     },
+     {
+      "id": "two_plus",
+      "label": "Two or more races",
+      "pct": 3.061887651451781
+     },
+     {
+      "id": "asian",
+      "label": "Asian",
+      "pct": 11.74566737430962
+     },
+     {
+      "id": "black",
+      "label": "Black or African American",
+      "pct": 10.229691344305142
+     },
+     {
+      "id": "other",
+      "label": "Some other race",
+      "pct": 0.40594906170826484
+     },
+     {
+      "id": "nhpi",
+      "label": "Native Hawaiian and Pacific Islander",
+      "pct": 0.5062906162059904
+     }
+    ],
+    "industry": [
+     {
+      "id": "health_ed",
+      "label": "Health care, social assistance, and education",
+      "short": "Health care and education",
+      "workers": 78354.25070663767,
+      "pct": 22.309213848920905
+     },
+     {
+      "id": "manufacturing",
+      "label": "Manufacturing",
+      "short": "Manufacturing",
+      "workers": 38160.68665066028,
+      "pct": 10.865204011696608
+     },
+     {
+      "id": "retail",
+      "label": "Retail",
+      "short": "Retail",
+      "workers": 36205.61179947183,
+      "pct": 10.30855031961918
+     },
+     {
+      "id": "arts_food",
+      "label": "Arts, recreation, lodging, and food service",
+      "short": "Recreation, lodging, and food",
+      "workers": 32073.593932378364,
+      "pct": 9.132072089105757
+     },
+     {
+      "id": "construction",
+      "label": "Construction",
+      "short": "Construction",
+      "workers": 24380.681129006953,
+      "pct": 6.9417271454207095
+     },
+     {
+      "id": "professional",
+      "label": "Professional, scientific, and administrative services",
+      "short": "Professional services",
+      "workers": 39446.971224626934,
+      "pct": 11.231438100752346
+     },
+     {
+      "id": "transport",
+      "label": "Transportation, warehousing, and utilities",
+      "short": "Transportation and utilities",
+      "workers": 36393.75217169888,
+      "pct": 10.36211810643069
+     },
+     {
+      "id": "ag_mining",
+      "label": "Agriculture, forestry, fishing, and mining",
+      "short": "Farming, forestry, and mining",
+      "workers": 1309.2884957425867,
+      "pct": 0.37278382191176923
+     },
+     {
+      "id": "finance",
+      "label": "Finance, insurance, and real estate",
+      "short": "Finance and real estate",
+      "workers": 14745.99740489164,
+      "pct": 4.19851643726448
+     },
+     {
+      "id": "public_admin",
+      "label": "Public administration",
+      "short": "Public administration",
+      "workers": 13784.981130045058,
+      "pct": 3.9248935336632917
+     },
+     {
+      "id": "other_services",
+      "label": "Other services",
+      "short": "Other services",
+      "workers": 19009.883398836093,
+      "pct": 5.412540483291982
+     },
+     {
+      "id": "wholesale",
+      "label": "Wholesale trade",
+      "short": "Wholesale trade",
+      "workers": 11494.834040695005,
+      "pct": 3.272837254635331
+     },
+     {
+      "id": "information",
+      "label": "Information",
+      "short": "Information",
+      "workers": 5858.705120422746,
+      "pct": 1.6681048472869469
+     }
+    ],
+    "age_bands": [
+     {
+      "id": "0-17",
+      "label": "Under 18",
+      "male": 86139.649168203,
+      "female": 82260.102369636,
+      "pct": 22.631967547787625
+     },
+     {
+      "id": "18-24",
+      "label": "18 to 24",
+      "male": 35374.89075275931,
+      "female": 33011.00318332128,
+      "pct": 9.19067467828215
+     },
+     {
+      "id": "25-44",
+      "label": "25 to 44",
+      "male": 106246.93353103631,
+      "female": 105921.3253868003,
+      "pct": 28.51420567221045
+     },
+     {
+      "id": "45-64",
+      "label": "45 to 64",
+      "male": 92098.9792125287,
+      "female": 97331.94625866096,
+      "pct": 25.458437549107774
+     },
+     {
+      "id": "65-74",
+      "label": "65 to 74",
+      "male": 29544.603603957505,
+      "female": 35023.45551535838,
+      "pct": 8.677579421984117
+     },
+     {
+      "id": "75+",
+      "label": "75 and older",
+      "male": 16814.361881834135,
+      "female": 24311.89816376166,
+      "pct": 5.527135130627894
+     }
+    ],
+    "tracts_used": 189,
+    "tracts_partly_inside": 18
+   }
+  },
+  "method_check": {
+   "plan": "cd119",
+   "acs5": 2024,
+   "comparisons": [
+    {
+     "metric": "population",
+     "kind": "count",
+     "method": 744079.1490278575,
+     "census": 744757.0,
+     "gap": -0.0009101639489693097,
+     "ok": true
+    },
+    {
+     "metric": "households",
+     "kind": "count",
+     "method": 229131.70130147762,
+     "census": 229358.0,
+     "gap": -0.000986661457295509,
+     "ok": true
+    },
+    {
+     "metric": "housing_units",
+     "kind": "count",
+     "method": 237697.7395678952,
+     "census": 237950.0,
+     "gap": -0.001060140500545547,
+     "ok": true
+    },
+    {
+     "metric": "poverty_pct",
+     "kind": "pct",
+     "method": 13.596432309542305,
+     "census": 13.554849670468759,
+     "gap": 0.04158263907354609,
+     "ok": true
+    },
+    {
+     "metric": "owner_occupied_pct",
+     "kind": "pct",
+     "method": 51.28911128744322,
+     "census": 51.32107883745062,
+     "gap": -0.03196755000740126,
+     "ok": true
+    },
+    {
+     "metric": "bachelors_plus_pct",
+     "kind": "pct",
+     "method": 23.590287434706262,
+     "census": 23.582480831017286,
+     "gap": 0.0078066036889765655,
+     "ok": true
+    },
+    {
+     "metric": "under_18_pct",
+     "kind": "pct",
+     "method": 22.631967547787625,
+     "census": 22.70109579366156,
+     "gap": -0.06912824587393374,
+     "ok": true
+    },
+    {
+     "metric": "age_65_plus_pct",
+     "kind": "pct",
+     "method": 14.20471455261201,
+     "census": 14.166097129667797,
+     "gap": 0.03861742294421333,
+     "ok": true
+    },
+    {
+     "metric": "uninsured_pct",
+     "kind": "pct",
+     "method": 9.9971300896996,
+     "census": 9.999620759618484,
+     "gap": -0.0024906699188846915,
+     "ok": true
+    },
+    {
+     "metric": "broadband_pct",
+     "kind": "pct",
+     "method": 92.56355694836436,
+     "census": 92.59280251833378,
+     "gap": -0.02924556996941874,
+     "ok": true
+    },
+    {
+     "metric": "labor_force_pct",
+     "kind": "pct",
+     "method": 63.606736753391935,
+     "census": 63.68215598422451,
+     "gap": -0.07541923083257274,
+     "ok": true
+    }
+   ]
+  },
+  "dropped_variables": []
+ }
+}

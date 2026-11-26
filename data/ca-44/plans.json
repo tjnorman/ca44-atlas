@@ -1,0 +1,2692 @@
+{
+ "generated_at": "2026-11-26T22:28:19+00:00",
+ "sources": [
+  {
+   "id": "census-bef-120",
+   "publisher": "U.S. Census Bureau",
+   "title": "120th Congressional District block equivalency files",
+   "url": "https://www.census.gov/geographies/mapping-files/2027/dec/rdo/120-congressional-district-bef.html",
+   "year": "2026",
+   "kind": "Data set",
+   "query": "https://www2.census.gov/programs-surveys/decennial/rdo/mapping-files/2027/120-congressional-district-befs/cd120.zip (CD120_06.txt)",
+   "vintage": "120th Congress",
+   "accessed": "2026-11-26",
+   "notes": "Whole 2020 census blocks assigned to each district of the plan, as submitted by the state.",
+   "apa": "U.S. Census Bureau. (2026). 120th Congressional District block equivalency files [Data set]. Retrieved November 26, 2026, from https://www.census.gov/geographies/mapping-files/2027/dec/rdo/120-congressional-district-bef.html"
+  },
+  {
+   "id": "census-bef-119",
+   "publisher": "U.S. Census Bureau",
+   "title": "119th Congressional District block equivalency files",
+   "url": "https://www.census.gov/geographies/mapping-files/2025/dec/rdo/119-congressional-district-bef.html",
+   "year": "2024",
+   "kind": "Data set",
+   "query": "https://www2.census.gov/programs-surveys/decennial/rdo/mapping-files/2025/119-congressional-district-befs/cd119.zip (NationalCD119.txt)",
+   "vintage": "119th Congress",
+   "accessed": "2026-11-26",
+   "notes": "Whole 2020 census blocks assigned to each district of the plan, as submitted by the state.",
+   "apa": "U.S. Census Bureau. (2024). 119th Congressional District block equivalency files [Data set]. Retrieved November 26, 2026, from https://www.census.gov/geographies/mapping-files/2025/dec/rdo/119-congressional-district-bef.html"
+  },
+  {
+   "id": "census-pl",
+   "publisher": "U.S. Census Bureau",
+   "title": "2020 Census Redistricting Data (Public Law 94-171) Summary File",
+   "url": "https://www2.census.gov/programs-surveys/decennial/2020/data/01-Redistricting_File--PL_94-171/California/ca2020.pl.zip",
+   "year": "2021",
+   "kind": "Data set",
+   "query": "https://www2.census.gov/programs-surveys/decennial/2020/data/01-Redistricting_File--PL_94-171/California/ca2020.pl.zip",
+   "vintage": "2020 Census",
+   "accessed": "2026-11-26",
+   "notes": "Block, place, county, and state population counts as of April 1, 2020.",
+   "apa": "U.S. Census Bureau. (2021). 2020 Census Redistricting Data (Public Law 94-171) Summary File [Data set]. Retrieved November 26, 2026, from https://www2.census.gov/programs-surveys/decennial/2020/data/01-Redistricting_File--PL_94-171/California/ca2020.pl.zip"
+  },
+  {
+   "id": "census-tiger-blocks",
+   "publisher": "U.S. Census Bureau",
+   "title": "TIGER/Line Shapefiles, 2020 census tabulation blocks (P.L. 94-171 release)",
+   "url": "https://www2.census.gov/geo/tiger/TIGER2020PL/LAYER/TABBLOCK/2020/tl_2020_06037_tabblock20.zip",
+   "year": "2020",
+   "kind": "Data set",
+   "query": "https://www2.census.gov/geo/tiger/TIGER2020PL/LAYER/TABBLOCK/2020/tl_2020_06037_tabblock20.zip",
+   "vintage": "2020",
+   "accessed": "2026-11-26",
+   "notes": "Block outlines with land and water area; district outlines are these blocks dissolved.",
+   "apa": "U.S. Census Bureau. (2020). TIGER/Line Shapefiles, 2020 census tabulation blocks (P.L. 94-171 release) [Data set]. Retrieved November 26, 2026, from https://www2.census.gov/geo/tiger/TIGER2020PL/LAYER/TABBLOCK/2020/tl_2020_06037_tabblock20.zip"
+  },
+  {
+   "id": "census-cb",
+   "publisher": "U.S. Census Bureau",
+   "title": "Cartographic Boundary Files, 2025: places and counties (1:500,000)",
+   "url": "https://www2.census.gov/geo/tiger/GENZ2025/shp/cb_2025_06_place_500k.zip",
+   "year": "2025",
+   "kind": "Data set",
+   "query": "https://www2.census.gov/geo/tiger/GENZ2025/shp/cb_2025_06_place_500k.zip",
+   "vintage": "2025",
+   "accessed": "2026-11-26",
+   "notes": "City and county outlines for the map.",
+   "apa": "U.S. Census Bureau. (2025). Cartographic Boundary Files, 2025: places and counties (1:500,000) [Data set]. Retrieved November 26, 2026, from https://www2.census.gov/geo/tiger/GENZ2025/shp/cb_2025_06_place_500k.zip"
+  },
+  {
+   "id": "census-cd119",
+   "publisher": "U.S. Census Bureau",
+   "title": "2020 Census, 119th Congressional District Summary File",
+   "url": "https://api.census.gov/data/2020/dec/cd119",
+   "year": "2023",
+   "kind": "Data set",
+   "query": "https://api.census.gov/data/2020/dec/cd119?get=P1_001N",
+   "vintage": "2020 Census",
+   "accessed": "2026-11-26",
+   "notes": "Population as tabulated by the Census Bureau for the plan.",
+   "apa": "U.S. Census Bureau. (2023). 2020 Census, 119th Congressional District Summary File [Data set]. Retrieved November 26, 2026, from https://api.census.gov/data/2020/dec/cd119"
+  },
+  {
+   "id": "census-gaz",
+   "publisher": "U.S. Census Bureau",
+   "title": "Gazetteer Files: 119th Congressional Districts",
+   "url": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_119CDs_national.zip",
+   "year": "2025",
+   "kind": "Data set",
+   "query": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_119CDs_national.zip",
+   "vintage": null,
+   "accessed": "2026-11-26",
+   "notes": "Land and water area by district.",
+   "apa": "U.S. Census Bureau. (2025). Gazetteer Files: 119th Congressional Districts [Data set]. Retrieved November 26, 2026, from https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_119CDs_national.zip"
+  }
+ ],
+ "district": "ca-44",
+ "source_module": "plans",
+ "data": {
+  "primary": "cd120",
+  "plans": {
+   "cd120": {
+    "id": "cd120",
+    "label": "Proposition 50 lines (120th Congress, from Jan. 3, 2027)",
+    "short": "new lines",
+    "congress": 120,
+    "effective": "2027-01-03",
+    "first_election": 2026,
+    "last_election": null,
+    "law": "AB 604 (Aguiar-Curry), Chapter 96, Statutes of 2025, put into effect by Proposition 50, approved by California voters on Nov. 4, 2025, for the 2026 through 2030 elections.",
+    "primary": true,
+    "blocks": 6672,
+    "blocks_missing_population": 0,
+    "pop_2020": 757709,
+    "land_sq_mi": 88.8101567269974,
+    "water_sq_mi": 25.44516816003855,
+    "counties": [
+     "037"
+    ],
+    "places": [
+     {
+      "place": "44000",
+      "name": "Los Angeles city",
+      "short": "Los Angeles",
+      "type": "city",
+      "pop_in_district": 170039,
+      "pop_place": 3898747,
+      "share_of_place": 0.04361375590670541
+     },
+     {
+      "place": "43000",
+      "name": "Long Beach city",
+      "short": "Long Beach",
+      "type": "city",
+      "pop_in_district": 118161,
+      "pop_place": 466742,
+      "share_of_place": 0.2531612753941149
+     },
+     {
+      "place": "11530",
+      "name": "Carson city",
+      "short": "Carson",
+      "type": "city",
+      "pop_in_district": 95558,
+      "pop_place": 95558,
+      "share_of_place": 1.0
+     },
+     {
+      "place": "73080",
+      "name": "South Gate city",
+      "short": "South Gate",
+      "type": "city",
+      "pop_in_district": 92726,
+      "pop_place": 92726,
+      "share_of_place": 1.0
+     },
+     {
+      "place": "44574",
+      "name": "Lynwood city",
+      "short": "Lynwood",
+      "type": "city",
+      "pop_in_district": 67265,
+      "pop_place": 67265,
+      "share_of_place": 1.0
+     },
+     {
+      "place": "24477",
+      "name": "Florence-Graham CDP",
+      "short": "Florence-Graham",
+      "type": "CDP",
+      "pop_in_district": 61983,
+      "pop_place": 61983,
+      "share_of_place": 1.0
+     },
+     {
+      "place": "36056",
+      "name": "Huntington Park city",
+      "short": "Huntington Park",
+      "type": "city",
+      "pop_in_district": 54883,
+      "pop_place": 54883,
+      "share_of_place": 1.0
+     },
+     {
+      "place": "55618",
+      "name": "Paramount city",
+      "short": "Paramount",
+      "type": "city",
+      "pop_in_district": 53733,
+      "pop_place": 53733,
+      "share_of_place": 1.0
+     },
+     {
+      "place": "84144",
+      "name": "West Carson CDP",
+      "short": "West Carson",
+      "type": "CDP",
+      "pop_in_district": 22870,
+      "pop_place": 22870,
+      "share_of_place": 1.0
+     },
+     {
+      "place": "83402",
+      "name": "Walnut Park CDP",
+      "short": "Walnut Park",
+      "type": "CDP",
+      "pop_in_district": 15214,
+      "pop_place": 15214,
+      "share_of_place": 1.0
+     },
+     {
+      "place": null,
+      "name": "Unincorporated area outside any census place",
+      "short": "Other unincorporated",
+      "type": "unincorporated",
+      "pop_in_district": 5055,
+      "pop_place": null,
+      "share_of_place": null
+     },
+     {
+      "place": "82422",
+      "name": "Vernon city",
+      "short": "Vernon",
+      "type": "city",
+      "pop_in_district": 222,
+      "pop_place": 222,
+      "share_of_place": 1.0
+     }
+    ],
+    "tracts": [
+     {
+      "tract": "06037291300",
+      "pop_in_district": 2562,
+      "pop_tract": 2839,
+      "weight": 0.9024304332511448
+     },
+     {
+      "tract": "06037292001",
+      "pop_in_district": 4791,
+      "pop_tract": 4791,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037292002",
+      "pop_in_district": 1688,
+      "pop_tract": 1688,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037293203",
+      "pop_in_district": 3337,
+      "pop_tract": 3337,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037293204",
+      "pop_in_district": 3119,
+      "pop_tract": 3119,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037293205",
+      "pop_in_district": 3873,
+      "pop_tract": 3873,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037293206",
+      "pop_in_district": 3330,
+      "pop_tract": 3330,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037293304",
+      "pop_in_district": 1603,
+      "pop_tract": 4150,
+      "weight": 0.38626506024096385
+     },
+     {
+      "tract": "06037293306",
+      "pop_in_district": 2478,
+      "pop_tract": 2571,
+      "weight": 0.9638273045507585
+     },
+     {
+      "tract": "06037293307",
+      "pop_in_district": 2460,
+      "pop_tract": 2460,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037294110",
+      "pop_in_district": 3876,
+      "pop_tract": 3876,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037294120",
+      "pop_in_district": 2324,
+      "pop_tract": 2324,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037294200",
+      "pop_in_district": 4658,
+      "pop_tract": 4658,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037294301",
+      "pop_in_district": 2501,
+      "pop_tract": 2501,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037294302",
+      "pop_in_district": 4513,
+      "pop_tract": 4513,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037294410",
+      "pop_in_district": 5310,
+      "pop_tract": 5310,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037294421",
+      "pop_in_district": 2443,
+      "pop_tract": 2794,
+      "weight": 0.8743736578382247
+     },
+     {
+      "tract": "06037294510",
+      "pop_in_district": 4057,
+      "pop_tract": 4057,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037294520",
+      "pop_in_district": 3459,
+      "pop_tract": 3459,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037294610",
+      "pop_in_district": 4025,
+      "pop_tract": 4025,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037294620",
+      "pop_in_district": 4034,
+      "pop_tract": 4034,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037294701",
+      "pop_in_district": 3110,
+      "pop_tract": 3110,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037294810",
+      "pop_in_district": 3729,
+      "pop_tract": 3729,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037294820",
+      "pop_in_district": 3346,
+      "pop_tract": 3346,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037294830",
+      "pop_in_district": 3838,
+      "pop_tract": 3838,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037294900",
+      "pop_in_district": 3871,
+      "pop_tract": 3871,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037295103",
+      "pop_in_district": 4978,
+      "pop_tract": 4978,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037296210",
+      "pop_in_district": 2976,
+      "pop_tract": 2976,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037296220",
+      "pop_in_district": 4449,
+      "pop_tract": 4449,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037296300",
+      "pop_in_district": 4874,
+      "pop_tract": 4874,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037296401",
+      "pop_in_district": 3176,
+      "pop_tract": 3176,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037296402",
+      "pop_in_district": 2971,
+      "pop_tract": 2971,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037296500",
+      "pop_in_district": 3796,
+      "pop_tract": 3796,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037296600",
+      "pop_in_district": 5305,
+      "pop_tract": 5305,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037296901",
+      "pop_in_district": 4148,
+      "pop_tract": 4148,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037296902",
+      "pop_in_district": 3987,
+      "pop_tract": 3987,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037297001",
+      "pop_in_district": 1662,
+      "pop_tract": 1662,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037297002",
+      "pop_in_district": 3657,
+      "pop_tract": 3657,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037297110",
+      "pop_in_district": 4298,
+      "pop_tract": 4298,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037297120",
+      "pop_in_district": 3425,
+      "pop_tract": 3425,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037297201",
+      "pop_in_district": 3879,
+      "pop_tract": 3879,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037297202",
+      "pop_in_district": 3546,
+      "pop_tract": 3546,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037297300",
+      "pop_in_district": 2306,
+      "pop_tract": 2306,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037297400",
+      "pop_in_district": 3760,
+      "pop_tract": 3760,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037297501",
+      "pop_in_district": 2483,
+      "pop_tract": 2483,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037297502",
+      "pop_in_district": 2508,
+      "pop_tract": 2508,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037297601",
+      "pop_in_district": 2781,
+      "pop_tract": 2781,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037297602",
+      "pop_in_district": 3579,
+      "pop_tract": 3579,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037532500",
+      "pop_in_district": 3838,
+      "pop_tract": 3838,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037532605",
+      "pop_in_district": 3812,
+      "pop_tract": 3812,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037532606",
+      "pop_in_district": 4125,
+      "pop_tract": 4125,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037532607",
+      "pop_in_district": 5694,
+      "pop_tract": 5694,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037532700",
+      "pop_in_district": 2878,
+      "pop_tract": 2878,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037532800",
+      "pop_in_district": 4204,
+      "pop_tract": 4204,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037532900",
+      "pop_in_district": 6358,
+      "pop_tract": 6358,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037533001",
+      "pop_in_district": 4439,
+      "pop_tract": 4439,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037533002",
+      "pop_in_district": 2370,
+      "pop_tract": 2370,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037533103",
+      "pop_in_district": 3233,
+      "pop_tract": 3233,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037533104",
+      "pop_in_district": 3923,
+      "pop_tract": 3923,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037533105",
+      "pop_in_district": 2423,
+      "pop_tract": 2423,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037533108",
+      "pop_in_district": 5133,
+      "pop_tract": 5133,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037533201",
+      "pop_in_district": 2602,
+      "pop_tract": 2602,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037533204",
+      "pop_in_district": 4143,
+      "pop_tract": 4143,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037533300",
+      "pop_in_district": 0,
+      "pop_tract": 3172,
+      "weight": 0.0
+     },
+     {
+      "tract": "06037533501",
+      "pop_in_district": 2958,
+      "pop_tract": 2958,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037533504",
+      "pop_in_district": 3848,
+      "pop_tract": 3848,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037534501",
+      "pop_in_district": 5077,
+      "pop_tract": 5077,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037534502",
+      "pop_in_district": 4074,
+      "pop_tract": 4074,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037534700",
+      "pop_in_district": 4108,
+      "pop_tract": 4108,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037534802",
+      "pop_in_district": 2759,
+      "pop_tract": 2759,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037534803",
+      "pop_in_district": 4629,
+      "pop_tract": 4629,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037534804",
+      "pop_in_district": 3718,
+      "pop_tract": 3718,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037534900",
+      "pop_in_district": 6241,
+      "pop_tract": 6241,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037535001",
+      "pop_in_district": 4152,
+      "pop_tract": 4152,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037535002",
+      "pop_in_district": 3318,
+      "pop_tract": 3318,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037535101",
+      "pop_in_district": 7329,
+      "pop_tract": 7329,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037535102",
+      "pop_in_district": 4557,
+      "pop_tract": 4557,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037535200",
+      "pop_in_district": 6031,
+      "pop_tract": 6031,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037535300",
+      "pop_in_district": 6511,
+      "pop_tract": 6511,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037535400",
+      "pop_in_district": 3595,
+      "pop_tract": 3595,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037535501",
+      "pop_in_district": 3711,
+      "pop_tract": 3711,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037535502",
+      "pop_in_district": 4740,
+      "pop_tract": 4740,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037535503",
+      "pop_in_district": 2370,
+      "pop_tract": 2370,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037535603",
+      "pop_in_district": 4111,
+      "pop_tract": 4111,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037535604",
+      "pop_in_district": 4213,
+      "pop_tract": 4213,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037535605",
+      "pop_in_district": 4042,
+      "pop_tract": 4042,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037535606",
+      "pop_in_district": 1833,
+      "pop_tract": 1833,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037535607",
+      "pop_in_district": 4521,
+      "pop_tract": 4521,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037535701",
+      "pop_in_district": 6001,
+      "pop_tract": 6001,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037535702",
+      "pop_in_district": 5429,
+      "pop_tract": 5429,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037535802",
+      "pop_in_district": 6481,
+      "pop_tract": 6481,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037535803",
+      "pop_in_district": 4242,
+      "pop_tract": 4242,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037535804",
+      "pop_in_district": 5209,
+      "pop_tract": 5209,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037535901",
+      "pop_in_district": 5682,
+      "pop_tract": 5682,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037535902",
+      "pop_in_district": 6236,
+      "pop_tract": 6236,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037536000",
+      "pop_in_district": 3471,
+      "pop_tract": 3471,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037536102",
+      "pop_in_district": 3343,
+      "pop_tract": 3343,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037536103",
+      "pop_in_district": 5438,
+      "pop_tract": 5438,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037536104",
+      "pop_in_district": 4127,
+      "pop_tract": 4127,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037536201",
+      "pop_in_district": 3583,
+      "pop_tract": 3583,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037536202",
+      "pop_in_district": 3949,
+      "pop_tract": 3949,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037540000",
+      "pop_in_district": 6678,
+      "pop_tract": 6678,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037540101",
+      "pop_in_district": 6281,
+      "pop_tract": 6281,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037540102",
+      "pop_in_district": 6833,
+      "pop_tract": 6833,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037540201",
+      "pop_in_district": 2113,
+      "pop_tract": 2113,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037540202",
+      "pop_in_district": 6497,
+      "pop_tract": 6497,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037540203",
+      "pop_in_district": 5135,
+      "pop_tract": 5135,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037540300",
+      "pop_in_district": 4997,
+      "pop_tract": 4997,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037540501",
+      "pop_in_district": 6411,
+      "pop_tract": 6411,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037540502",
+      "pop_in_district": 6131,
+      "pop_tract": 6131,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037541003",
+      "pop_in_district": 3307,
+      "pop_tract": 4863,
+      "weight": 0.6800329015011309
+     },
+     {
+      "tract": "06037541700",
+      "pop_in_district": 6278,
+      "pop_tract": 6278,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037541801",
+      "pop_in_district": 5079,
+      "pop_tract": 5529,
+      "weight": 0.9186109603906674
+     },
+     {
+      "tract": "06037541802",
+      "pop_in_district": 4832,
+      "pop_tract": 5293,
+      "weight": 0.9129038352541092
+     },
+     {
+      "tract": "06037543100",
+      "pop_in_district": 597,
+      "pop_tract": 6988,
+      "weight": 0.08543216943331425
+     },
+     {
+      "tract": "06037543304",
+      "pop_in_district": 6339,
+      "pop_tract": 6339,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037543305",
+      "pop_in_district": 3240,
+      "pop_tract": 3251,
+      "weight": 0.9966164257151645
+     },
+     {
+      "tract": "06037543306",
+      "pop_in_district": 6778,
+      "pop_tract": 6778,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037543321",
+      "pop_in_district": 6034,
+      "pop_tract": 6034,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037543322",
+      "pop_in_district": 6844,
+      "pop_tract": 6844,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037543400",
+      "pop_in_district": 4132,
+      "pop_tract": 4132,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037543501",
+      "pop_in_district": 7053,
+      "pop_tract": 7053,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037543502",
+      "pop_in_district": 4424,
+      "pop_tract": 4424,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037543503",
+      "pop_in_district": 6080,
+      "pop_tract": 6080,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037543601",
+      "pop_in_district": 3887,
+      "pop_tract": 3887,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037543603",
+      "pop_in_district": 3903,
+      "pop_tract": 3903,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037543605",
+      "pop_in_district": 4609,
+      "pop_tract": 4609,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037543606",
+      "pop_in_district": 3854,
+      "pop_tract": 3854,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037543607",
+      "pop_in_district": 5502,
+      "pop_tract": 5502,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037543701",
+      "pop_in_district": 2845,
+      "pop_tract": 2845,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037543703",
+      "pop_in_district": 3429,
+      "pop_tract": 3429,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037543704",
+      "pop_in_district": 3284,
+      "pop_tract": 3284,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037543705",
+      "pop_in_district": 3624,
+      "pop_tract": 3624,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037543801",
+      "pop_in_district": 5093,
+      "pop_tract": 5093,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037543803",
+      "pop_in_district": 5173,
+      "pop_tract": 5173,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037543804",
+      "pop_in_district": 4835,
+      "pop_tract": 4835,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037543903",
+      "pop_in_district": 4090,
+      "pop_tract": 4090,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037543905",
+      "pop_in_district": 4344,
+      "pop_tract": 4344,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037544001",
+      "pop_in_district": 4689,
+      "pop_tract": 4689,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037544002",
+      "pop_in_district": 3172,
+      "pop_tract": 3172,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037553502",
+      "pop_in_district": 4147,
+      "pop_tract": 4147,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037553503",
+      "pop_in_district": 2730,
+      "pop_tract": 2730,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037553504",
+      "pop_in_district": 5320,
+      "pop_tract": 5320,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037553601",
+      "pop_in_district": 4839,
+      "pop_tract": 4839,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037553602",
+      "pop_in_district": 4922,
+      "pop_tract": 4922,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037553701",
+      "pop_in_district": 3861,
+      "pop_tract": 3861,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037553702",
+      "pop_in_district": 4606,
+      "pop_tract": 4606,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037553801",
+      "pop_in_district": 4021,
+      "pop_tract": 4021,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037553802",
+      "pop_in_district": 6601,
+      "pop_tract": 6601,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037553901",
+      "pop_in_district": 6709,
+      "pop_tract": 6709,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037553902",
+      "pop_in_district": 5977,
+      "pop_tract": 5977,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037570100",
+      "pop_in_district": 1791,
+      "pop_tract": 2950,
+      "weight": 0.6071186440677966
+     },
+     {
+      "tract": "06037570202",
+      "pop_in_district": 6122,
+      "pop_tract": 6122,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037570203",
+      "pop_in_district": 4051,
+      "pop_tract": 4051,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037570204",
+      "pop_in_district": 4003,
+      "pop_tract": 4133,
+      "weight": 0.9685458504718123
+     },
+     {
+      "tract": "06037570303",
+      "pop_in_district": 3925,
+      "pop_tract": 3925,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037570304",
+      "pop_in_district": 5007,
+      "pop_tract": 5007,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037570305",
+      "pop_in_district": 5291,
+      "pop_tract": 5291,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037570306",
+      "pop_in_district": 3010,
+      "pop_tract": 3010,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037570402",
+      "pop_in_district": 3391,
+      "pop_tract": 3391,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037570403",
+      "pop_in_district": 4556,
+      "pop_tract": 4556,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037570404",
+      "pop_in_district": 3509,
+      "pop_tract": 3509,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037570502",
+      "pop_in_district": 6558,
+      "pop_tract": 6558,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037570503",
+      "pop_in_district": 3789,
+      "pop_tract": 3789,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037570504",
+      "pop_in_district": 3903,
+      "pop_tract": 3903,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037570601",
+      "pop_in_district": 5235,
+      "pop_tract": 5235,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037570602",
+      "pop_in_district": 6557,
+      "pop_tract": 6557,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037570603",
+      "pop_in_district": 4715,
+      "pop_tract": 5391,
+      "weight": 0.874605824522352
+     },
+     {
+      "tract": "06037571502",
+      "pop_in_district": 602,
+      "pop_tract": 5067,
+      "weight": 0.11880797315966055
+     },
+     {
+      "tract": "06037571505",
+      "pop_in_district": 2563,
+      "pop_tract": 2969,
+      "weight": 0.8632536207477265
+     },
+     {
+      "tract": "06037571600",
+      "pop_in_district": 2180,
+      "pop_tract": 2180,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037571701",
+      "pop_in_district": 6495,
+      "pop_tract": 6495,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037571703",
+      "pop_in_district": 3505,
+      "pop_tract": 3505,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037571704",
+      "pop_in_district": 3947,
+      "pop_tract": 3947,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037572301",
+      "pop_in_district": 3840,
+      "pop_tract": 3840,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037572500",
+      "pop_in_district": 4244,
+      "pop_tract": 4244,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037572600",
+      "pop_in_district": 5273,
+      "pop_tract": 5276,
+      "weight": 0.9994313874147082
+     },
+     {
+      "tract": "06037572700",
+      "pop_in_district": 5405,
+      "pop_tract": 5405,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037577700",
+      "pop_in_district": 4671,
+      "pop_tract": 4672,
+      "weight": 0.9997859589041096
+     },
+     {
+      "tract": "06037578000",
+      "pop_in_district": 3,
+      "pop_tract": 7189,
+      "weight": 0.0004173042147725692
+     },
+     {
+      "tract": "06037609900",
+      "pop_in_district": 1804,
+      "pop_tract": 1804,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037980002",
+      "pop_in_district": 9,
+      "pop_tract": 9,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037980011",
+      "pop_in_district": 0,
+      "pop_tract": 140,
+      "weight": 0.0
+     },
+     {
+      "tract": "06037980014",
+      "pop_in_district": 150,
+      "pop_tract": 150,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037980015",
+      "pop_in_district": 1267,
+      "pop_tract": 1267,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037980016",
+      "pop_in_district": 222,
+      "pop_tract": 222,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037980025",
+      "pop_in_district": 518,
+      "pop_tract": 518,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037980031",
+      "pop_in_district": 1748,
+      "pop_tract": 1748,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037980033",
+      "pop_in_district": 0,
+      "pop_tract": 89,
+      "weight": 0.0
+     },
+     {
+      "tract": "06037980037",
+      "pop_in_district": 0,
+      "pop_tract": 0,
+      "weight": 0.0
+     },
+     {
+      "tract": "06037990300",
+      "pop_in_district": 0,
+      "pop_tract": 0,
+      "weight": 0.0
+     }
+    ],
+    "state_blocks": 519723,
+    "pop_2020_census_tabulation": null
+   },
+   "cd119": {
+    "id": "cd119",
+    "label": "2021 Citizens Redistricting Commission lines (118th and 119th Congresses)",
+    "short": "2021 lines",
+    "congress": 119,
+    "effective": "2023-01-03",
+    "first_election": 2022,
+    "last_election": 2024,
+    "law": "Drawn by the California Citizens Redistricting Commission, certified Dec. 27, 2021; used for the 2022 and 2024 elections and the 118th and 119th Congresses.",
+    "primary": false,
+    "blocks": 6816,
+    "blocks_missing_population": 0,
+    "pop_2020": 757951,
+    "land_sq_mi": 91.16466521901086,
+    "water_sq_mi": 25.53136623913747,
+    "counties": [
+     "037"
+    ],
+    "places": [
+     {
+      "place": "43000",
+      "name": "Long Beach city",
+      "short": "Long Beach",
+      "type": "city",
+      "pop_in_district": 202169,
+      "pop_place": 466742,
+      "share_of_place": 0.43314936303139634
+     },
+     {
+      "place": "44000",
+      "name": "Los Angeles city",
+      "short": "Los Angeles",
+      "type": "city",
+      "pop_in_district": 170039,
+      "pop_place": 3898747,
+      "share_of_place": 0.04361375590670541
+     },
+     {
+      "place": "11530",
+      "name": "Carson city",
+      "short": "Carson",
+      "type": "city",
+      "pop_in_district": 95558,
+      "pop_place": 95558,
+      "share_of_place": 1.0
+     },
+     {
+      "place": "73080",
+      "name": "South Gate city",
+      "short": "South Gate",
+      "type": "city",
+      "pop_in_district": 92726,
+      "pop_place": 92726,
+      "share_of_place": 1.0
+     },
+     {
+      "place": "44574",
+      "name": "Lynwood city",
+      "short": "Lynwood",
+      "type": "city",
+      "pop_in_district": 67265,
+      "pop_place": 67265,
+      "share_of_place": 1.0
+     },
+     {
+      "place": "55618",
+      "name": "Paramount city",
+      "short": "Paramount",
+      "type": "city",
+      "pop_in_district": 53733,
+      "pop_place": 53733,
+      "share_of_place": 1.0
+     },
+     {
+      "place": "39892",
+      "name": "Lakewood city",
+      "short": "Lakewood",
+      "type": "city",
+      "pop_in_district": 33259,
+      "pop_place": 82496,
+      "share_of_place": 0.40315894103956557
+     },
+     {
+      "place": "84144",
+      "name": "West Carson CDP",
+      "short": "West Carson",
+      "type": "CDP",
+      "pop_in_district": 22870,
+      "pop_place": 22870,
+      "share_of_place": 1.0
+     },
+     {
+      "place": "04982",
+      "name": "Bellflower city",
+      "short": "Bellflower",
+      "type": "city",
+      "pop_in_district": 15277,
+      "pop_place": 79190,
+      "share_of_place": 0.19291577219345876
+     },
+     {
+      "place": null,
+      "name": "Unincorporated area outside any census place",
+      "short": "Other unincorporated",
+      "type": "unincorporated",
+      "pop_in_district": 5055,
+      "pop_place": null,
+      "share_of_place": null
+     }
+    ],
+    "tracts": [
+     {
+      "tract": "06037291300",
+      "pop_in_district": 2562,
+      "pop_tract": 2839,
+      "weight": 0.9024304332511448
+     },
+     {
+      "tract": "06037292001",
+      "pop_in_district": 4791,
+      "pop_tract": 4791,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037292002",
+      "pop_in_district": 1688,
+      "pop_tract": 1688,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037293203",
+      "pop_in_district": 3337,
+      "pop_tract": 3337,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037293204",
+      "pop_in_district": 3119,
+      "pop_tract": 3119,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037293205",
+      "pop_in_district": 3873,
+      "pop_tract": 3873,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037293206",
+      "pop_in_district": 3330,
+      "pop_tract": 3330,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037293304",
+      "pop_in_district": 1603,
+      "pop_tract": 4150,
+      "weight": 0.38626506024096385
+     },
+     {
+      "tract": "06037293306",
+      "pop_in_district": 2478,
+      "pop_tract": 2571,
+      "weight": 0.9638273045507585
+     },
+     {
+      "tract": "06037293307",
+      "pop_in_district": 2460,
+      "pop_tract": 2460,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037294110",
+      "pop_in_district": 3876,
+      "pop_tract": 3876,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037294120",
+      "pop_in_district": 2324,
+      "pop_tract": 2324,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037294200",
+      "pop_in_district": 4658,
+      "pop_tract": 4658,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037294301",
+      "pop_in_district": 2501,
+      "pop_tract": 2501,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037294302",
+      "pop_in_district": 4513,
+      "pop_tract": 4513,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037294410",
+      "pop_in_district": 5310,
+      "pop_tract": 5310,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037294421",
+      "pop_in_district": 2443,
+      "pop_tract": 2794,
+      "weight": 0.8743736578382247
+     },
+     {
+      "tract": "06037294510",
+      "pop_in_district": 4057,
+      "pop_tract": 4057,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037294520",
+      "pop_in_district": 3459,
+      "pop_tract": 3459,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037294610",
+      "pop_in_district": 4025,
+      "pop_tract": 4025,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037294620",
+      "pop_in_district": 4034,
+      "pop_tract": 4034,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037294701",
+      "pop_in_district": 3110,
+      "pop_tract": 3110,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037294810",
+      "pop_in_district": 3729,
+      "pop_tract": 3729,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037294820",
+      "pop_in_district": 3346,
+      "pop_tract": 3346,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037294830",
+      "pop_in_district": 3838,
+      "pop_tract": 3838,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037294900",
+      "pop_in_district": 3871,
+      "pop_tract": 3871,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037295103",
+      "pop_in_district": 4978,
+      "pop_tract": 4978,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037296210",
+      "pop_in_district": 2976,
+      "pop_tract": 2976,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037296220",
+      "pop_in_district": 4449,
+      "pop_tract": 4449,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037296300",
+      "pop_in_district": 4874,
+      "pop_tract": 4874,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037296401",
+      "pop_in_district": 3176,
+      "pop_tract": 3176,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037296402",
+      "pop_in_district": 2971,
+      "pop_tract": 2971,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037296500",
+      "pop_in_district": 3796,
+      "pop_tract": 3796,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037296600",
+      "pop_in_district": 5305,
+      "pop_tract": 5305,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037296901",
+      "pop_in_district": 4148,
+      "pop_tract": 4148,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037296902",
+      "pop_in_district": 3987,
+      "pop_tract": 3987,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037297001",
+      "pop_in_district": 1662,
+      "pop_tract": 1662,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037297002",
+      "pop_in_district": 3657,
+      "pop_tract": 3657,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037297110",
+      "pop_in_district": 4298,
+      "pop_tract": 4298,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037297120",
+      "pop_in_district": 3425,
+      "pop_tract": 3425,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037297201",
+      "pop_in_district": 3879,
+      "pop_tract": 3879,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037297202",
+      "pop_in_district": 3546,
+      "pop_tract": 3546,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037297300",
+      "pop_in_district": 2306,
+      "pop_tract": 2306,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037297400",
+      "pop_in_district": 3760,
+      "pop_tract": 3760,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037297501",
+      "pop_in_district": 2483,
+      "pop_tract": 2483,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037297502",
+      "pop_in_district": 2508,
+      "pop_tract": 2508,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037297601",
+      "pop_in_district": 2781,
+      "pop_tract": 2781,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037297602",
+      "pop_in_district": 3579,
+      "pop_tract": 3579,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037535501",
+      "pop_in_district": 3711,
+      "pop_tract": 3711,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037535502",
+      "pop_in_district": 4740,
+      "pop_tract": 4740,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037535503",
+      "pop_in_district": 2370,
+      "pop_tract": 2370,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037535603",
+      "pop_in_district": 4111,
+      "pop_tract": 4111,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037535604",
+      "pop_in_district": 4213,
+      "pop_tract": 4213,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037535605",
+      "pop_in_district": 4042,
+      "pop_tract": 4042,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037535606",
+      "pop_in_district": 1833,
+      "pop_tract": 1833,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037535607",
+      "pop_in_district": 4521,
+      "pop_tract": 4521,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037535701",
+      "pop_in_district": 6001,
+      "pop_tract": 6001,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037535702",
+      "pop_in_district": 5429,
+      "pop_tract": 5429,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037535802",
+      "pop_in_district": 6481,
+      "pop_tract": 6481,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037535803",
+      "pop_in_district": 4242,
+      "pop_tract": 4242,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037535804",
+      "pop_in_district": 5209,
+      "pop_tract": 5209,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037535901",
+      "pop_in_district": 5682,
+      "pop_tract": 5682,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037535902",
+      "pop_in_district": 6236,
+      "pop_tract": 6236,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037536000",
+      "pop_in_district": 3471,
+      "pop_tract": 3471,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037536102",
+      "pop_in_district": 3343,
+      "pop_tract": 3343,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037536103",
+      "pop_in_district": 5438,
+      "pop_tract": 5438,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037536104",
+      "pop_in_district": 4127,
+      "pop_tract": 4127,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037536201",
+      "pop_in_district": 3583,
+      "pop_tract": 3583,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037536202",
+      "pop_in_district": 3949,
+      "pop_tract": 3949,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037540000",
+      "pop_in_district": 6678,
+      "pop_tract": 6678,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037540101",
+      "pop_in_district": 6281,
+      "pop_tract": 6281,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037540102",
+      "pop_in_district": 6833,
+      "pop_tract": 6833,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037540201",
+      "pop_in_district": 2113,
+      "pop_tract": 2113,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037540202",
+      "pop_in_district": 6497,
+      "pop_tract": 6497,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037540203",
+      "pop_in_district": 5135,
+      "pop_tract": 5135,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037540300",
+      "pop_in_district": 4997,
+      "pop_tract": 4997,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037540501",
+      "pop_in_district": 6411,
+      "pop_tract": 6411,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037540502",
+      "pop_in_district": 6131,
+      "pop_tract": 6131,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037541003",
+      "pop_in_district": 3307,
+      "pop_tract": 4863,
+      "weight": 0.6800329015011309
+     },
+     {
+      "tract": "06037541700",
+      "pop_in_district": 6278,
+      "pop_tract": 6278,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037541801",
+      "pop_in_district": 5079,
+      "pop_tract": 5529,
+      "weight": 0.9186109603906674
+     },
+     {
+      "tract": "06037541802",
+      "pop_in_district": 4832,
+      "pop_tract": 5293,
+      "weight": 0.9129038352541092
+     },
+     {
+      "tract": "06037543100",
+      "pop_in_district": 597,
+      "pop_tract": 6988,
+      "weight": 0.08543216943331425
+     },
+     {
+      "tract": "06037543304",
+      "pop_in_district": 6339,
+      "pop_tract": 6339,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037543305",
+      "pop_in_district": 3240,
+      "pop_tract": 3251,
+      "weight": 0.9966164257151645
+     },
+     {
+      "tract": "06037543306",
+      "pop_in_district": 6778,
+      "pop_tract": 6778,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037543321",
+      "pop_in_district": 6034,
+      "pop_tract": 6034,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037543322",
+      "pop_in_district": 6844,
+      "pop_tract": 6844,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037543400",
+      "pop_in_district": 4132,
+      "pop_tract": 4132,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037543501",
+      "pop_in_district": 7053,
+      "pop_tract": 7053,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037543502",
+      "pop_in_district": 4424,
+      "pop_tract": 4424,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037543503",
+      "pop_in_district": 6080,
+      "pop_tract": 6080,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037543601",
+      "pop_in_district": 3887,
+      "pop_tract": 3887,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037543603",
+      "pop_in_district": 3903,
+      "pop_tract": 3903,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037543605",
+      "pop_in_district": 4609,
+      "pop_tract": 4609,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037543606",
+      "pop_in_district": 3854,
+      "pop_tract": 3854,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037543607",
+      "pop_in_district": 5502,
+      "pop_tract": 5502,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037543701",
+      "pop_in_district": 2845,
+      "pop_tract": 2845,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037543703",
+      "pop_in_district": 3429,
+      "pop_tract": 3429,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037543704",
+      "pop_in_district": 3284,
+      "pop_tract": 3284,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037543705",
+      "pop_in_district": 3624,
+      "pop_tract": 3624,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037543801",
+      "pop_in_district": 5093,
+      "pop_tract": 5093,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037543803",
+      "pop_in_district": 5173,
+      "pop_tract": 5173,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037543804",
+      "pop_in_district": 4835,
+      "pop_tract": 4835,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037543903",
+      "pop_in_district": 4090,
+      "pop_tract": 4090,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037543905",
+      "pop_in_district": 4344,
+      "pop_tract": 4344,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037544001",
+      "pop_in_district": 4689,
+      "pop_tract": 4689,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037544002",
+      "pop_in_district": 3172,
+      "pop_tract": 3172,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037553502",
+      "pop_in_district": 4147,
+      "pop_tract": 4147,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037553503",
+      "pop_in_district": 2730,
+      "pop_tract": 2730,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037553504",
+      "pop_in_district": 5320,
+      "pop_tract": 5320,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037553601",
+      "pop_in_district": 4839,
+      "pop_tract": 4839,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037553602",
+      "pop_in_district": 4922,
+      "pop_tract": 4922,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037553701",
+      "pop_in_district": 3861,
+      "pop_tract": 3861,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037553702",
+      "pop_in_district": 4606,
+      "pop_tract": 4606,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037553801",
+      "pop_in_district": 4021,
+      "pop_tract": 4021,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037553802",
+      "pop_in_district": 6601,
+      "pop_tract": 6601,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037553901",
+      "pop_in_district": 6709,
+      "pop_tract": 6709,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037553902",
+      "pop_in_district": 5977,
+      "pop_tract": 5977,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037554201",
+      "pop_in_district": 2104,
+      "pop_tract": 4096,
+      "weight": 0.513671875
+     },
+     {
+      "tract": "06037554301",
+      "pop_in_district": 3499,
+      "pop_tract": 3499,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037554302",
+      "pop_in_district": 4072,
+      "pop_tract": 4072,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037554403",
+      "pop_in_district": 5602,
+      "pop_tract": 5602,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037554404",
+      "pop_in_district": 0,
+      "pop_tract": 4509,
+      "weight": 0.0
+     },
+     {
+      "tract": "06037570002",
+      "pop_in_district": 2883,
+      "pop_tract": 2883,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037570003",
+      "pop_in_district": 4617,
+      "pop_tract": 4617,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037570100",
+      "pop_in_district": 2950,
+      "pop_tract": 2950,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037570202",
+      "pop_in_district": 6122,
+      "pop_tract": 6122,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037570203",
+      "pop_in_district": 4051,
+      "pop_tract": 4051,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037570204",
+      "pop_in_district": 4133,
+      "pop_tract": 4133,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037570303",
+      "pop_in_district": 3925,
+      "pop_tract": 3925,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037570304",
+      "pop_in_district": 5007,
+      "pop_tract": 5007,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037570305",
+      "pop_in_district": 5291,
+      "pop_tract": 5291,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037570306",
+      "pop_in_district": 3010,
+      "pop_tract": 3010,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037570402",
+      "pop_in_district": 3391,
+      "pop_tract": 3391,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037570403",
+      "pop_in_district": 4556,
+      "pop_tract": 4556,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037570404",
+      "pop_in_district": 3509,
+      "pop_tract": 3509,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037570502",
+      "pop_in_district": 6558,
+      "pop_tract": 6558,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037570503",
+      "pop_in_district": 3789,
+      "pop_tract": 3789,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037570504",
+      "pop_in_district": 3903,
+      "pop_tract": 3903,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037570601",
+      "pop_in_district": 5235,
+      "pop_tract": 5235,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037570602",
+      "pop_in_district": 6557,
+      "pop_tract": 6557,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037570603",
+      "pop_in_district": 5391,
+      "pop_tract": 5391,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037570701",
+      "pop_in_district": 6993,
+      "pop_tract": 6993,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037570703",
+      "pop_in_district": 3473,
+      "pop_tract": 3473,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037570800",
+      "pop_in_district": 5661,
+      "pop_tract": 5661,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037571102",
+      "pop_in_district": 44,
+      "pop_tract": 4006,
+      "weight": 0.010983524712930605
+     },
+     {
+      "tract": "06037571201",
+      "pop_in_district": 3775,
+      "pop_tract": 3775,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037571202",
+      "pop_in_district": 4459,
+      "pop_tract": 4459,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037571300",
+      "pop_in_district": 4638,
+      "pop_tract": 4638,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037571400",
+      "pop_in_district": 4950,
+      "pop_tract": 4950,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037571502",
+      "pop_in_district": 5067,
+      "pop_tract": 5067,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037571504",
+      "pop_in_district": 4935,
+      "pop_tract": 4935,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037571505",
+      "pop_in_district": 2969,
+      "pop_tract": 2969,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037571600",
+      "pop_in_district": 2180,
+      "pop_tract": 2180,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037571701",
+      "pop_in_district": 6495,
+      "pop_tract": 6495,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037571703",
+      "pop_in_district": 3505,
+      "pop_tract": 3505,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037571704",
+      "pop_in_district": 3947,
+      "pop_tract": 3947,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037571800",
+      "pop_in_district": 3229,
+      "pop_tract": 3229,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037571900",
+      "pop_in_district": 5769,
+      "pop_tract": 5769,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037572001",
+      "pop_in_district": 5434,
+      "pop_tract": 5434,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037572201",
+      "pop_in_district": 6141,
+      "pop_tract": 6141,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037572202",
+      "pop_in_district": 3848,
+      "pop_tract": 3848,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037572301",
+      "pop_in_district": 3840,
+      "pop_tract": 3840,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037572500",
+      "pop_in_district": 4244,
+      "pop_tract": 4244,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037572600",
+      "pop_in_district": 5276,
+      "pop_tract": 5276,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037572700",
+      "pop_in_district": 4350,
+      "pop_tract": 5405,
+      "weight": 0.8048103607770583
+     },
+     {
+      "tract": "06037573002",
+      "pop_in_district": 3484,
+      "pop_tract": 3484,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037573003",
+      "pop_in_district": 1790,
+      "pop_tract": 1790,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037573004",
+      "pop_in_district": 4670,
+      "pop_tract": 4670,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037573101",
+      "pop_in_district": 4220,
+      "pop_tract": 4220,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037573102",
+      "pop_in_district": 3245,
+      "pop_tract": 3245,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037573601",
+      "pop_in_district": 6421,
+      "pop_tract": 6441,
+      "weight": 0.9968948920975004
+     },
+     {
+      "tract": "06037573700",
+      "pop_in_district": 810,
+      "pop_tract": 4790,
+      "weight": 0.16910229645093947
+     },
+     {
+      "tract": "06037574000",
+      "pop_in_district": 150,
+      "pop_tract": 5322,
+      "weight": 0.02818489289740699
+     },
+     {
+      "tract": "06037574100",
+      "pop_in_district": 5251,
+      "pop_tract": 5251,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037575401",
+      "pop_in_district": 12,
+      "pop_tract": 4530,
+      "weight": 0.0026490066225165563
+     },
+     {
+      "tract": "06037577700",
+      "pop_in_district": 4672,
+      "pop_tract": 4672,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037577900",
+      "pop_in_district": 5481,
+      "pop_tract": 5481,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037578000",
+      "pop_in_district": 5081,
+      "pop_tract": 7189,
+      "weight": 0.706774238419808
+     },
+     {
+      "tract": "06037609900",
+      "pop_in_district": 1804,
+      "pop_tract": 1804,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037980002",
+      "pop_in_district": 9,
+      "pop_tract": 9,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037980011",
+      "pop_in_district": 21,
+      "pop_tract": 140,
+      "weight": 0.15
+     },
+     {
+      "tract": "06037980014",
+      "pop_in_district": 150,
+      "pop_tract": 150,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037980015",
+      "pop_in_district": 1267,
+      "pop_tract": 1267,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037980025",
+      "pop_in_district": 518,
+      "pop_tract": 518,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037980031",
+      "pop_in_district": 1748,
+      "pop_tract": 1748,
+      "weight": 1.0
+     },
+     {
+      "tract": "06037980037",
+      "pop_in_district": 0,
+      "pop_tract": 0,
+      "weight": 0.0
+     },
+     {
+      "tract": "06037990300",
+      "pop_in_district": 0,
+      "pop_tract": 0,
+      "weight": 0.0
+     }
+    ],
+    "state_blocks": 519723,
+    "pop_2020_census_tabulation": 757951,
+    "land_sq_mi_gazetteer": 91.137
+   }
+  },
+  "overlap": {
+   "a": "cd120",
+   "b": "cd119",
+   "pop_both": 624349,
+   "pop_only_a": 133360,
+   "pop_only_b": 133602,
+   "blocks_both": 5492,
+   "places_only_a": [
+    {
+     "place": "24477",
+     "name": "Florence-Graham",
+     "pop": 61983
+    },
+    {
+     "place": "36056",
+     "name": "Huntington Park",
+     "pop": 54883
+    },
+    {
+     "place": "83402",
+     "name": "Walnut Park",
+     "pop": 15214
+    },
+    {
+     "place": "43000",
+     "name": "Long Beach",
+     "pop": 1058
+    },
+    {
+     "place": "82422",
+     "name": "Vernon",
+     "pop": 222
+    }
+   ],
+   "places_only_b": [
+    {
+     "place": "43000",
+     "name": "Long Beach",
+     "pop": 85066
+    },
+    {
+     "place": "39892",
+     "name": "Lakewood",
+     "pop": 33259
+    },
+    {
+     "place": "04982",
+     "name": "Bellflower",
+     "pop": 15277
+    }
+   ]
+  },
+  "state_pop_2020": 39538223,
+  "county_pop_2020": {
+   "037": 10014009
+  },
+  "county_names": {
+   "037": "Los Angeles County"
+  },
+  "as_of": "2026-11-26"
+ }
+}

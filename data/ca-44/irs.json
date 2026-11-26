@@ -1,0 +1,96 @@
+{
+ "generated_at": "2026-11-26T22:29:46+00:00",
+ "sources": [
+  {
+   "id": "irs-soi-cd",
+   "publisher": "Internal Revenue Service, Statistics of Income Division",
+   "title": "Individual income tax returns: Congressional district data, tax year 2023",
+   "url": "https://www.irs.gov/statistics/soi-tax-stats-data-by-congressional-district-2023",
+   "year": "2026",
+   "kind": "Data set",
+   "query": "https://www.irs.gov/pub/irs-soi/23incd.csv",
+   "vintage": "Tax year 2023",
+   "accessed": "2026-11-26",
+   "notes": "Totals from individual income tax returns (Form 1040) filed during the following calendar year. The IRS assigns returns to districts by the ZIP code on the return. Amounts are published in thousands of dollars. This is not all federal tax: employer payroll taxes, corporate, excise, and estate taxes are not published by congressional district.",
+   "apa": "Internal Revenue Service, Statistics of Income Division. (2026). Individual income tax returns: Congressional district data, tax year 2023 [Data set]. Retrieved November 26, 2026, from https://www.irs.gov/statistics/soi-tax-stats-data-by-congressional-district-2023"
+  }
+ ],
+ "district": "ca-44",
+ "source_module": "irs",
+ "data": {
+  "tax_year": 2023,
+  "filed_in": 2024,
+  "congress_named_in_documentation": [
+   118
+  ],
+  "variables": {
+   "returns": {
+    "irs_variable": "N1",
+    "description": "Number of returns [4] Num"
+   },
+   "agi": {
+    "irs_variable": "A00100",
+    "description": "Adjust gross income (AGI) [9] 1040:11 Num"
+   },
+   "total_tax_liability": {
+    "irs_variable": "A10300",
+    "description": "Total tax liability amount [16] 1040:24 Num"
+   },
+   "income_tax_after_credits": {
+    "irs_variable": "A06500",
+    "description": "Income tax after credits amount 1040:22 Num"
+   },
+   "refunds": {
+    "irs_variable": "A11902",
+    "description": "Overpayments refunded amount [18] 1040:35a Num"
+   },
+   "tax_due_at_filing": {
+    "irs_variable": "A11901",
+    "description": "Tax due at time of filing amount [17] 1040:37 Num"
+   }
+  },
+  "not_published": [],
+  "district": {
+   "returns": 344970.0,
+   "agi": 23156174000.0,
+   "total_tax_liability": 2457968000.0,
+   "income_tax_after_credits": 2308901000.0,
+   "refunds": 689618000.0,
+   "tax_due_at_filing": 327963000.0,
+   "agi_per_return": 67125.18189987534,
+   "tax_per_return": 7125.164507058585,
+   "tax_share_of_agi_pct": 10.614741450811348
+  },
+  "state": {
+   "returns": 18481730.0,
+   "agi": 2050837814000.0,
+   "total_tax_liability": 337701221000.0,
+   "income_tax_after_credits": 317075608000.0,
+   "refunds": 39166530000.0,
+   "tax_due_at_filing": 41291164000.0,
+   "agi_per_return": 110965.68416484821,
+   "tax_per_return": 18272.165051648302,
+   "tax_share_of_agi_pct": 16.466500602567884
+  },
+  "us": {
+   "returns": 158994790.0,
+   "agi": 15129325039000.0,
+   "total_tax_liability": 2246087774000.0,
+   "income_tax_after_credits": 2102643671000.0,
+   "refunds": 345437636000.0,
+   "tax_due_at_filing": 260574679000.0,
+   "agi_per_return": 95156.10567490922,
+   "tax_per_return": 14126.801098325297,
+   "tax_share_of_agi_pct": 14.845921865054063
+  },
+  "us_scope": "Sum of the 50 states and the District of Columbia",
+  "excludes": [
+   "Employer share of payroll taxes",
+   "Corporate income tax",
+   "Excise taxes",
+   "Estate and gift taxes",
+   "Customs duties"
+  ],
+  "as_of": "2026-11-26"
+ }
+}

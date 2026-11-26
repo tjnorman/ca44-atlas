@@ -1,0 +1,255 @@
+{
+ "generated_at": "2026-11-26T22:29:44+00:00",
+ "sources": [
+  {
+   "id": "usaspending",
+   "publisher": "U.S. Department of the Treasury, Bureau of the Fiscal Service",
+   "title": "USAspending.gov award obligations by place of performance",
+   "url": "https://www.usaspending.gov/search",
+   "year": "2026",
+   "kind": "Data set",
+   "query": "https://api.usaspending.gov/api/v2/search/spending_over_time/ (place of performance CA-44, current district lines)",
+   "vintage": null,
+   "accessed": "2026-11-26",
+   "notes": "Obligations are commitments to spend, reported by agencies and revised over time. Awards are placed by where the work happens. Some payments to individuals are reported only at county or state level and are not included in district totals.",
+   "apa": "U.S. Department of the Treasury, Bureau of the Fiscal Service. (2026). USAspending.gov award obligations by place of performance [Data set]. Retrieved November 26, 2026, from https://www.usaspending.gov/search"
+  }
+ ],
+ "district": "ca-44",
+ "source_module": "usaspending",
+ "data": {
+  "last_complete_fy": 2026,
+  "award_types": [
+   {
+    "id": "contracts",
+    "label": "Contracts"
+   },
+   {
+    "id": "grants",
+    "label": "Grants"
+   },
+   {
+    "id": "direct",
+    "label": "Direct payments"
+   },
+   {
+    "id": "loans",
+    "label": "Loans"
+   },
+   {
+    "id": "idv",
+    "label": "Indefinite delivery vehicles"
+   },
+   {
+    "id": "other",
+    "label": "Other assistance"
+   }
+  ],
+  "years": [
+   {
+    "fy": 2018,
+    "total": 402323527.18,
+    "contracts": 261723329.18,
+    "grants": 56328296.4,
+    "direct": 84271901.6,
+    "loans": 0.0,
+    "idv": 0,
+    "other": 0
+   },
+   {
+    "fy": 2019,
+    "total": 540403178.4399999,
+    "contracts": 298488217.25,
+    "grants": 90177749.69,
+    "direct": 151715378.42,
+    "loans": -601.92,
+    "idv": 0,
+    "other": 22435.0
+   },
+   {
+    "fy": 2020,
+    "total": 491869684.43,
+    "contracts": 191931815.57,
+    "grants": 102595838.99,
+    "direct": 194905492.21,
+    "loans": 2408128.66,
+    "idv": 0,
+    "other": 28409.0
+   },
+   {
+    "fy": 2021,
+    "total": 666670452.17,
+    "contracts": 198252167.8,
+    "grants": 199462242.79,
+    "direct": 268053888.57,
+    "loans": 902153.36,
+    "idv": 0,
+    "other": -0.35
+   },
+   {
+    "fy": 2022,
+    "total": 411635154.81,
+    "contracts": 139859535.12,
+    "grants": 74209741.29,
+    "direct": 197767051.36,
+    "loans": 123918.19,
+    "idv": 0,
+    "other": -325091.15
+   },
+   {
+    "fy": 2023,
+    "total": 505486612.42,
+    "contracts": 213747693.37,
+    "grants": 75630456.64,
+    "direct": 216535112.32,
+    "loans": -426649.91,
+    "idv": 0,
+    "other": 0
+   },
+   {
+    "fy": 2024,
+    "total": 577419629.96,
+    "contracts": 263447090.91,
+    "grants": 76173509.2,
+    "direct": 237771798.15,
+    "loans": 76261.7,
+    "idv": 0,
+    "other": -49030.0
+   },
+   {
+    "fy": 2025,
+    "total": 906731249.37,
+    "contracts": 202919897.43,
+    "grants": 449487240.3,
+    "direct": 252721688.5,
+    "loans": 1576639.26,
+    "idv": 0,
+    "other": 25783.88
+   },
+   {
+    "fy": 2026,
+    "total": 513021155.34000003,
+    "contracts": 203121395.83,
+    "grants": 50488233.03,
+    "direct": 258352000.96,
+    "loans": 967733.52,
+    "idv": 0,
+    "other": 91792.0
+   }
+  ],
+  "top_agencies": [
+   {
+    "name": "Department of Defense",
+    "code": "DOD",
+    "amount": 179336948.87
+   },
+   {
+    "name": "Department of Housing and Urban Development",
+    "code": "HUD",
+    "amount": 175424292.96
+   },
+   {
+    "name": "Department of Education",
+    "code": "ED",
+    "amount": 81112251.1
+   },
+   {
+    "name": "Department of Health and Human Services",
+    "code": "HHS",
+    "amount": 27903755.74
+   },
+   {
+    "name": "Department of Homeland Security",
+    "code": "DHS",
+    "amount": 16552886.61
+   },
+   {
+    "name": "Federal Communications Commission",
+    "code": "FCC",
+    "amount": 11027100.25
+   },
+   {
+    "name": "National Aeronautics and Space Administration",
+    "code": "NASA",
+    "amount": 3466612.0
+   },
+   {
+    "name": "Department of Veterans Affairs",
+    "code": "VA",
+    "amount": 3267646.34
+   },
+   {
+    "name": "Department of Justice",
+    "code": "DOJ",
+    "amount": 3235642.6
+   },
+   {
+    "name": "Environmental Protection Agency",
+    "code": "EPA",
+    "amount": 3201209.02
+   }
+  ],
+  "top_programs": [
+   {
+    "name": "Section 8 Housing Choice Vouchers",
+    "code": "14.871",
+    "amount": 139215925.0
+   },
+   {
+    "name": "Federal Pell Grant Program",
+    "code": "84.063",
+    "amount": 73917838.27
+   },
+   {
+    "name": "Project-Based Rental Assistance (PBRA)",
+    "code": "14.195",
+    "amount": 30979557.0
+   },
+   {
+    "name": "UNIVERSAL SERVICE FUND - SCHOOLS and LIBRARIES",
+    "code": "32.004",
+    "amount": 11027100.25
+   },
+   {
+    "name": "Allergy and Infectious Diseases Research",
+    "code": "93.855",
+    "amount": 5798698.0
+   },
+   {
+    "name": "Health Center Program",
+    "code": "93.224",
+    "amount": 4736203.0
+   },
+   {
+    "name": "Cardiovascular Diseases Research",
+    "code": "93.837",
+    "amount": 4715594.0
+   },
+   {
+    "name": "Community Development Block Grants/Entitlement Grants",
+    "code": "14.218",
+    "amount": 3524892.0
+   },
+   {
+    "name": "Port Security Grant Program ",
+    "code": "97.056",
+    "amount": 3032182.0
+   },
+   {
+    "name": "Congressionally Mandated Projects",
+    "code": "66.202",
+    "amount": 2959752.0
+   }
+  ],
+  "counties_whole": {
+   "037": {
+    "name": "Los Angeles County",
+    "amount": 78093173602.63,
+    "per_capita": 7798.39,
+    "population": 10014009
+   }
+  },
+  "district_total_by_geography": 513021155.34,
+  "as_of": "2026-11-26"
+ }
+}

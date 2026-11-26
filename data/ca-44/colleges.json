@@ -1,0 +1,185 @@
+{
+ "generated_at": "2026-11-26T23:02:38+00:00",
+ "sources": [
+  {
+   "id": "nces-ipeds-hd",
+   "publisher": "National Center for Education Statistics",
+   "title": "Integrated Postsecondary Education Data System (IPEDS): Institutional Characteristics directory file, HD2024",
+   "url": "https://nces.ed.gov/ipeds/use-the-data",
+   "year": "2025",
+   "kind": "Data set",
+   "query": "https://nces.ed.gov/ipeds/datacenter/data/HD2024.zip",
+   "vintage": "HD2024",
+   "accessed": "2026-11-26",
+   "notes": "The directory of institutions that take part in federal student aid programs. An institution appears once, at its main address; branch campuses that do not report separately are not listed.",
+   "apa": "National Center for Education Statistics. (2025). Integrated Postsecondary Education Data System (IPEDS): Institutional Characteristics directory file, HD2024 [Data set]. Retrieved November 26, 2026, from https://nces.ed.gov/ipeds/use-the-data"
+  }
+ ],
+ "district": "ca-44",
+ "source_module": "colleges",
+ "data": {
+  "directory_year": 2024,
+  "count": 8,
+  "active_count": 8,
+  "institutions": [
+   {
+    "unitid": "483009",
+    "name": "American College of Healthcare and Technology",
+    "city": "Huntington Park",
+    "county_fips": null,
+    "county": "Los Angeles",
+    "lat": 33.98271,
+    "lon": -118.22475,
+    "website": "https://www.ach.edu/",
+    "control": "Private for-profit",
+    "level": "Less than 2 years (below associate)",
+    "size": "Under 1,000",
+    "active": true,
+    "closed": null,
+    "ipeds_cd": "642",
+    "in_plans": [
+     "cd120"
+    ]
+   },
+   {
+    "unitid": "442985",
+    "name": "California Healing Arts College",
+    "city": "Carson",
+    "county_fips": null,
+    "county": "Los Angeles",
+    "lat": 33.84472,
+    "lon": -118.26592,
+    "website": "https://www.chac.edu/",
+    "control": "Private for-profit",
+    "level": "Less than 2 years (below associate)",
+    "size": "Under 1,000",
+    "active": true,
+    "closed": null,
+    "ipeds_cd": "644",
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "unitid": "110547",
+    "name": "California State University-Dominguez Hills",
+    "city": "Carson",
+    "county_fips": null,
+    "county": "Los Angeles",
+    "lat": 33.86477,
+    "lon": -118.25592,
+    "website": "https://www.csudh.edu/",
+    "control": "Public",
+    "level": "Four or more years",
+    "size": "10,000 - 19,999",
+    "active": true,
+    "closed": null,
+    "ipeds_cd": "644",
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "unitid": "450960",
+    "name": "Healthcare Career College",
+    "city": "Paramount",
+    "county_fips": null,
+    "county": "Los Angeles",
+    "lat": 33.88972,
+    "lon": -118.14965,
+    "website": "https://healthcarecareercollege.edu/",
+    "control": "Private for-profit",
+    "level": "At least 2 but less than 4 years",
+    "size": "Under 1,000",
+    "active": true,
+    "closed": null,
+    "ipeds_cd": "644",
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "unitid": "117690",
+    "name": "Los Angeles Harbor College",
+    "city": "Wilmington",
+    "county_fips": null,
+    "county": "Los Angeles",
+    "lat": 33.78583,
+    "lon": -118.28355,
+    "website": "https://www.lahc.edu/",
+    "control": "Public",
+    "level": "At least 2 but less than 4 years",
+    "size": "5,000 - 9,999",
+    "active": true,
+    "closed": null,
+    "ipeds_cd": "644",
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "unitid": "447759",
+    "name": "National Polytechnic College",
+    "city": "Lakewood",
+    "county_fips": null,
+    "county": "Los Angeles",
+    "lat": 33.86053,
+    "lon": -118.14381,
+    "website": "https://npcollege.edu/",
+    "control": "Private for-profit",
+    "level": "At least 2 but less than 4 years",
+    "size": "Under 1,000",
+    "active": true,
+    "closed": null,
+    "ipeds_cd": "644",
+    "in_plans": [
+     "cd119"
+    ]
+   },
+   {
+    "unitid": "124681",
+    "name": "UEI College-Huntington Park",
+    "city": "Huntington Park",
+    "county_fips": null,
+    "county": "Los Angeles",
+    "lat": 33.98606,
+    "lon": -118.22621,
+    "website": "https://www.uei.edu/",
+    "control": "Private for-profit",
+    "level": "Less than 2 years (below associate)",
+    "size": "1,000 - 4,999",
+    "active": true,
+    "closed": null,
+    "ipeds_cd": "642",
+    "in_plans": [
+     "cd120"
+    ]
+   },
+   {
+    "unitid": "491899",
+    "name": "Victory Career College",
+    "city": "Carson",
+    "county_fips": null,
+    "county": "Los Angeles",
+    "lat": 33.84638,
+    "lon": -118.26605,
+    "website": "https://victorycareercollege.edu/",
+    "control": "Private for-profit",
+    "level": "Less than 2 years (below associate)",
+    "size": "Under 1,000",
+    "active": true,
+    "closed": null,
+    "ipeds_cd": "644",
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   }
+  ],
+  "coverage_note": "IPEDS lists each institution once, at its main address. Branch campuses and outreach centers inside the district that report under a parent institution are not listed."
+ }
+}

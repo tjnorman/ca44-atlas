@@ -1,0 +1,114 @@
+{
+ "generated_at": "2026-11-26T23:02:41+00:00",
+ "sources": [
+  {
+   "id": "fcc-queries",
+   "publisher": "Federal Communications Commission, Media Bureau",
+   "title": "AM Query, FM Query, and TV Query: licensed broadcast stations",
+   "url": "https://www.fcc.gov/media/radio/am-query",
+   "year": "2026",
+   "kind": "Data set",
+   "query": "https://transition.fcc.gov/fcc-bin/fmq?state=CA&serv=FM&status=L&list=4 (and amq, tvq)",
+   "vintage": null,
+   "accessed": "2026-11-26",
+   "notes": "Licensing records as of the retrieval date; the FCC updates them continuously. The output has no column names, so each row's layout is checked before use. Coordinates are transmitter sites.",
+   "apa": "Federal Communications Commission, Media Bureau. (2026). AM Query, FM Query, and TV Query: licensed broadcast stations [Data set]. Retrieved November 26, 2026, from https://www.fcc.gov/media/radio/am-query"
+  }
+ ],
+ "district": "ca-44",
+ "source_module": "broadcast",
+ "data": {
+  "listen": {
+   "verified_on": "2026-11-26",
+   "linked": 0,
+   "groups": []
+  },
+  "count": 4,
+  "by_band": {
+   "AM": 2,
+   "FM": 2,
+   "TV": 0
+  },
+  "stations": [
+   {
+    "call": "KFRN",
+    "frequency": "1280 kHz",
+    "channel": null,
+    "city": "Long Beach",
+    "licensee": "Loam Media, Inc.",
+    "facility_id": "21005",
+    "lat": 33.89169,
+    "lon": -118.18564,
+    "band": "AM",
+    "kind": "AM radio",
+    "transmitter_county": null,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "call": "KLTX",
+    "frequency": "1390 kHz",
+    "channel": null,
+    "city": "Long Beach",
+    "licensee": "Hi-Favor Broadcasting, Llc",
+    "facility_id": "58625",
+    "lat": 33.89169,
+    "lon": -118.18508,
+    "band": "AM",
+    "kind": "AM radio",
+    "transmitter_county": null,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "call": "KBUE",
+    "frequency": "105.5 MHz",
+    "channel": null,
+    "city": "Long Beach",
+    "licensee": "Estrella Radio License Of California Llc",
+    "facility_id": "34386",
+    "lat": 33.85808,
+    "lon": -118.22425,
+    "band": "FM",
+    "kind": "FM radio",
+    "transmitter_county": null,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "call": "KCLA-LP",
+    "frequency": "100.7 MHz",
+    "channel": null,
+    "city": "San Pedro",
+    "licensee": "Art In Motion, Inc.",
+    "facility_id": "197367",
+    "lat": 33.73842,
+    "lon": -118.28703,
+    "band": "FM",
+    "kind": "Low-power FM radio",
+    "transmitter_county": null,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   }
+  ],
+  "licensed_to_district_community_transmitter_outside": [],
+  "kinds": {
+   "AM": "AM radio",
+   "FM": "FM radio",
+   "FL": "Low-power FM radio",
+   "DTV": "Full-power television",
+   "DCA": "Class A television",
+   "LPD": "Low-power television or translator"
+  },
+  "rule": "Listed: licensed stations whose transmitter stands inside the district outline. Translators and boosters are left out. Stations that are received in the district from transmitters outside it are not listed.",
+  "as_of": "2026-11-26"
+ }
+}

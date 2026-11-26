@@ -160,6 +160,7 @@ def fetch(fetcher: Fetcher, d: District, shape_path: pathlib.Path) -> tuple[dict
             "control": label("CONTROL", r.get("CONTROL")), "level": label("ICLEVEL", r.get("ICLEVEL")),
             "size": label("INSTSIZE", r.get("INSTSIZE")),
             "active": active, "closed": closed if closed and closed not in ("-2", "-1") else None,
+            "ipeds_cd": r.get("CNGDSTCD") if "CNGDSTCD" in good else None,
         })
     extra_sources = []
     for name, st in curated_status().items():

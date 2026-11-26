@@ -12,6 +12,12 @@ from typing import Any
 from .config import District
 
 
+def fold(s: str) -> str:
+    """Lower case without accents, so 'Barragán' and 'Barragan' compare equal."""
+    import unicodedata
+    return "".join(c for c in unicodedata.normalize("NFKD", s or "") if not unicodedata.combining(c)).lower()
+
+
 def _data(ds: dict | None) -> dict | None:
     return ds.get("data") if ds else None
 
@@ -142,7 +148,7 @@ def run(d: District, data: dict[str, dict | None], notes: list[dict], extra: lis
         winner = last["candidates"][0]
         start = f"{last['year'] + 1}-01-03"
         term = next((x for x in leg["terms"] if x["start"] >= start[:7]), None)
-        ok = bool(term) and term["last_name"].lower() in winner["name"].lower()
+        ok = bool(term) and fold(term["last_name"]) in fold(winner["name"])
         who = "FEC certified results" if last.get("source") == "fec-results" else "MIT Election Lab"
         out.append(check("election-winner", t, "pass" if ok else "fail",
                          f"{who}: {winner['name']} won in {last['year']}. congress-legislators: term "
@@ -200,8 +206,8 @@ def run(d: District, data: dict[str, dict | None], notes: list[dict], extra: lis
     if fec and leg and leg.get("current") and ele and ele.get("results"):
         cyc = str(ele["results"][-1]["year"])
         names = [c["name"] or "" for c in fec["cycles"].get(cyc, [])]
-        ln = leg["current"]["last_name"].upper()
-        ok = any(ln in n.upper() for n in names)
+        ln = fold(leg["current"]["last_name"])
+        ok = any(ln in fold(n) for n in names)
         out.append(check("fec-member", t, "pass" if ok else "warn",
                          f"{len(names)} candidates with financial activity in the {cyc} cycle; "
                          f"{'found' if ok else 'did not find'} {leg['current']['last_name']}.", ["fec", "congress-legislators"]))

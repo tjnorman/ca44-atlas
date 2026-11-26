@@ -63,6 +63,22 @@ def annotate_plans(records: list[dict], shape_path: pathlib.Path) -> None:
         r["in_plans"] = [pid for pid, geoms in shapes.items() if any(contains(g, r["lon"], r["lat"]) for g in geoms)]
 
 
+def rejudge_ipeds(check: dict, payload: dict, d: District) -> dict:
+    """IPEDS codes each institution with its district under the current (Census-tabulated) plan.
+    With several plans, compare that code with the current plan's outline only."""
+    cur = next((p["id"] for p in d.raw.get("plans", []) if int(p["congress"]) == d.congress), None)
+    rows = [r for r in payload.get("institutions", []) if r.get("ipeds_cd") is not None]
+    if not cur or not rows:
+        return check
+    bad = [r for r in rows if (r["ipeds_cd"].lstrip("0") == d.geoid.lstrip("0")) != (cur in (r.get("in_plans") or []))]
+    new_only = sum(1 for r in payload["institutions"] if cur not in (r.get("in_plans") or []))
+    return {**check, "status": "pass" if not bad else "warn", "values": {"listed": len(payload["institutions"]), "disagree": len(bad)},
+            "detail": (f"For the {cur} lines, IPEDS district codes agree with the outline for all {len(rows)} institutions listed"
+                       + (f"; {new_only} are inside the new lines only and carry a neighboring district's code, as expected." if new_only else ".")
+                       if not bad else f"{len(bad)} differ from the {cur} outline: "
+                       + "; ".join(f"{r['name']} (IPEDS {r['ipeds_cd']})" for r in bad[:6]))}
+
+
 def run(d: District, only: list[str] | None = None) -> dict:
     ORDER = order_for(d)
     out = data_dir(d)
@@ -137,6 +153,8 @@ def run(d: District, only: list[str] | None = None) -> dict:
                 for key in ("institutions", "stations", "licensed_here_outside"):
                     if isinstance(payload.get(key), list):
                         annotate_plans(payload[key], out / "geo" / "district.simple.geojson.json")
+                if name == "colleges":
+                    src_checks = [rejudge_ipeds(c, payload, d) if c["id"] == "ipeds-district" else c for c in src_checks]
             data[name] = dataset(payload, sources, district=d.id, source_module=name)
             write_json(out / f"{name}.json", data[name], compact=name in {"votes"})
             extra_checks += src_checks

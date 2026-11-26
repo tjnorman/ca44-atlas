@@ -69,3 +69,8 @@ def test_weighted_row_sums_counts_and_skips_medians():
 def test_place_names():
     assert plans.short_place("Florence-Graham CDP") == "Florence-Graham"
     assert plans.place_type("Los Angeles city") == "city" and plans.place_type("West Carson CDP") == "CDP"
+
+
+def test_fold_ignores_accents():
+    from pipeline.checks import fold
+    assert fold("Barragán") == fold("BARRAGAN") == "barragan"

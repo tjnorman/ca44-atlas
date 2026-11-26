@@ -156,8 +156,9 @@ def fetch(fetcher: Fetcher, d: District) -> tuple[dict, list[Source], list[dict]
             fec_years.append(y)
     by_year = {r["year"]: dict(r, source="medsl-house") for r in medsl}
     for y, r in fec_results.items():
-        if y not in by_year:
-            by_year[y] = dict(r, source="fec-results")
+        # The FEC compilation reproduces official certified results; where both sources cover a
+        # year, it is the figure shown and the MIT file is the cross-check.
+        by_year[y] = dict(r, source="fec-results")
     results = [by_year[y] for y in sorted(by_year)]
 
     checks = []
@@ -168,12 +169,21 @@ def fetch(fetcher: Fetcher, d: District) -> tuple[dict, list[Source], list[dict]
         b = fec_results[y]["candidates"][0]
         same = surname(a["name"]) == surname(b["name"])
         close = abs(a["votes"] - b["votes"]) <= max(50, 0.002 * a["votes"])
+        official = next((o for o in d.trends.get("official_results", []) if int(o["year"]) == y), None)
+        detail = (f"{y} general election: MIT Election Lab has {a['name']} with {a['votes']:,} votes; "
+                  f"the FEC compilation has {b['name']} with {b['votes']:,} votes (tolerance 0.2%).")
+        status = "pass" if same and close else "fail"
+        if not (same and close) and official:
+            fec_ok = b["votes"] == int(official["winner_votes"])
+            status = "pass" if fec_ok and same else "fail"
+            detail += (f" The Statement of Vote gives {int(official['winner_votes']):,} "
+                       f"({' '.join(str(official['source']).split())}). "
+                       + ("The FEC figure matches it and is the one shown. " if fec_ok else "Neither matches. ")
+                       + " ".join(str(official.get("note", "")).split()))
         checks.append({
             "id": "election-sources-agree",
-            "title": "Two election compilations agree on the same race",
-            "status": "pass" if same and close else "fail",
-            "detail": (f"{y} general election: MIT Election Lab has {a['name']} with {a['votes']:,} votes; "
-                       f"the FEC compilation has {b['name']} with {b['votes']:,} votes (tolerance 0.2%)."),
+            "title": "Two election compilations agree on the same race, or the official count settles it",
+            "status": status, "detail": detail,
             "sources": ["medsl-house", "fec-results"],
         })
     payload = {"results": results, "redistricting_years": REDISTRICTING_YEARS, "fec_years": fec_years,

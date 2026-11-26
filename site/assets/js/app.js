@@ -185,15 +185,15 @@ async function main() {
     const res = (ele?.results || []).slice().reverse();
     $("#elections").innerHTML = table(["Year", "Winner", "Share", "Runner-up", "Share"], res.map((r) => {
       const [a, b] = r.candidates;
-      return [`${r.year}${r.new_lines ? ' <span class="tag">new lines</span>' : ""}`, a ? `${esc(a.name)} (${esc(a.party || "")})` : "", a ? pct(a.pct) : "",
+      return [`${r.year}${r.new_lines ? ' <span class="tag" title="First election on newly drawn lines">redrawn</span>' : ""}`, a ? `${esc(a.name)} (${esc(a.party || "")})` : "", a ? pct(a.pct) : "",
         b ? `${esc(b.name)} (${esc(b.party || "")})` : "—", b ? pct(b.pct) : ""];
     }), [2, 4]);
     $("#elections-note").innerHTML = `Certified general election results ${srcLink("medsl-house")} ${srcLink("fec-results")}. The Nov. 3, 2026 election, the first on the new lines, is not shown until results are certified and published in these sources.`;
     if (votes) {
-      $("#votes").innerHTML = `<div class="kpis"><div><b>${pct(votes.missed_pct)}</b><span>Roll calls missed, ${votes.congress}th Congress (House median member: ${pct(votes.house_missed_pct)})</span></div>`
+      $("#votes").innerHTML = `<div class="kpis"><div><b>${pct(votes.missed_pct)}</b><span>Yes-or-no roll calls missed, ${votes.congress}th Congress (all House members on the same roll calls: ${pct(votes.house_missed_pct)})</span></div>`
         + `<div><b>${pct(votes.with_party_majority_pct)}</b><span>Votes with the majority of the member's party</span></div>`
         + `<div><b>${int(votes.votes_cast)}</b><span>Yes or no votes cast</span></div><div><b>${int(votes.period?.roll_calls_parsed)}</b><span>Roll calls read, ${votes.period?.from_year}–${votes.period?.to_year}</span></div></div>`
-        + `<p class="fine">Clerk of the House roll calls ${srcLink("clerk-votes")}, through ${longDate(votes.period?.through)}.</p>`;
+        + `<p class="fine">Clerk of the House roll calls ${srcLink("clerk-votes")}, through ${longDate(votes.period?.through)}. ${esc(votes.definitions?.not_voting || "")}</p>`;
     } else $("#votes").innerHTML = '<p class="sub">Roll calls not available in this build.</p>';
     const cycles = Object.keys(fec?.cycles || {}).sort().reverse();
     $("#fec").innerHTML = table(["Cycle", "Candidate", "Party", "Raised", "Spent", "Cash on hand"],

@@ -1,0 +1,65 @@
+# Methodology
+
+How the CA-44 Atlas turns public records into figures, and how it checks them.
+
+## Two plans
+
+The atlas follows the seat, not one officeholder, and California drew the seat twice this decade:
+
+- **2021 lines (cd119):** drawn by the California Citizens Redistricting Commission; in effect for the
+  118th and 119th Congresses.
+- **New lines (cd120):** AB 604 (Chapter 96, Statutes of 2025), approved by voters as Proposition 50 on
+  Nov. 4, 2025, for the 2026 through 2030 elections; the 120th Congress is seated Jan. 3, 2027.
+
+Every figure names the plan it describes.
+
+## Geography from census blocks
+
+1. **Block assignment.** The Census Bureau's block equivalency files list every 2020 census block and
+   its district: the 119th Congress national file for the 2021 lines, and the 120th Congress files
+   (California state file and national file, which must agree) for the new lines.
+2. **Population.** Each block's 2020 population comes from the 2020 Census redistricting data
+   (P.L. 94-171). A plan's population is the sum of its blocks.
+3. **Area and outline.** TIGER/Line 2020 block shapes give land and water area; the district outline
+   is the plan's blocks dissolved into one shape.
+4. **Cities and places.** Each block carries the code of its incorporated city or census-designated
+   place (CDP). Blocks in no place are "other unincorporated."
+
+### Checks
+
+- Block populations for the 2021 lines are compared with the Census Bureau's own 2020 tabulation for
+  the 119th Congress district.
+- Block land area for the 2021 lines is compared with the Census Gazetteer (tolerance 0.5%).
+- Each plan's population is compared with an equal share of California's 2020 population (52 seats).
+  California balanced its districts on adjusted counts, so a gap of a few tenths of a percent is expected.
+- Places and the unincorporated remainder must add up to the whole plan.
+
+## People and homes (ACS)
+
+- **2021 lines:** the Census Bureau tabulates the ACS for the 119th Congress district directly. The
+  atlas uses those figures, 1-year and 5-year, with margins of error at 90% confidence.
+- **New lines:** no Census tabulation exists yet. The atlas multiplies each census tract's ACS 5-year
+  counts by the share of the tract's 2020 population inside the new lines, sums them, and computes
+  shares from the sums. Medians and averages (median age, income, home value, rent) cannot be summed
+  and are not estimated. Margins of error for counts are combined as the root of summed squares and
+  understate the true uncertainty, because the population weights are themselves fixed at 2020.
+- **Method check:** the same tract calculation is run for the 2021 lines and compared with the Census
+  Bureau's own figures for the same ACS release (counts within 1%, shares within 1.5 points). On Nov. 26,
+  2026, a test run on the 2020-2024 release reproduced the 2021-lines population within 0.09%, poverty
+  within 0.05 points, and homeownership within 0.03 points.
+
+## Representation, elections, and money
+
+- **Member:** congress-legislators (unitedstates project) checked against the Clerk of the House.
+- **House votes:** Clerk of the House roll calls.
+- **Election results:** MIT Election Data and Science Lab and FEC certified compilations, from 2012,
+  the first election near today's district. Before 2012, "the 44th" was in Riverside County.
+- **Campaign finance:** FEC candidate totals by cycle.
+- **Federal awards:** USAspending.gov by place of performance, under the district lines USAspending
+  uses (currently the 2021 lines).
+- **Income tax:** IRS Statistics of Income by congressional district (2021 lines).
+
+## Labels
+
+"est." marks a figure computed by the atlas rather than published by the source. Unofficial election
+results are labeled until certified.

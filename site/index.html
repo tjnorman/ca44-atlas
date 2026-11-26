@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CA-44 Atlas · California's 44th Congressional District, counted</title>
+  <meta name="description" content="A nonpartisan atlas of California's 44th Congressional District under its 2021 and new Proposition 50 lines: people, places, federal dollars, and representation. Every number sourced and checked." />
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="assets/img/icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <link rel="stylesheet" href="assets/css/ca44.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <noscript><p style="padding:16px;text-align:center">This atlas draws its map and tables with JavaScript. The data, with sources, is in the repository's data folder.</p></noscript>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="CA-44 Atlas home"><span>CA-44 Atlas</span></a>
+      <nav aria-label="Sections">
+        <a href="#maps">Two maps</a><a href="#places">Places</a><a href="#people">People</a>
+        <a href="#seat">The seat</a><a href="#money">Federal dollars</a><a href="#institutions">Colleges and stations</a><a href="#checks">Checks</a><a href="#sources">Sources</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero ca-hero" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow">Nonpartisan · Sourced · Checked</p>
+        <h1>California's <span class="grad">44th</span>.</h1>
+        <p class="hero-lede">One seat, two maps. From San Pedro and the harbor to South Gate and Huntington Park.</p>
+        <p class="sample-banner" id="draft-banner">Private draft for review. Not published.</p>
+      </div>
+    </section>
+
+    <section class="glance" aria-label="At a glance"><div class="glance-grid" id="glance"></div></section>
+
+    <section class="chapter" id="maps">
+      <div class="chapter-head">
+        <h2>Two maps of one seat.</h2>
+        <p class="lede" id="maps-lede"></p>
+      </div>
+      <div class="panel">
+        <div class="panel-head">
+          <h3>District lines</h3>
+          <div class="segmented" role="group" aria-label="Which lines to show" id="plan-toggle">
+            <button data-show="both" class="on">Both</button><button data-show="cd120">New lines</button><button data-show="cd119">2021 lines</button>
+          </div>
+        </div>
+        <figure class="map ca-map" id="map" aria-label="Map of CA-44 under both plans with city outlines"></figure>
+        <div class="legend-row fine" id="map-legend"></div>
+      </div>
+      <div class="two-up">
+        <div class="panel"><h3>Joining under the new lines</h3><div class="table-wrap" id="joining"></div></div>
+        <div class="panel"><h3>Leaving under the new lines</h3><div class="table-wrap" id="leaving"></div></div>
+      </div>
+      <div class="panel"><h3>The two plans</h3><div class="table-wrap" id="plan-table"></div><p class="fine" id="plan-note"></p></div>
+    </section>
+
+    <section class="chapter" id="places">
+      <div class="chapter-head"><h2>Cities and places.</h2>
+        <p class="lede">Each 2020 census block belongs to one city or census-designated place. These are the places in each version of the district, and how much of each lies inside it.</p></div>
+      <div class="panel">
+        <div class="panel-head"><h3 id="places-title">Places</h3>
+          <div class="segmented" role="group" aria-label="Plan" id="places-toggle"></div></div>
+        <div class="table-wrap" id="places-table"></div>
+        <p class="fine">The City of Los Angeles part includes San Pedro, Wilmington, and the harbor area; neighborhood boundaries within the city are not yet in the atlas.</p>
+      </div>
+    </section>
+
+    <section class="chapter" id="people">
+      <div class="chapter-head"><h2>The people.</h2>
+        <p class="lede" id="people-lede"></p></div>
+      <div class="panel"><div class="table-wrap" id="people-table"></div><p class="fine" id="people-note"></p></div>
+      <div class="panel"><h3>How well the estimate method works</h3><div class="table-wrap" id="method-table"></div><p class="fine" id="method-note"></p></div>
+    </section>
+
+    <section class="chapter" id="seat">
+      <div class="chapter-head"><h2>The seat.</h2><p class="lede" id="seat-lede"></p></div>
+      <div class="two-up">
+        <div class="panel"><h3>Elections</h3><div class="table-wrap" id="elections"></div><p class="fine" id="elections-note"></p></div>
+        <div class="panel"><h3>House votes</h3><div id="votes"></div></div>
+      </div>
+      <div class="panel"><h3>Campaign money</h3><div class="table-wrap" id="fec"></div><p class="fine" id="fec-note"></p></div>
+    </section>
+
+    <section class="chapter" id="money">
+      <div class="chapter-head"><h2>Federal dollars.</h2><p class="lede">What federal agencies commit to spend where the work happens, and what residents report in federal income tax. Both use the 2021 lines.</p></div>
+      <div class="two-up">
+        <div class="panel"><h3>Federal awards by year</h3><div class="table-wrap" id="usaspending"></div><p class="fine" id="usa-note"></p></div>
+        <div class="panel"><h3>Federal income tax</h3><div class="table-wrap" id="irs"></div><p class="fine" id="irs-note"></p></div>
+      </div>
+      <div class="panel"><h3>Largest awarding agencies</h3><div class="table-wrap" id="agencies"></div></div>
+    </section>
+
+    <section class="chapter" id="institutions">
+      <div class="chapter-head"><h2>Colleges and stations.</h2><p class="lede">Institutions and broadcast transmitters located inside either version of the district.</p></div>
+      <div class="two-up">
+        <div class="panel"><h3>Colleges and universities</h3><div class="table-wrap" id="colleges"></div><p class="fine" id="colleges-note"></p></div>
+        <div class="panel"><h3>Radio and television transmitters</h3><div class="table-wrap" id="stations"></div><p class="fine" id="stations-note"></p></div>
+      </div>
+    </section>
+
+    <section class="chapter" id="checks">
+      <div class="chapter-head"><h2>Checked.</h2><p class="lede" id="checks-lede"></p></div>
+      <div class="panel"><ul class="checks" id="checks-list"></ul></div>
+    </section>
+
+    <section class="chapter" id="sources">
+      <div class="chapter-head"><h2>Sources.</h2><p class="lede">Every figure comes from a public record. Citations are in APA style.</p></div>
+      <div class="panel"><ol class="sources" id="sources-list"></ol></div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="footer-inner fine" id="footer"></div></footer>
+  <div class="tooltip" id="tooltip" role="status" hidden></div>
+  <script src="vendor/d3.min.js"></script>
+  <script src="vendor/topojson-client.min.js"></script>
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

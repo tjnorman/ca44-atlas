@@ -1,0 +1,9 @@
+{
+  "name": "ca44-atlas",
+  "private": true,
+  "description": "Map tooling for the CA-44 Atlas pipeline (mapshaper simplifies Census boundaries into TopoJSON).",
+  "license": "MIT",
+  "devDependencies": {
+    "mapshaper": "^0.6.102"
+  }
+}

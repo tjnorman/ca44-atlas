@@ -1,0 +1,93 @@
+# District configuration for the CA-44 Atlas.
+#
+# CA-44 lies entirely inside Los Angeles County, so the atlas builds the district up from 2020
+# census blocks, tracts, and cities instead of from counties. California redrew its congressional
+# map for the 2026 elections (Proposition 50), so the atlas follows two plans of the same seat.
+
+id: ca-44
+name: California's 44th Congressional District
+short_name: CA-44
+tagline: California's 44th Congressional District, counted.
+
+state:
+  name: California
+  abbr: CA
+  fips: "06"
+
+district: "44"
+district_number: 44
+# Congress whose Census tabulations (ACS, 2020 Census) describe the seat as it is drawn today.
+congress: 119
+districts_in_state: 52
+comparable_acs1_years_from: 2022
+
+geography: plans
+county_fips: ["037"]
+
+# The two maps of the seat. The first listed is compared with the second for "who moves".
+plans:
+  - id: cd120
+    short: new lines
+    label: "Proposition 50 lines (120th Congress, from Jan. 3, 2027)"
+    congress: 120
+    primary: true
+    effective: "2027-01-03"
+    first_election: 2026
+    law: >-
+      AB 604 (Aguiar-Curry), Chapter 96, Statutes of 2025, put into effect by Proposition 50,
+      approved by California voters on Nov. 4, 2025, for the 2026 through 2030 elections.
+    bef_zip: https://www2.census.gov/programs-surveys/decennial/rdo/mapping-files/2027/120-congressional-district-befs/cd120.zip
+    bef_member: CD120_06.txt
+    bef_cross_member: NationalCD120.txt
+    bef_page: https://www.census.gov/geographies/mapping-files/2027/dec/rdo/120-congressional-district-bef.html
+    bef_year: 2026
+    census_tabulated: false
+    gazetteer: false
+  - id: cd119
+    short: 2021 lines
+    label: "2021 Citizens Redistricting Commission lines (118th and 119th Congresses)"
+    congress: 119
+    primary: false
+    effective: "2023-01-03"
+    first_election: 2022
+    last_election: 2024
+    law: >-
+      Drawn by the California Citizens Redistricting Commission, certified Dec. 27, 2021; used for the
+      2022 and 2024 elections and the 118th and 119th Congresses.
+    bef_zip: https://www2.census.gov/programs-surveys/decennial/rdo/mapping-files/2025/119-congressional-district-befs/cd119.zip
+    bef_member: NationalCD119.txt
+    bef_page: https://www.census.gov/geographies/mapping-files/2025/dec/rdo/119-congressional-district-bef.html
+    bef_year: 2024
+    census_tabulated: true
+    gazetteer: true
+
+publisher: Thomas J. Norman
+repo: tjnorman/ca44-atlas
+site_url: ""
+live_proxy: ""
+companion_sites: []
+
+# Facts recorded elsewhere that each build re-checks against primary sources.
+expectations:
+  pop_2020_source: "computed from the Census block files on Nov. 26, 2026, before the pipeline existed"
+  pop_2020:
+    cd120: 757709
+    cd119: 757951
+
+comparisons:
+  - id: state
+    label: California
+  - id: us
+    label: United States
+
+trends:
+  usaspending_start_fy: 2018
+  fec_cycles: [2022, 2024, 2026]
+  # District numbers moved across California in each redistricting. Before 2012 "the 44th" was in
+  # Riverside County, so results start with the first election held near today's district.
+  house_results_from: 2012
+  redistricting_years: [2012, 2022, 2026]
+  votes_start_year: 2017
+
+# Sources run for this district, in order.
+sources: [plans, legislators, acs, acs_plan, usaspending, irs, elections, fec, votes, colleges, broadcast]

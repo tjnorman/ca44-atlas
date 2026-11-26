@@ -1,0 +1,76 @@
+# Rebuild the CA-44 data from primary sources, run the cross-checks, and commit what changed.
+# The repository is private and the site is not published; there is no deploy step.
+name: Data refresh
+
+on:
+  schedule:
+    - cron: "23 13 * * 1"   # Mondays, 13:23 UTC (early morning in California)
+  workflow_dispatch:
+    inputs:
+      only:
+        description: "Comma-separated sources to rebuild (blank = all)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-refresh
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: pip install -r requirements.txt
+      - run: npm install --no-audit --no-fund
+      - name: Restore HTTP cache (roll calls and other files that never change)
+        uses: actions/cache@v4
+        with:
+          path: .cache/http
+          key: http-${{ github.run_id }}
+          restore-keys: http-
+      - name: Build data
+        env:
+          CENSUS_API_KEY: ${{ secrets.CENSUS_API_KEY }}
+          FEC_API_KEY: ${{ secrets.FEC_API_KEY }}
+          ATLAS_USE_CACHE: "0"
+        run: |
+          python -c "import os; [print(k, 'present' if os.environ.get(k, '').strip() else 'not set') for k in ('CENSUS_API_KEY','FEC_API_KEY')]"
+          if [ -n "${{ github.event.inputs.only }}" ]; then
+            python -m pipeline build --district ca-44 --only "${{ github.event.inputs.only }}"
+          else
+            python -m pipeline build --district ca-44
+          fi
+      - name: Save this build's data for inspection
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: data-build
+          path: data/
+          retention-days: 14
+      - name: Tests
+        run: python -m pytest -q
+      - name: Commit changes
+        run: |
+          git config user.name "ca44-atlas-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          if git diff --cached --quiet; then
+            echo "No changes."
+          else
+            git commit -m "Data refresh $(date -u +%Y-%m-%d)" -m "Automated rebuild from primary sources; see data/ca-44/integrity.json for cross-check results."
+            git pull --rebase
+            git push
+          fi

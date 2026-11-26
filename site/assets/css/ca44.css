@@ -1,0 +1,30 @@
+/* CA-44 Atlas additions to the shared WI-7 design tokens. */
+
+:root { --plan-new: var(--accent); --plan-old: #d98a1f; }
+
+.ca-hero { min-height: auto; padding: 90px 22px 40px; }
+.ca-hero .sample-banner { position: static; display: inline-block; border-radius: 980px; padding: 6px 16px; margin-top: 22px; }
+.glance-grid.three { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 820px) { .glance-grid, .glance-grid.three { grid-template-columns: 1fr 1fr; } .two-up { grid-template-columns: 1fr; } }
+
+.ca-map svg { width: 100%; height: auto; display: block; max-height: 74svh; }
+.ca-map .county { fill: var(--land); stroke: none; }
+.ca-map .place { fill: none; stroke: var(--line-2); stroke-width: 0.8; }
+.ca-map .plan { fill-opacity: 0.16; stroke-width: 2.4; stroke-linejoin: round; transition: opacity 0.4s; }
+.ca-map .plan-cd120 { fill: var(--plan-new); stroke: var(--plan-new); }
+.ca-map .plan-cd119 { fill: var(--plan-old); stroke: var(--plan-old); fill-opacity: 0.08; stroke-dasharray: 6 4; }
+.ca-map .plan.off { opacity: 0; }
+.ca-map .plabel { font-size: 11px; font-weight: 600; fill: var(--ink-2); paint-order: stroke; stroke: var(--panel); stroke-width: 3px; pointer-events: none; text-anchor: middle; }
+.swatch { display: inline-block; width: 22px; height: 0; border-top: 3px solid var(--plan-new); vertical-align: middle; margin-right: 6px; }
+.swatch.old { border-top: 3px dashed var(--plan-old); }
+.est { font-size: 11px; font-weight: 600; color: var(--warn); margin-left: 4px; }
+.bar { display: inline-block; height: 8px; border-radius: 4px; background: var(--accent); vertical-align: middle; margin-left: 8px; opacity: 0.75; }
+.tag { display: inline-block; font-size: 11px; font-weight: 600; border-radius: 6px; padding: 1px 6px; background: var(--bg-2); color: var(--muted); margin-right: 4px; }
+.tag.new { color: var(--plan-new); }
+.tag.old { color: var(--plan-old); }
+.kpis { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.kpis div { background: var(--bg-2); border-radius: 14px; padding: 14px 16px; }
+.kpis b { display: block; font-size: 28px; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.kpis span { color: var(--muted); font-size: 13px; }
+.chapter { padding-top: 80px; }
+.chapter-head h2 { font-size: clamp(36px, 5vw, 60px); }

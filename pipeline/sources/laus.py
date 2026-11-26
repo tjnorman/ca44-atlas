@@ -123,25 +123,33 @@ def fetch(fetcher: Fetcher, d: District, plans_payload: dict) -> tuple[dict, lis
     not_published = [places[c]["name"] for c in places if not series.get(c)]
     if not published:
         raise FetchError("BLS returned no city series. Messages: " + "; ".join(messages[:3]))
-    latest = {k: s[-1]["date"] for k, s in series.items() if s}
-    newest = max(latest.values())
-    behind = [places.get(k, {}).get("name", k) for k, v in latest.items() if v != newest and k != "us"]
+    # BLS releases city estimates after county, state, and national ones, so the page compares every area in the
+    # newest month that all published cities share.
+    city_last = {places[c]["name"]: series[c][-1]["date"] for c in published}
+    newest = min(city_last.values())
+    behind = [n for n, v in city_last.items() if v != max(city_last.values())]
     gaps = sorted({g for s in series.values() for g in missing_months(s)})
+    known_gaps = d.trends.get("laus_known_gaps") or {}
 
+    newer = {k: s[-1]["date"] for k, s in series.items() if not k.isdigit() and s and s[-1]["date"] > newest}
+    unexplained = [g for g in gaps if g not in known_gaps]
     checks = [{
-        "id": "laus-current", "title": "Every published city and the county have unemployment data through the same month",
-        "status": "pass" if not behind else "warn", "sources": ["bls-laus"], "values": {"latest": newest},
-        "detail": (f"{len(published)} cities and {len(counties)} county series run through {newest}."
+        "id": "laus-current", "title": "Every published city has unemployment data through the same month, and gaps are explained",
+        "status": "pass" if not behind and not unexplained else "warn", "sources": ["bls-laus"], "values": {"latest": newest},
+        "detail": (f"{len(published)} cities run through {newest}."
                    + (f" Behind: {', '.join(behind)}." if behind else "")
+                   + (f" County, state, or national series run to {max(newer.values())}; the page compares all areas in {newest}." if newer else "")
                    + (f" BLS does not publish monthly series for {', '.join(not_published)} (cities and places under its threshold "
                       "or census-designated places it does not cover)." if not_published else "")
-                   + (f" Months with no estimate in any series: {', '.join(gaps)}." if gaps else "")),
+                   + (f" Months with no estimate in any series: {', '.join(gaps)}." if gaps else "")
+                   + "".join(f" {g}: {' '.join(str(known_gaps[g]).split())}" for g in gaps if g in known_gaps)),
     }]
     payload = {
         "places": [places[c] | {"published": c in published} for c in sorted(places, key=lambda c: -places[c]["pop_place"])],
         "series": series,
         "latest_month": newest,
         "gap_months": gaps,
+        "gap_notes": {g: " ".join(str(known_gaps[g]).split()) for g in gaps if g in known_gaps},
         "seasonally_adjusted": False,
         "series_ids": {f"{k}:{m}": sid for sid, (k, m) in ids.items()},
         "scope_note": ("City figures describe whole cities. Most of Los Angeles and Long Beach lies outside the district, so their "

@@ -92,6 +92,11 @@ trends:
   votes_start_year: 2017
   laus_start_year: 2017
   laus_min_place_pop: 25000
+  # Months BLS did not estimate, with the reason BLS gives (checked Nov. 26, 2026).
+  laus_known_gaps:
+    "2025-10": >-
+      BLS states that October 2025 data collection for the Current Population Survey, the primary input to these
+      estimates, did not occur because of the 2025 lapse in federal appropriations (https://www.bls.gov/lau/launews1.htm).
   ports_start_year: 2017
   # Official results recorded from the California Secretary of State's Statement of Vote, used to
   # judge the two compilations when they disagree.

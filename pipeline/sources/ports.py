@@ -22,7 +22,9 @@ import re
 from datetime import datetime, timezone
 from html.parser import HTMLParser
 
-from ..config import District
+import yaml
+
+from ..config import ROOT, District
 from ..geo import contains
 from ..http import Fetcher, FetchError
 from ..provenance import Source
@@ -238,27 +240,49 @@ def fetch(fetcher: Fetcher, d: District, full_shape_path: pathlib.Path) -> tuple
                           url="https://www.portoflosangeles.org/business/statistics/container-statistics", year=str(now.year),
                           query=POLA_YEAR.format(y="YYYY"), notes="TEUs (twenty-foot equivalent units) reported by the port; the latest month may be revised."))
 
-    # Port of Long Beach: calendar year by month, and the last 25 months
-    cy = parse_polb_cy(fetcher.text(POLB_CY), now.year)
-    if not cy["months"]:   # early in a year the table may already hold the new year
-        cy = parse_polb_cy(fetcher.text(POLB_CY), now.year - 1)
-    recent = parse_polb_recent(fetcher.text(POLB_RECENT))
+    # Port of Long Beach: calendar year by month, and the last 25 months. The port's tables refuse automated
+    # readers from some networks; then the build uses the copy recorded by hand in data/curated/polb_teu.yaml.
+    polb_mode, polb_note = "live", None
+    try:
+        cy = parse_polb_cy(fetcher.text(POLB_CY, retries=1), now.year)
+        if not cy["months"]:   # early in a year the table may already hold the new year
+            cy = parse_polb_cy(fetcher.text(POLB_CY, retries=1), now.year - 1)
+        recent = parse_polb_recent(fetcher.text(POLB_RECENT, retries=1))
+    except (FetchError, ValueError) as exc:
+        cur = yaml.safe_load((ROOT / "data" / "curated" / "polb_teu.yaml").read_text(encoding="utf-8"))
+        polb_mode = "recorded"
+        polb_note = (f"The port's tables refused the automated build ({str(exc)[:60]}...). Figures were recorded by hand from "
+                     f"the port's tables on {cur['read_on']}; review by {cur['review_by']}.")
+        recent = [{"month": r["month"], "loaded_imports": r["loaded_inbound"], "empty_imports": r["empty_inbound"],
+                   "loaded_exports": r["loaded_outbound"], "empty_exports": r["empty_outbound"], "total": r["total"]}
+                  for r in cur["recent"]]
+        recent.sort(key=lambda m: m["month"])
+        cyc = cur["calendar_year"]
+        cy = {"year": cyc["year"], "year_to_date": cyc["year_to_date"],
+              "months": [{"month": k, "total": v} for k, v in sorted(cyc["months"].items())]}
+        overdue = str(cur["review_by"]) < now.date().isoformat()
+        checks.append({"id": "polb-recorded", "title": "Hand-recorded Port of Long Beach figures are reviewed on schedule",
+                       "status": "warn" if overdue else "pass", "sources": ["polb-teu"], "values": {},
+                       "detail": f"Recorded {cur['read_on']}; review by {cur['review_by']}." + (" Overdue." if overdue else "")})
     s = sum(m["total"] for m in cy["months"])
-    ok_ytd = cy["year_to_date"] is not None and abs(s - cy["year_to_date"]) < 1.0
+    # The port rounds each figure separately, so sums may differ from its totals by a TEU or two.
+    ok_ytd = cy["year_to_date"] is not None and abs(s - cy["year_to_date"]) <= 2.0
     checks.append({"id": "polb-months-sum", "title": "Port of Long Beach months add up to its year-to-date total",
                    "status": "pass" if ok_ytd else "warn", "sources": ["polb-teu"], "values": {"sum": s, "ytd": cy["year_to_date"]},
-                   "detail": f"{len(cy['months'])} months of {cy['year']} sum to {s:,.0f} TEUs; the table's year-to-date row is "
-                             f"{cy['year_to_date']:,.0f}." if cy["year_to_date"] is not None else "No year-to-date row found."})
+                   "detail": (f"{len(cy['months'])} months of {cy['year']} sum to {s:,.0f} TEUs; the table's year-to-date row is "
+                              f"{cy['year_to_date']:,.0f} (tolerance 2 TEUs for rounding)." if cy["year_to_date"] is not None
+                              else "No year-to-date row found.")})
     rec = {m["month"]: m["total"] for m in recent}
     overlap = [(m["month"], m["total"], rec[m["month"]]) for m in cy["months"] if m["month"] in rec]
-    differ = [o for o in overlap if abs(o[1] - o[2]) >= 1.0]
+    differ = [o for o in overlap if abs(o[1] - o[2]) > 2.0]
     checks.append({"id": "polb-tables-agree", "title": "Two Port of Long Beach tables agree month by month",
                    "status": "pass" if overlap and not differ else "warn", "sources": ["polb-teu"], "values": {},
                    "detail": (f"{len(overlap)} months appear in both the calendar-year table and the 25-month table; "
                               + ("all match." if not differ else f"{len(differ)} differ, for example {differ[0][0]}: {differ[0][1]:,.0f} vs {differ[0][2]:,.0f}."))})
     sources.append(Source(id="polb-teu", publisher="Port of Long Beach", title="Port statistics: container trade in TEUs",
                           url=POLB_PAGE, year=str(now.year), query=f"{POLB_CY}; {POLB_RECENT}",
-                          notes="The port describes its latest numbers as preliminary estimates."))
+                          notes="The port describes its latest numbers as preliminary estimates."
+                                + (" " + polb_note if polb_note else "")))
 
     # One monthly series per port for the page: Long Beach from the 25-month table plus this year's table.
     polb_months = {m["month"]: m for m in recent}
@@ -281,7 +305,8 @@ def fetch(fetcher: Fetcher, d: District, full_shape_path: pathlib.Path) -> tuple
                       "its point falls inside the plan's outline; the outline includes harbor water."),
         "pola": {"years": [{k: p[k] for k in ("year", "calendar_year_total", "sum_of_months", "months_match_total")} for p in pola_years],
                  "months": sorted(pola_months.values(), key=lambda m: m["month"])[-24:]},
-        "polb": {"months": sorted(polb_months.values(), key=lambda m: m["month"])[-24:], "year_to_date": cy["year_to_date"], "year": cy["year"]},
+        "polb": {"months": sorted(polb_months.values(), key=lambda m: m["month"])[-24:], "year_to_date": cy["year_to_date"],
+                 "year": cy["year"], "mode": polb_mode, "note": polb_note},
         "latest_common_month": latest_common,
         "ytd": {port: {"this_year": ytd(series, latest_common), "last_year": ytd(series, latest_common, 1)}
                 for port, series in (("pola", pola_months), ("polb", polb_months))},

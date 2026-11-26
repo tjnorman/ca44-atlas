@@ -218,7 +218,7 @@ async function main() {
     const np = laus.places.filter((p) => !p.published).map((p) => esc(p.name));
     $("#laus-note").innerHTML = `Bureau of Labor Statistics, Local Area Unemployment Statistics ${srcLink("bls-laus")}. ${esc(laus.scope_note)}`
       + (np.length ? ` BLS publishes no monthly series for ${np.join(", ")}.` : "")
-      + (laus.gap_months?.length ? ` No estimates exist for ${laus.gap_months.join(", ")}.` : "")
+      + (laus.gap_months?.length ? ` No estimates exist for ${laus.gap_months.join(", ")}. ${Object.values(laus.gap_notes || {}).map(esc).join(" ")}` : "")
       + " The latest month is preliminary.";
   }
 
@@ -242,7 +242,8 @@ async function main() {
       const a = get("pola", mo)?.total, b = get("polb", mo)?.total;
       return [new Date(+mo.slice(0, 4), +mo.slice(5) - 1, 15).toLocaleDateString("en-US", { month: "short", year: "numeric" }), int(a), int(b), a != null && b != null ? int(a + b) : "n/a"];
     }), [1, 2, 3]);
-    $("#teu-note").innerHTML = `Port of Los Angeles container statistics ${srcLink("pola-teu")}; Port of Long Beach container trade ${srcLink("polb-teu")}, whose latest figures the port calls preliminary. Includes loaded and empty containers.`;
+    $("#teu-note").innerHTML = `Port of Los Angeles container statistics ${srcLink("pola-teu")}; Port of Long Beach container trade ${srcLink("polb-teu")}, whose latest figures the port calls preliminary. Includes loaded and empty containers.`
+      + (pd.polb.note ? ` ${esc(pd.polb.note)}` : "");
     $("#docks-table").innerHTML = table(["Port", "Docks listed", "In new lines", "In 2021 lines", "In neither"],
       ["pola", "polb"].filter((k) => ds[k]).map((k) => [name(k), int(ds[k].docks), int(ds[k][`in_${primary}`]), int(ds[k][`in_${other}`]), int(ds[k].outside_all)]), [1, 2, 3, 4]);
     $("#docks-note").innerHTML = `U.S. Army Corps of Engineers navigation facility records ${srcLink("usace-docks")}. ${esc(pd.dock_note)}`;

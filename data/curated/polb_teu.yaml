@@ -1,0 +1,41 @@
+# Port of Long Beach container trade (TEUs), recorded by hand.
+# The port's statistics tables refuse automated readers (HTTP 403, "Access Denied") from the build, so these
+# figures were copied from the tables as they display in a browser. Refresh after each monthly release.
+# The port rounds each column separately, so a subtotal can differ from the sum of its parts by 1 or 2 TEUs.
+read_on: "2026-11-26"
+review_by: "2026-12-31"
+read_by: "Claude, in Thomas J. Norman's browser, at his direction"
+sources:
+  recent: https://thehelm.polb.com/stellar_custom_table/table100
+  calendar_year: https://thehelm.polb.com/stellar_custom_table/table102
+  page: https://polb.com/business/port-statistics/
+recent:
+  - {month: "2026-10", loaded_inbound: 461909, loaded_outbound: 93874, total_loaded: 555783, empty_inbound: 15181, empty_outbound: 366751, total_empties: 381932, total: 937715}
+  - {month: "2026-09", loaded_inbound: 509390, loaded_outbound: 91747, total_loaded: 601136, empty_inbound: 15741, empty_outbound: 380299, total_empties: 396041, total: 997177}
+  - {month: "2026-08", loaded_inbound: 456100, loaded_outbound: 99754, total_loaded: 555854, empty_inbound: 17375, empty_outbound: 346763, total_empties: 364138, total: 919992}
+  - {month: "2026-07", loaded_inbound: 467461, loaded_outbound: 104843, total_loaded: 572304, empty_inbound: 14399, empty_outbound: 341806, total_empties: 356205, total: 928508}
+  - {month: "2026-06", loaded_inbound: 387025, loaded_outbound: 86446, total_loaded: 473471, empty_inbound: 14476, empty_outbound: 291384, total_empties: 305860, total: 779331}
+  - {month: "2026-05", loaded_inbound: 418851, loaded_outbound: 109168, total_loaded: 528018, empty_inbound: 16094, empty_outbound: 297918, total_empties: 314012, total: 842030}
+  - {month: "2026-04", loaded_inbound: 389835, loaded_outbound: 118901, total_loaded: 508736, empty_inbound: 17553, empty_outbound: 291704, total_empties: 309257, total: 817992}
+  - {month: "2026-03", loaded_inbound: 374412, loaded_outbound: 104554, total_loaded: 478965, empty_inbound: 14794, empty_outbound: 281176, total_empties: 295970, total: 774935}
+  - {month: "2026-02", loaded_inbound: 368060, loaded_outbound: 97422, total_loaded: 465481, empty_inbound: 15618, empty_outbound: 286426, total_empties: 302044, total: 767525}
+  - {month: "2026-01", loaded_inbound: 409818, loaded_outbound: 99478, total_loaded: 509295, empty_inbound: 16273, empty_outbound: 322197, total_empties: 338470, total: 847765}
+  - {month: "2025-12", loaded_inbound: 392153, loaded_outbound: 102443, total_loaded: 494596, empty_inbound: 14016, empty_outbound: 325506, total_empties: 339522, total: 834119}
+  - {month: "2025-11", loaded_inbound: 400505, loaded_outbound: 110122, total_loaded: 510627, empty_inbound: 17122, empty_outbound: 289812, total_empties: 306934, total: 817561}
+  - {month: "2025-10", loaded_inbound: 401915, loaded_outbound: 99817, total_loaded: 501731, empty_inbound: 15326, empty_outbound: 322615, total_empties: 337940, total: 839671}
+  - {month: "2025-09", loaded_inbound: 388084, loaded_outbound: 85081, total_loaded: 473165, empty_inbound: 15390, empty_outbound: 308982, total_empties: 324372, total: 797537}
+  - {month: "2025-08", loaded_inbound: 440318, loaded_outbound: 95960, total_loaded: 536278, empty_inbound: 15007, empty_outbound: 350560, total_empties: 365568, total: 901846}
+  - {month: "2025-07", loaded_inbound: 468081, loaded_outbound: 91328, total_loaded: 559408, empty_inbound: 13474, empty_outbound: 371350, total_empties: 384824, total: 944232}
+  - {month: "2025-06", loaded_inbound: 348681, loaded_outbound: 87627, total_loaded: 436308, empty_inbound: 13098, empty_outbound: 254997, total_empties: 268095, total: 704403}
+  - {month: "2025-05", loaded_inbound: 299116, loaded_outbound: 82149, total_loaded: 381265, empty_inbound: 15424, empty_outbound: 242471, total_empties: 257895, total: 639160}
+  - {month: "2025-04", loaded_inbound: 419828, loaded_outbound: 93842, total_loaded: 513670, empty_inbound: 17368, empty_outbound: 336456, total_empties: 353823, total: 867493}
+  - {month: "2025-03", loaded_inbound: 380562, loaded_outbound: 104063, total_loaded: 484625, empty_inbound: 17213, empty_outbound: 315619, total_empties: 332833, total: 817457}
+  - {month: "2025-02", loaded_inbound: 368669, loaded_outbound: 90026, total_loaded: 458695, empty_inbound: 14397, empty_outbound: 292293, total_empties: 306690, total: 765385}
+  - {month: "2025-01", loaded_inbound: 471649, loaded_outbound: 98655, total_loaded: 570303, empty_inbound: 13225, empty_outbound: 369205, total_empties: 382430, total: 952733}
+  - {month: "2024-12", loaded_inbound: 412876, loaded_outbound: 100792, total_loaded: 513668, empty_inbound: 14483, empty_outbound: 332855, total_empties: 347338, total: 861006}
+  - {month: "2024-11", loaded_inbound: 432823, loaded_outbound: 119083, total_loaded: 551905, empty_inbound: 15306, empty_outbound: 316944, total_empties: 332249, total: 884154}
+  - {month: "2024-10", loaded_inbound: 487563, loaded_outbound: 112845, total_loaded: 600408, empty_inbound: 14646, empty_outbound: 372136, total_empties: 386782, total: 987191}
+calendar_year:
+  year: 2026
+  months: {"2026-01": 847765, "2026-02": 767525, "2026-03": 774935, "2026-04": 817992, "2026-05": 842030, "2026-06": 779331, "2026-07": 928508, "2026-08": 919992, "2026-09": 997177, "2026-10": 937715}
+  year_to_date: 8612969

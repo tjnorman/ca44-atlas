@@ -74,3 +74,14 @@ def test_place_names():
 def test_fold_ignores_accents():
     from pipeline.checks import fold
     assert fold("Barragán") == fold("BARRAGAN") == "barragan"
+
+
+def test_canonical_names_fixes_accents_and_damage():
+    from pipeline.sources.elections import canonical_names, surname
+    res = [{"year": 2016, "candidates": [{"name": "Nanette Diaz Barrag�___�__�n"}]},
+           {"year": 2018, "candidates": [{"name": "Nanette Diaz Barragán"}]},
+           {"year": 2020, "candidates": [{"name": "Nanette Diaz Barragan"}]}]
+    assert canonical_names(res) == 2
+    assert {r["candidates"][0]["name"] for r in res} == {"Nanette Diaz Barragán"}
+    assert res[0]["candidates"][0]["original_name"].startswith("Nanette Diaz Barrag")
+    assert surname("Nanette Diaz Barragán") == surname("NANETTE DIAZ BARRAGAN")

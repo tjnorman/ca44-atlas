@@ -27,9 +27,49 @@ FEC_PARTIES = {"R": "Republican", "D": "Democrat", "DEM": "Democrat", "REP": "Re
                "LIB": "Libertarian", "GRE": "Green", "CON": "Constitution", "W": "Write-in", "WI": "Write-in"}
 
 
+def fold(s: str) -> str:
+    import unicodedata
+    return "".join(c for c in unicodedata.normalize("NFKD", s or "") if not unicodedata.combining(c)).lower()
+
+
 def surname(name: str) -> str:
     parts = [p for p in name.replace(".", "").split() if p.lower() not in {"jr", "sr", "ii", "iii", "iv"}]
-    return parts[-1].lower() if parts else ""
+    return fold(parts[-1]) if parts else ""
+
+
+def canonical_names(results: list[dict]) -> int:
+    """Use one spelling per candidate across years.
+
+    Compilations spell accented names differently ("Barragán", "Barragan"), and older files can
+    carry broken characters from an encoding error. Names are grouped by their first two words and
+    accent-free surname; a broken name is matched on its first two words. The spelling kept is an
+    intact one with accents where any source has them. Returns how many names were changed."""
+    broken = lambda n: "\ufffd" in n or "__" in n
+    first2 = lambda n: " ".join(fold(n).split()[:2])
+    good: dict[str, str] = {}
+    for r in results:
+        for c in r["candidates"]:
+            n = c["name"]
+            if broken(n):
+                continue
+            key = first2(n) + "|" + surname(n)
+            best = good.get(key)
+            if best is None or sum(ord(ch) > 127 for ch in n) > sum(ord(ch) > 127 for ch in best):
+                good[key] = n
+    changed = 0
+    for r in results:
+        for c in r["candidates"]:
+            n = c["name"]
+            if broken(n):
+                match = [v for k, v in good.items() if k.split("|")[0] == first2(n)]
+                new = match[0] if len(match) == 1 else n
+            else:
+                new = good.get(first2(n) + "|" + surname(n), n)
+            if new != n:
+                c["original_name"] = n
+                c["name"] = new
+                changed += 1
+    return changed
 
 
 def _truthy(v: str) -> bool:
@@ -160,6 +200,7 @@ def fetch(fetcher: Fetcher, d: District) -> tuple[dict, list[Source], list[dict]
         # year, it is the figure shown and the MIT file is the cross-check.
         by_year[y] = dict(r, source="fec-results")
     results = [by_year[y] for y in sorted(by_year)]
+    renamed = canonical_names(results)
 
     checks = []
     overlap = sorted(set(fec_results) & {r["year"] for r in medsl})
@@ -186,6 +227,11 @@ def fetch(fetcher: Fetcher, d: District) -> tuple[dict, list[Source], list[dict]
             "status": status, "detail": detail,
             "sources": ["medsl-house", "fec-results"],
         })
+    if renamed:
+        checks.append({"id": "election-names", "title": "Candidate names are spelled one way across years",
+                       "status": "pass", "sources": ["medsl-house", "fec-results"], "values": {"changed": renamed},
+                       "detail": f"{renamed} candidate names were set to one spelling (accents or a damaged character "
+                                 "in a source file); each row keeps the source's own spelling as original_name."})
     payload = {"results": results, "redistricting_years": REDISTRICTING_YEARS, "fec_years": fec_years,
                "latest_year": results[-1]["year"] if results else None}
     sources = [

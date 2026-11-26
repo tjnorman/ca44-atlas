@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-26T23:29:26+00:00",
+ "generated_at": "2026-11-26T23:31:47+00:00",
  "sources": [
   {
    "id": "usace-docks",
@@ -2509,61 +2509,77 @@
      "year": 2017,
      "calendar_year_total": 9343192.95,
      "sum_of_months": 9343192.95,
-     "months_match_total": true
+     "months_match_total": true,
+     "corrections": []
     },
     {
      "year": 2018,
      "calendar_year_total": 9458748.5,
      "sum_of_months": 9458748.5,
-     "months_match_total": true
+     "months_match_total": true,
+     "corrections": []
     },
     {
      "year": 2019,
      "calendar_year_total": 9337632.4,
      "sum_of_months": 9337632.4,
-     "months_match_total": true
+     "months_match_total": true,
+     "corrections": []
     },
     {
      "year": 2020,
      "calendar_year_total": 9213395.95,
-     "sum_of_months": 8323649.8,
-     "months_match_total": false
+     "sum_of_months": 9213397.95,
+     "months_match_total": false,
+     "corrections": [
+      {
+       "month": "2020-11",
+       "shown": "889.,748.15",
+       "used": 889748.15
+      }
+     ]
     },
     {
      "year": 2021,
      "calendar_year_total": 10677609.7,
      "sum_of_months": 10677609.7,
-     "months_match_total": true
+     "months_match_total": true,
+     "corrections": []
     },
     {
      "year": 2022,
      "calendar_year_total": 9911158.85,
      "sum_of_months": 9911158.85,
-     "months_match_total": true
+     "months_match_total": true,
+     "corrections": []
     },
     {
      "year": 2023,
      "calendar_year_total": 8629681.1,
      "sum_of_months": 8629681.1,
-     "months_match_total": true
+     "months_match_total": true,
+     "corrections": []
     },
     {
      "year": 2024,
      "calendar_year_total": 10297352.25,
      "sum_of_months": 10297352.25,
-     "months_match_total": true
+     "months_match_total": true,
+     "corrections": []
     },
     {
      "year": 2025,
      "calendar_year_total": 10239318.4,
      "sum_of_months": 10239318.4,
-     "months_match_total": true
+     "months_match_total": true,
+     "corrections": []
     },
     {
      "year": 2026,
      "calendar_year_total": 9108497.2,
      "sum_of_months": 9108497.2,
-     "months_match_total": true
+     "months_match_total": true,
+     "corrections": []
     }
    ],
    "months": [

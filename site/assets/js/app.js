@@ -229,7 +229,12 @@ async function main() {
     const mon = m ? new Date(+m.slice(0, 4), +m.slice(5) - 1, 15).toLocaleDateString("en-US", { month: "long", year: "numeric" }) : "";
     const last = (k) => (pd[k].months || []).find((x) => x.month === m);
     const ds = pd.dock_summary || {};
-    $("#ports-lede").innerHTML = `The Port of Los Angeles and the Port of Long Beach share San Pedro Bay. Container counts are the ports' own monthly reports, through ${esc(mon)}.`;
+    const inNew = (k) => ds[k]?.[`in_${primary}`] ?? 0;
+    const where = (k) => (!ds[k] ? "" : inNew(k) === ds[k].docks ? `all ${int(ds[k].docks)} of the ${name(k)}'s listed docks lie inside the new lines`
+      : inNew(k) === 0 ? `none of the ${name(k)}'s ${int(ds[k].docks)} listed docks do`
+      : `${int(inNew(k))} of the ${name(k)}'s ${int(ds[k].docks)} listed docks lie inside the new lines`);
+    $("#ports-lede").innerHTML = `The two ports share San Pedro Bay, but only one is in CA-44: ${where("pola")}, and ${where("polb")}. `
+      + `Both are shown because they work as one harbor. Container counts are the ports' own monthly reports, through ${esc(mon)}.`;
     const yt = (k) => pd.ytd?.[k] || {};
     const chg = (k) => (yt(k).this_year && yt(k).last_year ? 100 * (yt(k).this_year / yt(k).last_year - 1) : null);
     const kpi = (k) => `<div class="stat"><div class="num">${int(last(k)?.total)}</div><div class="lab">TEUs at the ${name(k)}, ${esc(mon)}</div>`

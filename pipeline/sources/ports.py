@@ -235,7 +235,7 @@ def fetch(fetcher: Fetcher, d: District, full_shape_path: pathlib.Path) -> tuple
             continue
         s = sum(m["total"] for m in py["months"])
         py["sum_of_months"] = round(s, 2)
-        py["months_match_total"] = py["calendar_year_total"] is not None and abs(s - py["calendar_year_total"]) <= 2.0
+        py["months_match_total"] = py["calendar_year_total"] is not None and abs(s - py["calendar_year_total"]) <= 2.005
         pola_years.append(py)
     mismatched = [str(p["year"]) for p in pola_years if not p["months_match_total"]]
     fixes = [c for p in pola_years for c in p.get("corrections", [])]

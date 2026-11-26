@@ -139,3 +139,9 @@ def test_pola_documented_correction():
     assert len(p["months"]) == 2 and p["corrections"][0]["used"] == 824323.25
     p2 = parse_pola_year(html, 2026, {})
     assert len(p2["months"]) == 1
+
+
+def test_clean_operators_drops_phone_numbers():
+    from pipeline.sources.ports import clean_operators
+    out = clean_operators("Current Operator: American President Lines, Ltd. Phone: 310-548-8700 FAX: 310-548-8890")
+    assert out == "American President Lines, Ltd" and "310" not in out

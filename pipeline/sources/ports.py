@@ -164,6 +164,16 @@ def parse_polb_recent(html: str) -> list[dict]:
     return sorted(out, key=lambda x: x["month"])
 
 
+CONTACT = re.compile(r"\s*(phone|fax|tel)\s*:?\s*[\d()./\- ]{7,}", re.I)
+
+
+def clean_operators(text: str) -> str | None:
+    """Operator names without the telephone and fax numbers the facility records carry."""
+    t = CONTACT.sub("", " ".join(str(text or "").split()))
+    t = re.sub(r"Current Operator:\s*", "", t)
+    return t.strip(" .|;") [:160] or None
+
+
 def docks(fetcher: Fetcher, plan_shapes: dict[str, list[dict]]) -> tuple[list[dict], dict]:
     where = "STATE='CA' AND (PORT_NAME='Port of Los Angeles, CA' OR PORT_NAME='Port of Long Beach, CA')"
     meta = fetcher.json(DOCKS, params={"f": "json"})
@@ -193,7 +203,7 @@ def docks(fetcher: Fetcher, plan_shapes: dict[str, list[dict]]) -> tuple[list[di
         in_plans = [pid for pid, geoms in plan_shapes.items() if any(contains(g, lon, float(lat)) for g in geoms)]
         out.append({"id": a.get("NAV_UNIT_ID"), "name": " ".join(str(a.get("NAV_UNIT_NAME") or "").split()),
                     "port": PORTS.get(a.get("PORT_NAME"), a.get("PORT_NAME")), "type": a.get("FAC_TYPE"),
-                    "operators": " ".join(str(a.get("OPERATORS") or "").split())[:160] or None,
+                    "operators": clean_operators(a.get("OPERATORS")),
                     "purpose": " ".join(str(a.get("PURPOSE") or "").split())[:160] or None,
                     "berthing_ft": a.get("BERTHING_TOTAL"), "lat": round(float(lat), 5), "lon": round(lon, 5),
                     "in_plans": in_plans})
@@ -253,7 +263,7 @@ def fetch(fetcher: Fetcher, d: District, full_shape_path: pathlib.Path) -> tuple
 
     # Port of Long Beach: calendar year by month, and the last 25 months. The port's tables refuse automated
     # readers from some networks; then the build uses the copy recorded by hand in data/curated/polb_teu.yaml.
-    polb_mode, polb_note = "live", None
+    polb_mode, polb_note, polb_error = "live", None, None
     try:
         cy = parse_polb_cy(fetcher.text(POLB_CY, retries=1), now.year)
         if not cy["months"]:   # early in a year the table may already hold the new year
@@ -262,8 +272,9 @@ def fetch(fetcher: Fetcher, d: District, full_shape_path: pathlib.Path) -> tuple
     except (FetchError, ValueError) as exc:
         cur = yaml.safe_load((ROOT / "data" / "curated" / "polb_teu.yaml").read_text(encoding="utf-8"))
         polb_mode = "recorded"
-        polb_note = (f"The port's tables refused the automated build ({str(exc)[:60]}...). Figures were recorded by hand from "
-                     f"the port's tables on {cur['read_on']}; review by {cur['review_by']}.")
+        polb_note = (f"The port's statistics tables refuse automated readers, so these figures were recorded by hand from "
+                     f"the tables on {cur['read_on']} (next review by {cur['review_by']}).")
+        polb_error = f"{type(exc).__name__}: {str(exc)[:120]}"
         recent = [{"month": r["month"], "loaded_imports": r["loaded_inbound"], "empty_imports": r["empty_inbound"],
                    "loaded_exports": r["loaded_outbound"], "empty_exports": r["empty_outbound"], "total": r["total"]}
                   for r in cur["recent"]]
@@ -317,7 +328,7 @@ def fetch(fetcher: Fetcher, d: District, full_shape_path: pathlib.Path) -> tuple
         "pola": {"years": [{k: p[k] for k in ("year", "calendar_year_total", "sum_of_months", "months_match_total", "corrections")} for p in pola_years],
                  "months": sorted(pola_months.values(), key=lambda m: m["month"])[-24:]},
         "polb": {"months": sorted(polb_months.values(), key=lambda m: m["month"])[-24:], "year_to_date": cy["year_to_date"],
-                 "year": cy["year"], "mode": polb_mode, "note": polb_note},
+                 "year": cy["year"], "mode": polb_mode, "note": polb_note, "live_error": polb_error},
         "latest_common_month": latest_common,
         "ytd": {port: {"this_year": ytd(series, latest_common), "last_year": ytd(series, latest_common, 1)}
                 for port, series in (("pola", pola_months), ("polb", polb_months))},

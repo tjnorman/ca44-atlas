@@ -156,11 +156,11 @@ def tiger_blocks(raw: bytes) -> tuple[pathlib.Path, dict[str, tuple[int, int]], 
     shp = next(pathlib.Path(tmp.name).glob("*.shp"))
     reader = shapefile.Reader(str(shp))
     fields = [f[0] for f in reader.fields[1:]]
-    for need in ("GEOID20", "ALAND20", "AWATER20"):
+    for need in ("GEOID20", "ALAND20", "AWATER20", "INTPTLAT20", "INTPTLON20"):
         if need not in fields:
             raise ValueError(f"TIGER block file lacks {need}")
-    area = {rec["GEOID20"]: (int(rec["ALAND20"]), int(rec["AWATER20"]))
-            for rec in reader.iterRecords(fields=["GEOID20", "ALAND20", "AWATER20"])}
+    area = {rec["GEOID20"]: (int(rec["ALAND20"]), int(rec["AWATER20"]), float(rec["INTPTLON20"]), float(rec["INTPTLAT20"]))
+            for rec in reader.iterRecords(fields=["GEOID20", "ALAND20", "AWATER20", "INTPTLON20", "INTPTLAT20"])}
     return shp, area, tmp
 
 
@@ -226,14 +226,20 @@ def census_tabulation(fetcher: Fetcher, congress: int, d: District) -> tuple[int
         return None, None
 
 
-def summarize_plan(blocks: set[str], pl: dict, area: dict[str, tuple[int, int]], tract_pop: dict[str, int]) -> dict:
+def summarize_plan(blocks: set[str], pl: dict, area: dict[str, tuple], tract_pop: dict[str, int]) -> dict:
     pop = {g: pl["blocks"].get(g) for g in blocks}
     missing = [g for g, v in pop.items() if v is None]
     places = Counter()
     tracts = Counter()
+    centers: dict[str, list[float]] = defaultdict(lambda: [0.0, 0.0, 0.0])
     for g, v in pop.items():
-        places[pl["block_place"].get(g, "99999")] += v or 0
+        code = pl["block_place"].get(g, "99999")
+        places[code] += v or 0
         tracts[g[:11]] += v or 0
+        a = area.get(g)
+        if a and len(a) >= 4 and v:
+            c = centers[code]
+            c[0] += v * a[2]; c[1] += v * a[3]; c[2] += v
     land = sum(area.get(g, (0, 0))[0] for g in blocks)
     water = sum(area.get(g, (0, 0))[1] for g in blocks)
     place_rows = []
@@ -244,9 +250,13 @@ def summarize_plan(blocks: set[str], pl: dict, area: dict[str, tuple[int, int]],
             continue
         name = pl["names"].get(code, code)
         total = pl["places"].get(code)
+        c = centers.get(code)
         place_rows.append({"place": code, "name": name, "short": short_place(name), "type": place_type(name),
                            "pop_in_district": n, "pop_place": total,
-                           "share_of_place": (n / total) if total else None})
+                           "share_of_place": (n / total) if total else None,
+                           # population-weighted center of the place's blocks inside the plan (map label point)
+                           "label_lon": round(c[0] / c[2], 5) if c and c[2] else None,
+                           "label_lat": round(c[1] / c[2], 5) if c and c[2] else None})
     tract_rows = [{"tract": t, "pop_in_district": n, "pop_tract": tract_pop.get(t),
                    "weight": (n / tract_pop[t]) if tract_pop.get(t) else 0.0}
                   for t, n in sorted(tracts.items())]

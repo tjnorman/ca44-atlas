@@ -47,12 +47,13 @@ def test_summarize_plan_places_and_tracts():
     pl = {"blocks": {"060370001001000": 100, "060370001001001": 50, "060370002001000": 30},
           "block_place": {"060370001001000": "11111", "060370001001001": "99999", "060370002001000": "11111"},
           "names": {"11111": "Sample city"}, "places": {"11111": 1000}}
-    area = {g: (2_589_988, 0) for g in pl["blocks"]}
+    area = {g: (2_589_988, 0, -118.0, 34.0) for g in pl["blocks"]}
     tract_pop = {"06037000100": 150, "06037000200": 60}
     s = plans.summarize_plan({"060370001001000", "060370001001001", "060370002001000"}, pl, area, tract_pop)
     assert s["pop_2020"] == 180 and round(s["land_sq_mi"], 3) == 3.0
     city = next(r for r in s["places"] if r["place"] == "11111")
     assert city["pop_in_district"] == 130 and city["short"] == "Sample" and city["type"] == "city"
+    assert (city["label_lon"], city["label_lat"]) == (-118.0, 34.0)
     assert sum(r["pop_in_district"] for r in s["places"]) == s["pop_2020"]
     weights = {t["tract"]: t["weight"] for t in s["tracts"]}
     assert weights["06037000100"] == 1.0 and weights["06037000200"] == 0.5

@@ -58,7 +58,7 @@ async function main() {
       [int(pr.pop_2020), `People in 2020, new lines`, "2020 Census blocks"],
       [int(P.overlap?.pop_both), `People in both versions`, `${pct(100 * P.overlap.pop_both / pr.pop_2020, 0)} of the new district`],
       [one(pr.land_sq_mi), `Square miles of land, new lines`, `${one(ol.land_sq_mi)} under the 2021 lines`],
-      [leg?.current ? esc(leg.current.name) : "n/a", "Member of Congress", leg?.current ? `${esc(leg.current.party)}, since ${leg.terms?.find((t) => t.name === leg.current.name)?.start?.slice(0, 4) || ""}` : ""],
+      [leg?.current ? `<span class="name">${esc(leg.current.name)}</span>` : "n/a", "Member of Congress", leg?.current ? `${esc(leg.current.party)}, since ${leg.terms?.find((t) => t.name === leg.current.name)?.start?.slice(0, 4) || ""}` : ""],
     ];
     if (m.median_household_income) cells.push([usd(m.median_household_income), "Median household income, 2021 lines", `ACS ${acs.vintage.acs1} 1-year`]);
     $("#glance").innerHTML = cells.slice(0, 4).map(([n, l, s]) => `<div class="stat"><div class="num">${n}</div><div class="lab">${l}</div><div class="moe">${s}</div></div>`).join("");
@@ -81,14 +81,25 @@ async function main() {
     for (const pid of [other, primary]) {
       svg.append("g").attr("class", `plan plan-${pid}`).attr("data-plan", pid).selectAll("path").data(layers[pid].features).join("path").attr("d", path);
     }
-    const pop = new Map();
-    for (const pid of ids) for (const r of plans[pid].places) if (r.place) pop.set(r.place, Math.max(pop.get(r.place) || 0, r.pop_in_district));
-    svg.append("g").selectAll("text").data(places.filter((f) => (pop.get(f.properties.place) || 0) > 10000)).join("text")
-      .attr("class", "plabel").attr("transform", (f) => {
-        const c = path.centroid(f);
-        return Number.isFinite(c[0]) ? `translate(${c})` : "translate(-99,-99)";
-      }).text((f) => f.properties.name);
-    $("#map-legend").innerHTML = `<span><i class="swatch"></i>New lines (from Jan. 3, 2027)</span><span><i class="swatch old"></i>2021 lines (through Jan. 3, 2027)</span><span>Gray lines: city and place boundaries (Census, ${esc("cartographic boundary file")}). Labels for places with more than 10,000 residents in either version.</span>`;
+    // Labels at each place's population center inside the district (from 2020 blocks), largest first;
+    // a label is skipped when it would overlap one already drawn.
+    const pts = new Map();
+    for (const pid of [primary, other]) for (const r of plans[pid].places) {
+      if (!r.place || r.label_lon == null || r.pop_in_district < 10000) continue;
+      const prev = pts.get(r.place);
+      if (!prev || r.pop_in_district > prev.pop) pts.set(r.place, { name: r.short, pop: r.pop_in_district, lon: r.label_lon, lat: r.label_lat });
+    }
+    const placed = [];
+    const g = svg.append("g");
+    for (const p of [...pts.values()].sort((a, b) => b.pop - a.pop)) {
+      const [x, y] = proj([p.lon, p.lat]);
+      const w = p.name.length * 6.6 + 8, h = 15;
+      const box = [x - w / 2, y - h / 2, x + w / 2, y + h / 2];
+      if (placed.some((b) => !(box[2] < b[0] || box[0] > b[2] || box[3] < b[1] || box[1] > b[3]))) continue;
+      placed.push(box);
+      g.append("text").attr("class", "plabel").attr("x", x).attr("y", y + 4).text(p.name);
+    }
+    $("#map-legend").innerHTML = `<span><i class="swatch"></i>New lines (from Jan. 3, 2027)</span><span><i class="swatch old"></i>2021 lines (through Jan. 3, 2027)</span><span>Gray lines: city and place boundaries (Census cartographic boundary file). Each label sits at the population center of that place\'s part of the district; places with more than 10,000 residents in either version.</span>`;
     document.querySelectorAll("#plan-toggle button").forEach((b) => b.addEventListener("click", () => {
       document.querySelectorAll("#plan-toggle button").forEach((x) => x.classList.toggle("on", x === b));
       const show = b.dataset.show;

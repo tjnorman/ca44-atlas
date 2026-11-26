@@ -352,7 +352,7 @@
   "live_proxy": null,
   "congress": 119
  },
- "built_at": "2026-11-26T23:02:41+00:00",
+ "built_at": "2026-11-26T23:04:32+00:00",
  "headline": [
   {
    "id": "population",
@@ -458,11 +458,12 @@
   "total_votes": 138714,
   "candidates": [
    {
-    "name": "Nanette Diaz Barragan",
+    "name": "Nanette Diaz Barragán",
     "party": "Democrat",
     "votes": 100160,
     "pct": 72.20612194875788,
-    "writein": false
+    "writein": false,
+    "original_name": "Nanette Diaz Barragan"
    },
    {
     "name": "Paul Jones",
@@ -734,11 +735,10 @@
   }
  ],
  "integrity": {
-  "total": 26,
-  "pass": 24,
-  "fail": 1,
+  "total": 27,
+  "pass": 26,
   "skip": 1,
-  "ok": false
+  "ok": true
  },
  "freshness": {
   "plans": "2026-11-26T22:27:58+00:00",
@@ -747,7 +747,7 @@
   "acs_plan": "2026-11-26T22:29:25+00:00",
   "usaspending": "2026-11-26T22:29:42+00:00",
   "irs": "2026-11-26T22:29:44+00:00",
-  "elections": "2026-11-26T22:29:46+00:00",
+  "elections": "2026-11-26T23:04:28+00:00",
   "fec": null,
   "votes": "2026-11-26T22:29:50+00:00",
   "colleges": "2026-11-26T23:02:36+00:00",

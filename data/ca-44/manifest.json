@@ -58,7 +58,7 @@
   },
   "elections": {
    "status": "ok",
-   "updated": "2026-11-26T22:29:46+00:00",
+   "updated": "2026-11-26T23:04:28+00:00",
    "error": null,
    "sources": [
     "medsl-house",
@@ -99,7 +99,7 @@
  },
  "district": "ca-44",
  "name": "California's 44th Congressional District",
- "built_at": "2026-11-26T23:02:41+00:00",
- "requests": 5329,
+ "built_at": "2026-11-26T23:04:32+00:00",
+ "requests": 4,
  "requests_from_cache": 0
 }

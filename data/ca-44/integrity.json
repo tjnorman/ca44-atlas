@@ -1,63 +1,59 @@
 {
- "generated_at": "2026-11-26T23:08:54+00:00",
+ "generated_at": "2026-11-26T23:25:51+00:00",
  "summary": {
-  "total": 27,
+  "total": 28,
   "pass": 26,
+  "warn": 1,
   "skip": 1,
   "ok": true
  },
  "checks": [
   {
-   "id": "places-cover-cd119",
-   "title": "Cities and places add up to the whole 2021 lines",
+   "id": "bef-files-cd120",
+   "title": "Two Census block files give the same blocks for the new lines",
+   "status": "pass",
+   "sources": [
+    "census-bef-120"
+   ],
+   "values": {},
+   "detail": "CD120_06.txt and NationalCD120.txt each assign 6,672 and 6,672 blocks to district 44; the lists are identical."
+  },
+  {
+   "id": "pop-recorded-cd120",
+   "title": "2020 population for the new lines matches the recorded figure",
+   "status": "pass",
+   "sources": [
+    "census-pl"
+   ],
+   "values": {
+    "blocks": 757709,
+    "recorded": 757709
+   },
+   "detail": "Blocks: 757,709; recorded 757,709 (computed from the Census block files on Nov. 26, 2026, before the pipeline existed)."
+  },
+  {
+   "id": "equal-pop-cd120",
+   "title": "The new lines holds about one equal share of the state's people",
+   "status": "pass",
+   "sources": [
+    "census-pl"
+   ],
+   "values": {
+    "pop": 757709,
+    "ideal": 760350.4423076923,
+    "deviation": -0.003473980102747576
+   },
+   "detail": "757,709 people against an equal share of 760,350 (California's 39,538,223 divided by 52): -0.35%. Tolerance 1%; states may balance districts on adjusted counts, so a small gap is expected."
+  },
+  {
+   "id": "places-cover-cd120",
+   "title": "Cities and places add up to the whole new lines",
    "status": "pass",
    "sources": [
     "census-pl"
    ],
    "values": {},
-   "detail": "10 places and unincorporated remainder sum to 757,951; district 757,951; blocks without a population record: 0."
-  },
-  {
-   "id": "equal-pop-cd119",
-   "title": "The 2021 lines holds about one equal share of the state's people",
-   "status": "pass",
-   "sources": [
-    "census-pl"
-   ],
-   "values": {
-    "pop": 757951,
-    "ideal": 760350.4423076923,
-    "deviation": -0.003155705809034348
-   },
-   "detail": "757,951 people against an equal share of 760,350 (California's 39,538,223 divided by 52): -0.32%. Tolerance 1%; states may balance districts on adjusted counts, so a small gap is expected."
-  },
-  {
-   "id": "pop-recorded-cd119",
-   "title": "2020 population for the 2021 lines matches the recorded figure",
-   "status": "pass",
-   "sources": [
-    "census-pl"
-   ],
-   "values": {
-    "blocks": 757951,
-    "recorded": 757951
-   },
-   "detail": "Blocks: 757,951; recorded 757,951 (computed from the Census block files on Nov. 26, 2026, before the pipeline existed)."
-  },
-  {
-   "id": "land-area-cd119",
-   "title": "Block land area matches the Census Gazetteer for the 2021 lines",
-   "status": "pass",
-   "sources": [
-    "census-bef-119",
-    "census-tiger-blocks",
-    "census-gaz"
-   ],
-   "values": {
-    "blocks": 91.16466521901086,
-    "gazetteer": 91.137
-   },
-   "detail": "Blocks: 91.16 sq mi of land; Gazetteer: 91.14 sq mi (tolerance 0.5%; the Gazetteer uses a newer boundary vintage)."
+   "detail": "12 places and unincorporated remainder sum to 757,709; district 757,709; blocks without a population record: 0."
   },
   {
    "id": "pop-2020-cd119",
@@ -75,149 +71,66 @@
    "detail": "Sum of 6,816 blocks: 757,951; Census 2020/dec/cd119 tabulation: 757,951."
   },
   {
-   "id": "places-cover-cd120",
-   "title": "Cities and places add up to the whole new lines",
+   "id": "land-area-cd119",
+   "title": "Block land area matches the Census Gazetteer for the 2021 lines",
    "status": "pass",
    "sources": [
-    "census-pl"
+    "census-bef-119",
+    "census-tiger-blocks",
+    "census-gaz"
    ],
-   "values": {},
-   "detail": "12 places and unincorporated remainder sum to 757,709; district 757,709; blocks without a population record: 0."
+   "values": {
+    "blocks": 91.16466521901086,
+    "gazetteer": 91.137
+   },
+   "detail": "Blocks: 91.16 sq mi of land; Gazetteer: 91.14 sq mi (tolerance 0.5%; the Gazetteer uses a newer boundary vintage)."
   },
   {
-   "id": "equal-pop-cd120",
-   "title": "The new lines holds about one equal share of the state's people",
+   "id": "pop-recorded-cd119",
+   "title": "2020 population for the 2021 lines matches the recorded figure",
    "status": "pass",
    "sources": [
     "census-pl"
    ],
    "values": {
-    "pop": 757709,
+    "blocks": 757951,
+    "recorded": 757951
+   },
+   "detail": "Blocks: 757,951; recorded 757,951 (computed from the Census block files on Nov. 26, 2026, before the pipeline existed)."
+  },
+  {
+   "id": "equal-pop-cd119",
+   "title": "The 2021 lines holds about one equal share of the state's people",
+   "status": "pass",
+   "sources": [
+    "census-pl"
+   ],
+   "values": {
+    "pop": 757951,
     "ideal": 760350.4423076923,
-    "deviation": -0.003473980102747576
+    "deviation": -0.003155705809034348
    },
-   "detail": "757,709 people against an equal share of 760,350 (California's 39,538,223 divided by 52): -0.35%. Tolerance 1%; states may balance districts on adjusted counts, so a small gap is expected."
+   "detail": "757,951 people against an equal share of 760,350 (California's 39,538,223 divided by 52): -0.32%. Tolerance 1%; states may balance districts on adjusted counts, so a small gap is expected."
   },
   {
-   "id": "pop-recorded-cd120",
-   "title": "2020 population for the new lines matches the recorded figure",
+   "id": "places-cover-cd119",
+   "title": "Cities and places add up to the whole 2021 lines",
    "status": "pass",
    "sources": [
     "census-pl"
    ],
-   "values": {
-    "blocks": 757709,
-    "recorded": 757709
-   },
-   "detail": "Blocks: 757,709; recorded 757,709 (computed from the Census block files on Nov. 26, 2026, before the pipeline existed)."
-  },
-  {
-   "id": "bef-files-cd120",
-   "title": "Two Census block files give the same blocks for the new lines",
-   "status": "pass",
-   "sources": [
-    "census-bef-120"
-   ],
    "values": {},
-   "detail": "CD120_06.txt and NationalCD120.txt each assign 6,672 and 6,672 blocks to district 44; the lists are identical."
+   "detail": "10 places and unincorporated remainder sum to 757,951; district 757,951; blocks without a population record: 0."
   },
   {
-   "id": "station-links",
-   "title": "Listening links point at stations in the FCC records",
+   "id": "acs-labels",
+   "title": "Every Census variable means what the atlas says it means",
    "status": "pass",
+   "detail": "210 of 210 variable labels matched the Census Bureau's official definitions for ACS 2025 1-year and ACS 2024 5-year. Education rows were chosen by label (found).",
    "sources": [
-    "fcc-queries"
-   ],
-   "values": {
-    "linked": 0
-   },
-   "detail": "0 stations carry a link to their broadcaster's listening page, checked on 2026-11-26."
-  },
-  {
-   "id": "fcc-layout",
-   "title": "FCC station records have the expected layout",
-   "status": "pass",
-   "sources": [
-    "fcc-queries"
-   ],
-   "values": {
-    "rows": 2255,
-    "readable": 2253
-   },
-   "detail": "2,253 of 2,255 rows had hemisphere letters and plausible coordinates in the expected positions."
-  },
-  {
-   "id": "ipeds-district",
-   "title": "IPEDS district codes agree with the district outline",
-   "status": "pass",
-   "sources": [
-    "nces-ipeds-hd",
-    "census-cb"
-   ],
-   "values": {
-    "listed": 8,
-    "disagree": 0
-   },
-   "detail": "For the cd119 lines, IPEDS district codes agree with the outline for all 8 institutions listed; 2 are inside the new lines only and carry a neighboring district's code, as expected."
-  },
-  {
-   "id": "ipeds-labels",
-   "title": "College directory variables match the IPEDS dictionary",
-   "status": "pass",
-   "sources": [
-    "nces-ipeds-hd"
-   ],
-   "values": {},
-   "detail": "13 of 13 variables confirmed against the 2024 dictionary."
-  },
-  {
-   "id": "irs-district-lines",
-   "title": "IRS file uses the current district lines",
-   "status": "pass",
-   "detail": "The tax year 2023 documentation names the 118th Congress; this atlas uses the 119th. California's lines have not changed since the 118th Congress.",
-   "sources": [
-    "irs-soi-cd"
-   ],
-   "values": {
-    "irs_congress": 118,
-    "atlas_congress": 119
-   }
-  },
-  {
-   "id": "irs-state-sum",
-   "title": "California's districts add up to the state total in the IRS file",
-   "status": "pass",
-   "detail": "Returns: state row 18,481,730; sum of 52 districts 18,481,730 (tolerance 2%; returns the IRS could not place in a district are counted only in the state row).",
-   "sources": [
-    "irs-soi-cd"
-   ],
-   "values": {
-    "state_row": 18481730.0,
-    "district_sum": 18481730.0
-   }
-  },
-  {
-   "id": "irs-classes-sum",
-   "title": "IRS income classes add up to the district total",
-   "status": "pass",
-   "detail": "Total tax liability: published total $2,457,968,000; sum of income classes $2,457,968,000 (tolerance 1%; the IRS rounds and suppresses small cells).",
-   "sources": [
-    "irs-soi-cd"
-   ],
-   "values": {
-    "published": 2457968000.0,
-    "summed": 2457968000.0
-   }
-  },
-  {
-   "id": "irs-labels",
-   "title": "IRS variables match their published descriptions",
-   "status": "pass",
-   "detail": "6 of 6 variables confirmed against the tax year 2023 documentation guide and within plausible range.",
-   "sources": [
-    "irs-soi-cd"
-   ],
-   "values": {}
+    "acs1",
+    "acs5"
+   ]
   },
   {
    "id": "acs-method",
@@ -234,14 +147,65 @@
    "detail": "Applied to the 2021 lines, the method is within tolerance on 11 of 11 measures (counts within 1%, shares within 1.5 points)."
   },
   {
-   "id": "acs-labels",
-   "title": "Every Census variable means what the atlas says it means",
-   "status": "pass",
-   "detail": "210 of 210 variable labels matched the Census Bureau's official definitions for ACS 2025 1-year and ACS 2024 5-year. Education rows were chosen by label (found).",
+   "id": "laus-current",
+   "title": "Every published city and the county have unemployment data through the same month",
+   "status": "warn",
    "sources": [
-    "acs1",
-    "acs5"
-   ]
+    "bls-laus"
+   ],
+   "values": {
+    "latest": "2026-10"
+   },
+   "detail": "9 cities and 1 county series run through 2026-10. Behind: Los Angeles, Long Beach, Carson, South Gate, Lynwood, Huntington Park, Paramount, Lakewood, Bellflower. BLS does not publish monthly series for Florence-Graham (cities and places under its threshold or census-designated places it does not cover). Months with no estimate in any series: 2025-10."
+  },
+  {
+   "id": "irs-labels",
+   "title": "IRS variables match their published descriptions",
+   "status": "pass",
+   "detail": "6 of 6 variables confirmed against the tax year 2023 documentation guide and within plausible range.",
+   "sources": [
+    "irs-soi-cd"
+   ],
+   "values": {}
+  },
+  {
+   "id": "irs-classes-sum",
+   "title": "IRS income classes add up to the district total",
+   "status": "pass",
+   "detail": "Total tax liability: published total $2,457,968,000; sum of income classes $2,457,968,000 (tolerance 1%; the IRS rounds and suppresses small cells).",
+   "sources": [
+    "irs-soi-cd"
+   ],
+   "values": {
+    "published": 2457968000.0,
+    "summed": 2457968000.0
+   }
+  },
+  {
+   "id": "irs-state-sum",
+   "title": "California's districts add up to the state total in the IRS file",
+   "status": "pass",
+   "detail": "Returns: state row 18,481,730; sum of 52 districts 18,481,730 (tolerance 2%; returns the IRS could not place in a district are counted only in the state row).",
+   "sources": [
+    "irs-soi-cd"
+   ],
+   "values": {
+    "state_row": 18481730.0,
+    "district_sum": 18481730.0
+   }
+  },
+  {
+   "id": "irs-district-lines",
+   "title": "IRS file uses the current district lines",
+   "status": "pass",
+   "detail": "The tax year 2023 documentation names the 118th Congress; this atlas uses the 119th. California's lines have not changed since the 118th Congress.",
+   "sources": [
+    "irs-soi-cd"
+   ],
+   "values": {
+    "irs_congress": 118,
+    "atlas_congress": 119
+   }
   },
   {
    "id": "election-sources-agree",
@@ -265,6 +229,55 @@
     "changed": 3
    },
    "detail": "3 candidate names were set to one spelling (accents or a damaged character in a source file); each row keeps the source's own spelling as original_name."
+  },
+  {
+   "id": "ipeds-labels",
+   "title": "College directory variables match the IPEDS dictionary",
+   "status": "pass",
+   "sources": [
+    "nces-ipeds-hd"
+   ],
+   "values": {},
+   "detail": "13 of 13 variables confirmed against the 2024 dictionary."
+  },
+  {
+   "id": "ipeds-district",
+   "title": "IPEDS district codes agree with the district outline",
+   "status": "pass",
+   "sources": [
+    "nces-ipeds-hd",
+    "census-cb"
+   ],
+   "values": {
+    "listed": 8,
+    "disagree": 0
+   },
+   "detail": "For the cd119 lines, IPEDS district codes agree with the outline for all 8 institutions listed; 2 are inside the new lines only and carry a neighboring district's code, as expected."
+  },
+  {
+   "id": "fcc-layout",
+   "title": "FCC station records have the expected layout",
+   "status": "pass",
+   "sources": [
+    "fcc-queries"
+   ],
+   "values": {
+    "rows": 2255,
+    "readable": 2253
+   },
+   "detail": "2,253 of 2,255 rows had hemisphere letters and plausible coordinates in the expected positions."
+  },
+  {
+   "id": "station-links",
+   "title": "Listening links point at stations in the FCC records",
+   "status": "pass",
+   "sources": [
+    "fcc-queries"
+   ],
+   "values": {
+    "linked": 0
+   },
+   "detail": "0 stations carry a link to their broadcaster's listening page, checked on 2026-11-26."
   },
   {
    "id": "acs-share",

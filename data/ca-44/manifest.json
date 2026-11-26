@@ -2,7 +2,7 @@
  "sources": {
   "plans": {
    "status": "ok",
-   "updated": "2026-11-26T23:07:20+00:00",
+   "updated": "2026-11-26T23:20:47+00:00",
    "error": null,
    "sources": [
     "census-bef-120",
@@ -16,7 +16,7 @@
   },
   "legislators": {
    "status": "ok",
-   "updated": "2026-11-26T22:28:19+00:00",
+   "updated": "2026-11-26T23:21:17+00:00",
    "error": null,
    "sources": [
     "congress-legislators",
@@ -25,7 +25,7 @@
   },
   "acs": {
    "status": "ok",
-   "updated": "2026-11-26T22:28:28+00:00",
+   "updated": "2026-11-26T23:21:26+00:00",
    "error": null,
    "sources": [
     "acs1",
@@ -34,7 +34,7 @@
   },
   "acs_plan": {
    "status": "ok",
-   "updated": "2026-11-26T22:29:25+00:00",
+   "updated": "2026-11-26T23:22:36+00:00",
    "error": null,
    "sources": [
     "acs5-tracts"
@@ -42,7 +42,7 @@
   },
   "usaspending": {
    "status": "ok",
-   "updated": "2026-11-26T22:29:42+00:00",
+   "updated": "2026-11-26T23:23:09+00:00",
    "error": null,
    "sources": [
     "usaspending"
@@ -50,7 +50,7 @@
   },
   "irs": {
    "status": "ok",
-   "updated": "2026-11-26T22:29:44+00:00",
+   "updated": "2026-11-26T23:23:11+00:00",
    "error": null,
    "sources": [
     "irs-soi-cd"
@@ -58,7 +58,7 @@
   },
   "elections": {
    "status": "ok",
-   "updated": "2026-11-26T23:08:50+00:00",
+   "updated": "2026-11-26T23:23:13+00:00",
    "error": null,
    "sources": [
     "medsl-house",
@@ -70,11 +70,11 @@
    "updated": null,
    "error": "FetchError: HTTP 403 for https://api.open.fec.gov/v1/candidates/totals/?api_key=REDACTED&election_year=2022&office=H&state=CA&district=44&per_page=100&sort=-receipts&election_full=true: {\n  \"error\": {\n    \"code\": \"API_KEY_INVALID\",\n    \"message\": \"An invalid api_key was supplied. Get one at https://api.data.gov/signup/\"\n  }\n}",
    "sources": [],
-   "attempted": "2026-11-26T22:29:49+00:00"
+   "attempted": "2026-11-26T23:23:16+00:00"
   },
   "votes": {
    "status": "ok",
-   "updated": "2026-11-26T22:29:50+00:00",
+   "updated": "2026-11-26T23:23:17+00:00",
    "error": null,
    "sources": [
     "clerk-votes"
@@ -82,7 +82,7 @@
   },
   "colleges": {
    "status": "ok",
-   "updated": "2026-11-26T23:02:36+00:00",
+   "updated": "2026-11-26T23:25:44+00:00",
    "error": null,
    "sources": [
     "nces-ipeds-hd"
@@ -90,16 +90,31 @@
   },
   "broadcast": {
    "status": "ok",
-   "updated": "2026-11-26T23:02:38+00:00",
+   "updated": "2026-11-26T23:25:48+00:00",
    "error": null,
    "sources": [
     "fcc-queries"
    ]
+  },
+  "laus": {
+   "status": "ok",
+   "updated": "2026-11-26T23:22:58+00:00",
+   "error": null,
+   "sources": [
+    "bls-laus"
+   ]
+  },
+  "ports": {
+   "status": "missing",
+   "updated": null,
+   "error": "FetchError: HTTP 403 for https://thehelm.polb.com/stellar_custom_table/table102: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;thehelm&#46;polb&#46;com&#47;stellar&#95;custom&#95;table&#47;t",
+   "sources": [],
+   "attempted": "2026-11-26T23:22:59+00:00"
   }
  },
  "district": "ca-44",
  "name": "California's 44th Congressional District",
- "built_at": "2026-11-26T23:08:54+00:00",
- "requests": 4,
- "requests_from_cache": 0
+ "built_at": "2026-11-26T23:25:51+00:00",
+ "requests": 5342,
+ "requests_from_cache": 4792
 }

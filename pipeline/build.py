@@ -188,7 +188,8 @@ def run(d: District, only: list[str] | None = None) -> dict:
                (c["id"] == "wisdot-program" and "roads" not in (only or [])) or \
                (c["id"].startswith("ssa-") and "ssa" not in (only or [])) or \
                (c["id"].split("-")[0] in ("bef", "pop", "land", "equal", "places") and "plans" not in (only or [])) or \
-               (c["id"].startswith("acs-method") and "acs_plan" not in (only or []))
+               (c["id"].startswith("acs-method") and "acs_plan" not in (only or [])) or \
+               (c["id"] in ("election-sources-agree", "election-names") and "elections" not in (only or []))
         if c["id"] not in run_ids and only and kept:
             results.insert(0, c)
     integrity = {"generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),

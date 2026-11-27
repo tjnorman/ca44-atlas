@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.1 — Nov. 26, 2026 (private draft)
+
+- New check `bef-state-cd120`: the state's own AB 604 block file (Statewide Database) must assign the same
+  blocks to the district as the Census Bureau's 120th Congress file. On Nov. 26, 2026 the two files agreed
+  on all 519,723 California blocks, including the 6,672 in CA-44.
+
 ## 0.2.0 — Nov. 26, 2026 (private draft)
 
 - New `laus` source: BLS monthly unemployment for every city of 25,000 or more in either plan, with Los Angeles

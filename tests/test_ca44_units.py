@@ -145,3 +145,14 @@ def test_clean_operators_drops_phone_numbers():
     from pipeline.sources.ports import clean_operators
     out = clean_operators("Current Operator: American President Lines, Ltd. Phone: 310-548-8700 FAX: 310-548-8890")
     assert out == "American President Lines, Ltd" and "310" not in out
+
+
+def test_read_state_bef_no_header_with_bom():
+    raw = zip_of("AB604.csv", '\ufeff"060370001001000","44"\r\n"060370001001001","43"\r\n"060650444033050","25"\r\n')
+    blocks, total = plans.read_state_bef(raw, "AB604.csv", "44")
+    assert blocks == {"060370001001000"} and total == 3
+
+
+def test_read_state_bef_rejects_other_layouts():
+    with pytest.raises(ValueError):
+        plans.read_state_bef(zip_of("AB604.csv", "GEOID,CDFP\n060370001001000,44\n"), "AB604.csv", "44")

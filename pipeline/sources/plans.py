@@ -272,6 +272,27 @@ def summarize_plan(blocks: set[str], pl: dict, area: dict[str, tuple], tract_pop
     }
 
 
+def read_state_bef(raw: bytes, member: str, district: str) -> tuple[set[str], int]:
+    """Blocks assigned to one district in a state-published block file with no header row
+    (15-digit block GEOID, district number), and the number of blocks listed."""
+    with zipfile.ZipFile(io.BytesIO(raw)) as z:
+        names = z.namelist()
+        if member not in names:
+            raise FetchError(f"{member} is not in the state block file (has {', '.join(names[:12])})")
+        reader = csv.reader(io.TextIOWrapper(z.open(member), encoding="utf-8-sig", newline=""))
+        blocks, total = set(), 0
+        for row in reader:
+            if len(row) < 2:
+                continue
+            g, cd = row[0].strip(), row[1].strip()
+            if not (len(g) == 15 and g.isdigit() and cd.isdigit()):
+                raise ValueError(f"Unexpected row in {member}: {row[:3]}")
+            total += 1
+            if int(cd) == int(district):
+                blocks.add(g)
+    return blocks, total
+
+
 def fetch(fetcher: Fetcher, d: District, out_dir: pathlib.Path) -> tuple[dict, list[Source], list[dict]]:
     plans_cfg = d.raw.get("plans") or []
     if not plans_cfg:
@@ -300,6 +321,26 @@ def fetch(fetcher: Fetcher, d: District, out_dir: pathlib.Path) -> tuple[dict, l
                                      + ("; the lists are identical." if same else "; the lists differ.")})
         if not blocks[p["id"]]:
             raise ValueError(f"No blocks assigned to district {d.district} in {p['bef_member']}")
+        if p.get("state_bef_zip"):   # the state's own file for the same plan, published separately
+            st_blocks, st_total = read_state_bef(fetcher.fetch(p["state_bef_zip"]), p["state_bef_member"], d.district)
+            same = st_blocks == blocks[p["id"]] and st_total == in_state
+            only_state, only_census = len(st_blocks - blocks[p["id"]]), len(blocks[p["id"]] - st_blocks)
+            checks.append({"id": f"bef-state-{p['id']}",
+                           "title": f"The state's own block file and the Census block file agree on the {p['short']}",
+                           "status": "pass" if same else "fail",
+                           "sources": [f"state-bef-{p['id']}", f"census-bef-{p['congress']}"],
+                           "values": {"state_blocks_in_district": len(st_blocks), "census_blocks_in_district": len(blocks[p["id"]]),
+                                      "state_blocks_listed": st_total, "census_blocks_listed": in_state},
+                           "detail": f"{p['state_bef_publisher']} assigns {len(st_blocks):,} blocks to district {d.district}; "
+                                     f"the Census file assigns {len(blocks[p['id']]):,}"
+                                     + ("; the lists are identical" if not (only_state or only_census) else
+                                        f"; {only_state:,} appear only in the state file and {only_census:,} only in the Census file")
+                                     + f". The state file lists {st_total:,} blocks statewide and the Census file {in_state:,}."})
+            sources.append(Source(
+                id=f"state-bef-{p['id']}", publisher=p["state_bef_publisher"], title=p["state_bef_title"],
+                url=p["state_bef_page"], year=str(p.get("state_bef_year", "")), vintage=p.get("state_bef_vintage"),
+                query=p["state_bef_zip"] + f" ({p['state_bef_member']})",
+                notes="The state's block equivalency file for the plan, used only to confirm the Census file."))
         sources.append(Source(
             id=f"census-bef-{p['congress']}", publisher="U.S. Census Bureau",
             title=f"{p['congress']}th Congressional District block equivalency files", url=p["bef_page"],

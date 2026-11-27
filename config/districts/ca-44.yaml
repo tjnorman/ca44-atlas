@@ -41,6 +41,15 @@ plans:
     bef_cross_member: NationalCD120.txt
     bef_page: https://www.census.gov/geographies/mapping-files/2027/dec/rdo/120-congressional-district-bef.html
     bef_year: 2026
+    # The state's own block file for AB 604, published by the Statewide Database (the Legislature's
+    # redistricting database at UC Berkeley). Read only to confirm the Census file, block by block.
+    state_bef_zip: https://statewidedatabase.org/pub/data/d25/AB604.zip
+    state_bef_member: AB604.csv
+    state_bef_page: https://statewidedatabase.org/
+    state_bef_publisher: Statewide Database, University of California, Berkeley
+    state_bef_title: AB 604 block equivalency file
+    state_bef_year: 2025
+    state_bef_vintage: "AB 604 as of Aug. 17, 2025"
     census_tabulated: false
     gazetteer: false
   - id: cd119

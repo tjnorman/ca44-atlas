@@ -18,6 +18,9 @@ Every figure names the plan it describes.
 1. **Block assignment.** The Census Bureau's block equivalency files list every 2020 census block and
    its district: the 119th Congress national file for the 2021 lines, and the 120th Congress files
    (California state file and national file, which must agree) for the new lines.
+   The new lines are also read from the state's own AB 604 block file, published by the Statewide
+   Database at UC Berkeley; the build fails its check unless that file and the Census file assign
+   the same blocks to the district and list the same number of California blocks.
 2. **Population.** Each block's 2020 population comes from the 2020 Census redistricting data
    (P.L. 94-171). A plan's population is the sum of its blocks.
 3. **Area and outline.** TIGER/Line 2020 block shapes give land and water area; the district outline

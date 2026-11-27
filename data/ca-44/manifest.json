@@ -68,7 +68,7 @@
   },
   "fec": {
    "status": "ok",
-   "updated": "2026-11-27T00:45:46+00:00",
+   "updated": "2026-11-27T01:41:04+00:00",
    "error": null,
    "sources": [
     "fec"
@@ -146,7 +146,7 @@
  },
  "district": "ca-44",
  "name": "California's 44th Congressional District",
- "built_at": "2026-11-27T01:11:06+00:00",
- "requests": 1,
+ "built_at": "2026-11-27T01:41:06+00:00",
+ "requests": 3,
  "requests_from_cache": 0
 }

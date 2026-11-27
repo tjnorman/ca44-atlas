@@ -1,208 +1,127 @@
 {
- "generated_at": "2026-11-27T00:54:09+00:00",
+ "generated_at": "2026-11-27T01:09:31+00:00",
  "summary": {
-  "total": 33,
-  "pass": 33,
+  "total": 36,
+  "pass": 35,
+  "warn": 1,
   "ok": true
  },
  "checks": [
   {
-   "id": "polb-tables-agree",
-   "title": "Two Port of Long Beach tables agree month by month",
+   "id": "laus-current",
+   "title": "Every published city has unemployment data through the same month, and gaps are explained",
    "status": "pass",
    "sources": [
-    "polb-teu"
+    "bls-laus"
+   ],
+   "values": {
+    "latest": "2026-09"
+   },
+   "detail": "9 cities run through 2026-09. County, state, or national series run to 2026-10; the page compares all areas in 2026-09. BLS does not publish monthly series for Florence-Graham (cities and places under its threshold or census-designated places it does not cover). Months with no estimate in any series: 2025-10. 2025-10: BLS states that October 2025 data collection for the Current Population Survey, the primary input to these estimates, did not occur because of the 2025 lapse in federal appropriations (https://www.bls.gov/lau/launews1.htm)."
+  },
+  {
+   "id": "places-cover-cd119",
+   "title": "Cities and places add up to the whole 2021 lines",
+   "status": "pass",
+   "sources": [
+    "census-pl"
    ],
    "values": {},
-   "detail": "10 months appear in both the calendar-year table and the 25-month table; all match."
+   "detail": "10 places and unincorporated remainder sum to 757,951; district 757,951; blocks without a population record: 0."
   },
   {
-   "id": "polb-months-sum",
-   "title": "Port of Long Beach months add up to its year-to-date total",
+   "id": "equal-pop-cd119",
+   "title": "The 2021 lines holds about one equal share of the state's people",
    "status": "pass",
    "sources": [
-    "polb-teu"
+    "census-pl"
    ],
    "values": {
-    "sum": 8612970,
-    "ytd": 8612969
+    "pop": 757951,
+    "ideal": 760350.4423076923,
+    "deviation": -0.003155705809034348
    },
-   "detail": "10 months of 2026 sum to 8,612,970 TEUs; the table's year-to-date row is 8,612,969 (tolerance 2 TEUs for rounding)."
+   "detail": "757,951 people against an equal share of 760,350 (California's 39,538,223 divided by 52): -0.32%. Tolerance 1%; states may balance districts on adjusted counts, so a small gap is expected."
   },
   {
-   "id": "polb-recorded",
-   "title": "Hand-recorded Port of Long Beach figures are reviewed on schedule",
+   "id": "pop-recorded-cd119",
+   "title": "2020 population for the 2021 lines matches the recorded figure",
    "status": "pass",
    "sources": [
-    "polb-teu"
+    "census-pl"
+   ],
+   "values": {
+    "blocks": 757951,
+    "recorded": 757951
+   },
+   "detail": "Blocks: 757,951; recorded 757,951 (computed from the Census block files on Nov. 26, 2026, before the pipeline existed)."
+  },
+  {
+   "id": "land-area-cd119",
+   "title": "Block land area matches the Census Gazetteer for the 2021 lines",
+   "status": "pass",
+   "sources": [
+    "census-bef-119",
+    "census-tiger-blocks",
+    "census-gaz"
+   ],
+   "values": {
+    "blocks": 91.16466521901086,
+    "gazetteer": 91.137
+   },
+   "detail": "Blocks: 91.16 sq mi of land; Gazetteer: 91.14 sq mi (tolerance 0.5%; the Gazetteer uses a newer boundary vintage)."
+  },
+  {
+   "id": "pop-2020-cd119",
+   "title": "Block counts reproduce the Census Bureau's own 2020 population for the 2021 lines",
+   "status": "pass",
+   "sources": [
+    "census-bef-119",
+    "census-pl",
+    "census-cd119"
+   ],
+   "values": {
+    "blocks": 757951,
+    "tabulation": 757951
+   },
+   "detail": "Sum of 6,816 blocks: 757,951; Census 2020/dec/cd119 tabulation: 757,951."
+  },
+  {
+   "id": "places-cover-cd120",
+   "title": "Cities and places add up to the whole new lines",
+   "status": "pass",
+   "sources": [
+    "census-pl"
    ],
    "values": {},
-   "detail": "Recorded 2026-11-26; review by 2026-12-31."
+   "detail": "12 places and unincorporated remainder sum to 757,709; district 757,709; blocks without a population record: 0."
   },
   {
-   "id": "pola-months-sum",
-   "title": "Port of Los Angeles months add up to its calendar-year totals",
+   "id": "equal-pop-cd120",
+   "title": "The new lines holds about one equal share of the state's people",
    "status": "pass",
    "sources": [
-    "pola-teu"
-   ],
-   "values": {},
-   "detail": "10 years read (2017–2026); every year's monthly TEUs sum to the page's calendar-year total within two TEUs (rounding). 2020-11: the page shows \"889.,748.15\"; 889,748.15 is used (documented correction)."
-  },
-  {
-   "id": "station-links",
-   "title": "Listening links point at stations in the FCC records",
-   "status": "pass",
-   "sources": [
-    "fcc-queries"
+    "census-pl"
    ],
    "values": {
-    "linked": 0
+    "pop": 757709,
+    "ideal": 760350.4423076923,
+    "deviation": -0.003473980102747576
    },
-   "detail": "0 stations carry a link to their broadcaster's listening page, checked on 2026-11-26."
+   "detail": "757,709 people against an equal share of 760,350 (California's 39,538,223 divided by 52): -0.35%. Tolerance 1%; states may balance districts on adjusted counts, so a small gap is expected."
   },
   {
-   "id": "fcc-layout",
-   "title": "FCC station records have the expected layout",
+   "id": "pop-recorded-cd120",
+   "title": "2020 population for the new lines matches the recorded figure",
    "status": "pass",
    "sources": [
-    "fcc-queries"
+    "census-pl"
    ],
    "values": {
-    "rows": 2255,
-    "readable": 2253
+    "blocks": 757709,
+    "recorded": 757709
    },
-   "detail": "2,253 of 2,255 rows had hemisphere letters and plausible coordinates in the expected positions."
-  },
-  {
-   "id": "ipeds-district",
-   "title": "IPEDS district codes agree with the district outline",
-   "status": "pass",
-   "sources": [
-    "nces-ipeds-hd",
-    "census-cb"
-   ],
-   "values": {
-    "listed": 8,
-    "disagree": 0
-   },
-   "detail": "For the cd119 lines, IPEDS district codes agree with the outline for all 8 institutions listed; 2 are inside the new lines only and carry a neighboring district's code, as expected."
-  },
-  {
-   "id": "ipeds-labels",
-   "title": "College directory variables match the IPEDS dictionary",
-   "status": "pass",
-   "sources": [
-    "nces-ipeds-hd"
-   ],
-   "values": {},
-   "detail": "13 of 13 variables confirmed against the 2024 dictionary."
-  },
-  {
-   "id": "election-names",
-   "title": "Candidate names are spelled one way across years",
-   "status": "pass",
-   "sources": [
-    "medsl-house",
-    "fec-results"
-   ],
-   "values": {
-    "changed": 3
-   },
-   "detail": "3 candidate names were set to one spelling (accents or a damaged character in a source file); each row keeps the source's own spelling as original_name."
-  },
-  {
-   "id": "election-sources-agree",
-   "title": "Two election compilations agree on the same race, or the official count settles it",
-   "status": "pass",
-   "detail": "2018 general election: MIT Election Lab has Nanette Diaz Barragan with 195,888 votes; the FEC compilation has Nanette Diaz Barragán with 97,944 votes (tolerance 0.2%). The Statement of Vote gives 97,944 (California Secretary of State, Statement of Vote, November 6, 2018 General Election, summary pages (https://elections.cdn.sos.ca.gov/sov/2018-general/sov/07-summary.pdf), read Nov. 26, 2026). The FEC figure matches it and is the one shown. The MIT Election Lab file reports exactly twice these counts for this race (195,888 and 90,756); the FEC compilation matches the Statement of Vote.",
-   "sources": [
-    "medsl-house",
-    "fec-results"
-   ]
-  },
-  {
-   "id": "irs-district-lines",
-   "title": "IRS file uses the current district lines",
-   "status": "pass",
-   "detail": "The tax year 2023 documentation names the 118th Congress; this atlas uses the 119th. California's lines have not changed since the 118th Congress.",
-   "sources": [
-    "irs-soi-cd"
-   ],
-   "values": {
-    "irs_congress": 118,
-    "atlas_congress": 119
-   }
-  },
-  {
-   "id": "irs-state-sum",
-   "title": "California's districts add up to the state total in the IRS file",
-   "status": "pass",
-   "detail": "Returns: state row 18,481,730; sum of 52 districts 18,481,730 (tolerance 2%; returns the IRS could not place in a district are counted only in the state row).",
-   "sources": [
-    "irs-soi-cd"
-   ],
-   "values": {
-    "state_row": 18481730.0,
-    "district_sum": 18481730.0
-   }
-  },
-  {
-   "id": "irs-classes-sum",
-   "title": "IRS income classes add up to the district total",
-   "status": "pass",
-   "detail": "Total tax liability: published total $2,457,968,000; sum of income classes $2,457,968,000 (tolerance 1%; the IRS rounds and suppresses small cells).",
-   "sources": [
-    "irs-soi-cd"
-   ],
-   "values": {
-    "published": 2457968000.0,
-    "summed": 2457968000.0
-   }
-  },
-  {
-   "id": "irs-labels",
-   "title": "IRS variables match their published descriptions",
-   "status": "pass",
-   "detail": "6 of 6 variables confirmed against the tax year 2023 documentation guide and within plausible range.",
-   "sources": [
-    "irs-soi-cd"
-   ],
-   "values": {}
-  },
-  {
-   "id": "acs-method",
-   "title": "The tract method reproduces the Census Bureau's own figures for the current lines",
-   "status": "pass",
-   "sources": [
-    "acs5-tracts",
-    "acs5"
-   ],
-   "values": {
-    "compared": 11,
-    "within_tolerance": 11
-   },
-   "detail": "Applied to the 2021 lines, the method is within tolerance on 11 of 11 measures (counts within 1%, shares within 1.5 points)."
-  },
-  {
-   "id": "acs-labels",
-   "title": "Every Census variable means what the atlas says it means",
-   "status": "pass",
-   "detail": "210 of 210 variable labels matched the Census Bureau's official definitions for ACS 2025 1-year and ACS 2024 5-year. Education rows were chosen by label (found).",
-   "sources": [
-    "acs1",
-    "acs5"
-   ]
-  },
-  {
-   "id": "bef-files-cd120",
-   "title": "Two Census block files give the same blocks for the new lines",
-   "status": "pass",
-   "sources": [
-    "census-bef-120"
-   ],
-   "values": {},
-   "detail": "CD120_06.txt and NationalCD120.txt each assign 6,672 and 6,672 blocks to district 44; the lists are identical."
+   "detail": "Blocks: 757,709; recorded 757,709 (computed from the Census block files on Nov. 26, 2026, before the pipeline existed)."
   },
   {
    "id": "bef-state-cd120",
@@ -221,120 +140,243 @@
    "detail": "Statewide Database, University of California, Berkeley assigns 6,672 blocks to district 44; the Census file assigns 6,672; the lists are identical. The state file lists 519,723 blocks statewide and the Census file 519,723."
   },
   {
-   "id": "pop-recorded-cd120",
-   "title": "2020 population for the new lines matches the recorded figure",
+   "id": "bef-files-cd120",
+   "title": "Two Census block files give the same blocks for the new lines",
    "status": "pass",
    "sources": [
-    "census-pl"
-   ],
-   "values": {
-    "blocks": 757709,
-    "recorded": 757709
-   },
-   "detail": "Blocks: 757,709; recorded 757,709 (computed from the Census block files on Nov. 26, 2026, before the pipeline existed)."
-  },
-  {
-   "id": "equal-pop-cd120",
-   "title": "The new lines holds about one equal share of the state's people",
-   "status": "pass",
-   "sources": [
-    "census-pl"
-   ],
-   "values": {
-    "pop": 757709,
-    "ideal": 760350.4423076923,
-    "deviation": -0.003473980102747576
-   },
-   "detail": "757,709 people against an equal share of 760,350 (California's 39,538,223 divided by 52): -0.35%. Tolerance 1%; states may balance districts on adjusted counts, so a small gap is expected."
-  },
-  {
-   "id": "places-cover-cd120",
-   "title": "Cities and places add up to the whole new lines",
-   "status": "pass",
-   "sources": [
-    "census-pl"
+    "census-bef-120"
    ],
    "values": {},
-   "detail": "12 places and unincorporated remainder sum to 757,709; district 757,709; blocks without a population record: 0."
+   "detail": "CD120_06.txt and NationalCD120.txt each assign 6,672 and 6,672 blocks to district 44; the lists are identical."
   },
   {
-   "id": "pop-2020-cd119",
-   "title": "Block counts reproduce the Census Bureau's own 2020 population for the 2021 lines",
+   "id": "acs-labels",
+   "title": "Every Census variable means what the atlas says it means",
+   "status": "pass",
+   "detail": "210 of 210 variable labels matched the Census Bureau's official definitions for ACS 2025 1-year and ACS 2024 5-year. Education rows were chosen by label (found).",
+   "sources": [
+    "acs1",
+    "acs5"
+   ]
+  },
+  {
+   "id": "acs-method",
+   "title": "The tract method reproduces the Census Bureau's own figures for the current lines",
    "status": "pass",
    "sources": [
-    "census-bef-119",
-    "census-pl",
-    "census-cd119"
+    "acs5-tracts",
+    "acs5"
    ],
    "values": {
-    "blocks": 757951,
-    "tabulation": 757951
+    "compared": 11,
+    "within_tolerance": 11
    },
-   "detail": "Sum of 6,816 blocks: 757,951; Census 2020/dec/cd119 tabulation: 757,951."
+   "detail": "Applied to the 2021 lines, the method is within tolerance on 11 of 11 measures (counts within 1%, shares within 1.5 points)."
   },
   {
-   "id": "land-area-cd119",
-   "title": "Block land area matches the Census Gazetteer for the 2021 lines",
+   "id": "irs-labels",
+   "title": "IRS variables match their published descriptions",
    "status": "pass",
+   "detail": "6 of 6 variables confirmed against the tax year 2023 documentation guide and within plausible range.",
    "sources": [
-    "census-bef-119",
-    "census-tiger-blocks",
-    "census-gaz"
+    "irs-soi-cd"
+   ],
+   "values": {}
+  },
+  {
+   "id": "irs-classes-sum",
+   "title": "IRS income classes add up to the district total",
+   "status": "pass",
+   "detail": "Total tax liability: published total $2,457,968,000; sum of income classes $2,457,968,000 (tolerance 1%; the IRS rounds and suppresses small cells).",
+   "sources": [
+    "irs-soi-cd"
    ],
    "values": {
-    "blocks": 91.16466521901086,
-    "gazetteer": 91.137
-   },
-   "detail": "Blocks: 91.16 sq mi of land; Gazetteer: 91.14 sq mi (tolerance 0.5%; the Gazetteer uses a newer boundary vintage)."
+    "published": 2457968000.0,
+    "summed": 2457968000.0
+   }
   },
   {
-   "id": "pop-recorded-cd119",
-   "title": "2020 population for the 2021 lines matches the recorded figure",
+   "id": "irs-state-sum",
+   "title": "California's districts add up to the state total in the IRS file",
    "status": "pass",
+   "detail": "Returns: state row 18,481,730; sum of 52 districts 18,481,730 (tolerance 2%; returns the IRS could not place in a district are counted only in the state row).",
    "sources": [
-    "census-pl"
+    "irs-soi-cd"
    ],
    "values": {
-    "blocks": 757951,
-    "recorded": 757951
-   },
-   "detail": "Blocks: 757,951; recorded 757,951 (computed from the Census block files on Nov. 26, 2026, before the pipeline existed)."
+    "state_row": 18481730.0,
+    "district_sum": 18481730.0
+   }
   },
   {
-   "id": "equal-pop-cd119",
-   "title": "The 2021 lines holds about one equal share of the state's people",
+   "id": "irs-district-lines",
+   "title": "IRS file uses the current district lines",
    "status": "pass",
+   "detail": "The tax year 2023 documentation names the 118th Congress; this atlas uses the 119th. California's lines have not changed since the 118th Congress.",
    "sources": [
-    "census-pl"
+    "irs-soi-cd"
    ],
    "values": {
-    "pop": 757951,
-    "ideal": 760350.4423076923,
-    "deviation": -0.003155705809034348
-   },
-   "detail": "757,951 people against an equal share of 760,350 (California's 39,538,223 divided by 52): -0.32%. Tolerance 1%; states may balance districts on adjusted counts, so a small gap is expected."
+    "irs_congress": 118,
+    "atlas_congress": 119
+   }
   },
   {
-   "id": "places-cover-cd119",
-   "title": "Cities and places add up to the whole 2021 lines",
+   "id": "election-sources-agree",
+   "title": "Two election compilations agree on the same race, or the official count settles it",
+   "status": "pass",
+   "detail": "2018 general election: MIT Election Lab has Nanette Diaz Barragan with 195,888 votes; the FEC compilation has Nanette Diaz Barragán with 97,944 votes (tolerance 0.2%). The Statement of Vote gives 97,944 (California Secretary of State, Statement of Vote, November 6, 2018 General Election, summary pages (https://elections.cdn.sos.ca.gov/sov/2018-general/sov/07-summary.pdf), read Nov. 26, 2026). The FEC figure matches it and is the one shown. The MIT Election Lab file reports exactly twice these counts for this race (195,888 and 90,756); the FEC compilation matches the Statement of Vote.",
+   "sources": [
+    "medsl-house",
+    "fec-results"
+   ]
+  },
+  {
+   "id": "election-names",
+   "title": "Candidate names are spelled one way across years",
    "status": "pass",
    "sources": [
-    "census-pl"
+    "medsl-house",
+    "fec-results"
+   ],
+   "values": {
+    "changed": 3
+   },
+   "detail": "3 candidate names were set to one spelling (accents or a damaged character in a source file); each row keeps the source's own spelling as original_name."
+  },
+  {
+   "id": "ipeds-labels",
+   "title": "College directory variables match the IPEDS dictionary",
+   "status": "pass",
+   "sources": [
+    "nces-ipeds-hd"
    ],
    "values": {},
-   "detail": "10 places and unincorporated remainder sum to 757,951; district 757,951; blocks without a population record: 0."
+   "detail": "13 of 13 variables confirmed against the 2024 dictionary."
   },
   {
-   "id": "laus-current",
-   "title": "Every published city has unemployment data through the same month, and gaps are explained",
+   "id": "ipeds-district",
+   "title": "IPEDS district codes agree with the district outline",
    "status": "pass",
    "sources": [
-    "bls-laus"
+    "nces-ipeds-hd",
+    "census-cb"
    ],
    "values": {
-    "latest": "2026-09"
+    "listed": 8,
+    "disagree": 0
    },
-   "detail": "9 cities run through 2026-09. County, state, or national series run to 2026-10; the page compares all areas in 2026-09. BLS does not publish monthly series for Florence-Graham (cities and places under its threshold or census-designated places it does not cover). Months with no estimate in any series: 2025-10. 2025-10: BLS states that October 2025 data collection for the Current Population Survey, the primary input to these estimates, did not occur because of the 2025 lapse in federal appropriations (https://www.bls.gov/lau/launews1.htm)."
+   "detail": "For the cd119 lines, IPEDS district codes agree with the outline for all 8 institutions listed; 2 are inside the new lines only and carry a neighboring district's code, as expected."
+  },
+  {
+   "id": "fcc-layout",
+   "title": "FCC station records have the expected layout",
+   "status": "pass",
+   "sources": [
+    "fcc-queries"
+   ],
+   "values": {
+    "rows": 2255,
+    "readable": 2253
+   },
+   "detail": "2,253 of 2,255 rows had hemisphere letters and plausible coordinates in the expected positions."
+  },
+  {
+   "id": "station-links",
+   "title": "Listening links point at stations in the FCC records",
+   "status": "pass",
+   "sources": [
+    "fcc-queries"
+   ],
+   "values": {
+    "linked": 0
+   },
+   "detail": "0 stations carry a link to their broadcaster's listening page, checked on 2026-11-26."
+  },
+  {
+   "id": "pola-months-sum",
+   "title": "Port of Los Angeles months add up to its calendar-year totals",
+   "status": "pass",
+   "sources": [
+    "pola-teu"
+   ],
+   "values": {},
+   "detail": "10 years read (2017–2026); every year's monthly TEUs sum to the page's calendar-year total within two TEUs (rounding). 2020-11: the page shows \"889.,748.15\"; 889,748.15 is used (documented correction)."
+  },
+  {
+   "id": "polb-recorded",
+   "title": "Hand-recorded Port of Long Beach figures are reviewed on schedule",
+   "status": "pass",
+   "sources": [
+    "polb-teu"
+   ],
+   "values": {},
+   "detail": "Recorded 2026-11-26; review by 2026-12-31."
+  },
+  {
+   "id": "polb-months-sum",
+   "title": "Port of Long Beach months add up to its year-to-date total",
+   "status": "pass",
+   "sources": [
+    "polb-teu"
+   ],
+   "values": {
+    "sum": 8612970,
+    "ytd": 8612969
+   },
+   "detail": "10 months of 2026 sum to 8,612,970 TEUs; the table's year-to-date row is 8,612,969 (tolerance 2 TEUs for rounding)."
+  },
+  {
+   "id": "polb-tables-agree",
+   "title": "Two Port of Long Beach tables agree month by month",
+   "status": "pass",
+   "sources": [
+    "polb-teu"
+   ],
+   "values": {},
+   "detail": "10 months appear in both the calendar-year table and the 25-month table; all match."
+  },
+  {
+   "id": "projects-sourced",
+   "title": "Every project fact names an official source",
+   "status": "pass",
+   "sources": [
+    "caltrans-vtb-2026-03-11",
+    "caltrans-vtb-2026-09-25",
+    "caltrans-vtb-2026-10-22",
+    "caltrans-vtb-2026-11-03"
+   ],
+   "values": {
+    "projects": 1
+   },
+   "detail": "14 facts across 1 project(s), each tied to a listed page. Read on 2026-11-26; due for re-reading by 2027-02-28."
+  },
+  {
+   "id": "cameras-inside",
+   "title": "Caltrans cameras inside the district are in Los Angeles County and mostly in service",
+   "status": "warn",
+   "sources": [
+    "caltrans-cctv"
+   ],
+   "values": {
+    "inside": 60,
+    "in_service": 58
+   },
+   "detail": "60 of 591 District 7 cameras fall inside either plan; 58 are in service. 2 carry a county other than Los Angeles: I-405 : (340) Main St, I-710 : (274) S/O Rte 105."
+  },
+  {
+   "id": "faa-layout",
+   "title": "FAA facility positions agree in decimal and in degrees, minutes, and seconds",
+   "status": "pass",
+   "sources": [
+    "faa-ntad-aviation"
+   ],
+   "values": {
+    "rows": 149,
+    "agree": 149
+   },
+   "detail": "149 of 149 Los Angeles County records agree; 8 facilities fall inside either plan (1 airports, 7 heliports). FAA record date: 2026/10/29."
   },
   {
    "id": "acs-share",

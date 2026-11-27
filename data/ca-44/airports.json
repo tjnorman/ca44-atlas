@@ -1,0 +1,154 @@
+{
+ "generated_at": "2026-11-27T01:09:31+00:00",
+ "sources": [
+  {
+   "id": "faa-ntad-aviation",
+   "publisher": "Federal Aviation Administration; Bureau of Transportation Statistics",
+   "title": "Aviation Facilities, National Transportation Atlas Database",
+   "url": "https://services.arcgis.com/xOi1kZaI0eWDREZv/arcgis/rest/services/NTAD_Aviation_Facilities/FeatureServer/0",
+   "year": "2026",
+   "kind": "Data set",
+   "query": "https://services.arcgis.com/xOi1kZaI0eWDREZv/arcgis/rest/services/NTAD_Aviation_Facilities/FeatureServer/0/query (STATE_CODE=CA, COUNTY_NAME=LOS ANGELES)",
+   "vintage": null,
+   "accessed": "2026-11-27",
+   "notes": "FAA landing facility records, updated every 28 days.",
+   "apa": "Federal Aviation Administration; Bureau of Transportation Statistics. (2026). Aviation Facilities, National Transportation Atlas Database [Data set]. Retrieved November 27, 2026, from https://services.arcgis.com/xOi1kZaI0eWDREZv/arcgis/rest/services/NTAD_Aviation_Facilities/FeatureServer/0"
+  }
+ ],
+ "district": "ca-44",
+ "source_module": "airports",
+ "data": {
+  "facilities": [
+   {
+    "id": "64CL",
+    "name": "Goodyear Blimp Base",
+    "type": "Airport",
+    "ownership": "Privately owned",
+    "use": "Private use",
+    "status": "Operational",
+    "city": "Carson",
+    "lat": 33.855,
+    "lon": -118.27617,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ],
+    "faa_record_date": "2026/10/29"
+   },
+   {
+    "id": "7L1",
+    "name": "Carson Sheriff Station",
+    "type": "Heliport",
+    "ownership": "Publicly owned",
+    "use": "Private use",
+    "status": "Operational",
+    "city": "Carson",
+    "lat": 33.83433,
+    "lon": -118.26213,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ],
+    "faa_record_date": "2026/10/29"
+   },
+   {
+    "id": "6CA3",
+    "name": "Catalina Air-Sea Trml",
+    "type": "Heliport",
+    "ownership": "Publicly owned",
+    "use": "Private use",
+    "status": "Operational",
+    "city": "San Pedro",
+    "lat": 33.74872,
+    "lon": -118.27507,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ],
+    "faa_record_date": "2026/10/29"
+   },
+   {
+    "id": "CN10",
+    "name": "Harbor Ucla Med Center Interim West",
+    "type": "Heliport",
+    "ownership": "Publicly owned",
+    "use": "Private use",
+    "status": "Operational",
+    "city": "Torrance",
+    "lat": 33.82839,
+    "lon": -118.29739,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ],
+    "faa_record_date": "2026/10/29"
+   },
+   {
+    "id": "50CL",
+    "name": "La County Sheriff Lakewood",
+    "type": "Heliport",
+    "ownership": "Publicly owned",
+    "use": "Private use",
+    "status": "Operational",
+    "city": "Lakewood",
+    "lat": 33.85179,
+    "lon": -118.13277,
+    "in_plans": [
+     "cd119"
+    ],
+    "faa_record_date": "2026/10/29"
+   },
+   {
+    "id": "30CL",
+    "name": "Long Beach Meml Medical Center",
+    "type": "Heliport",
+    "ownership": "Privately owned",
+    "use": "Private use",
+    "status": "Operational",
+    "city": "Long Beach",
+    "lat": 33.80869,
+    "lon": -118.18661,
+    "in_plans": [
+     "cd119"
+    ],
+    "faa_record_date": "2026/10/29"
+   },
+   {
+    "id": "CA52",
+    "name": "Ports O'Call",
+    "type": "Heliport",
+    "ownership": "Privately owned",
+    "use": "Private use",
+    "status": "Operational",
+    "city": "San Pedro",
+    "lat": 33.7321,
+    "lon": -118.27604,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ],
+    "faa_record_date": "2026/10/29"
+   },
+   {
+    "id": "4CA4",
+    "name": "St Francis Medical Center Helistop",
+    "type": "Heliport",
+    "ownership": "Privately owned",
+    "use": "Private use",
+    "status": "Operational",
+    "city": "Lynwood",
+    "lat": 33.92985,
+    "lon": -118.20265,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ],
+    "faa_record_date": "2026/10/29"
+   }
+  ],
+  "county_records": 149,
+  "faa_record_date": "2026/10/29",
+  "note": "Includes private-use heliports, such as those at hospitals and industrial sites; private-use facilities are not open to the public.",
+  "as_of": "2026-11-27"
+ }
+}

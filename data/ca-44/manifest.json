@@ -115,11 +115,38 @@
     "pola-teu",
     "polb-teu"
    ]
+  },
+  "projects": {
+   "status": "ok",
+   "updated": "2026-11-27T01:09:29+00:00",
+   "error": null,
+   "sources": [
+    "caltrans-vtb-2026-11-03",
+    "caltrans-vtb-2026-10-22",
+    "caltrans-vtb-2026-09-25",
+    "caltrans-vtb-2026-03-11"
+   ]
+  },
+  "cameras": {
+   "status": "ok",
+   "updated": "2026-11-27T01:09:29+00:00",
+   "error": null,
+   "sources": [
+    "caltrans-cctv"
+   ]
+  },
+  "airports": {
+   "status": "ok",
+   "updated": "2026-11-27T01:09:31+00:00",
+   "error": null,
+   "sources": [
+    "faa-ntad-aviation"
+   ]
   }
  },
  "district": "ca-44",
  "name": "California's 44th Congressional District",
- "built_at": "2026-11-27T00:54:09+00:00",
- "requests": 1,
+ "built_at": "2026-11-27T01:09:31+00:00",
+ "requests": 3,
  "requests_from_cache": 0
 }

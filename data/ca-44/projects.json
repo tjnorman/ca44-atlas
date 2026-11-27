@@ -1,0 +1,179 @@
+{
+ "generated_at": "2026-11-27T01:09:29+00:00",
+ "sources": [
+  {
+   "id": "caltrans-vtb-2026-11-03",
+   "publisher": "California Department of Transportation (Caltrans), District 7",
+   "title": "16-month full closure of Vincent Thomas Bridge to begin this weekend",
+   "url": "https://dot.ca.gov/caltrans-near-me/district-7/district-7-projects/d7-daytime-lane-closure-vtb-pothole-repairs-2--12/vtb-full-closure-release-11-4-26",
+   "year": "2026, November 3",
+   "kind": "Press release",
+   "query": null,
+   "vintage": null,
+   "accessed": "2026-11-27",
+   "notes": null,
+   "apa": "California Department of Transportation (Caltrans), District 7. (2026, November 3). 16-month full closure of Vincent Thomas Bridge to begin this weekend [Press release]. Retrieved November 27, 2026, from https://dot.ca.gov/caltrans-near-me/district-7/district-7-projects/d7-daytime-lane-closure-vtb-pothole-repairs-2--12/vtb-full-closure-release-11-4-26"
+  },
+  {
+   "id": "caltrans-vtb-2026-10-22",
+   "publisher": "California Department of Transportation (Caltrans), District 7",
+   "title": "16-month closure of Vincent Thomas Bridge set for Nov. 7",
+   "url": "https://dot.ca.gov/caltrans-near-me/district-7/district-7-projects/d7vtbmarch26openhouse/VTB-Full-Closure-Announcement-102226",
+   "year": "2026, October 22",
+   "kind": "Press release",
+   "query": null,
+   "vintage": null,
+   "accessed": "2026-11-27",
+   "notes": null,
+   "apa": "California Department of Transportation (Caltrans), District 7. (2026, October 22). 16-month closure of Vincent Thomas Bridge set for Nov. 7 [Press release]. Retrieved November 27, 2026, from https://dot.ca.gov/caltrans-near-me/district-7/district-7-projects/d7vtbmarch26openhouse/VTB-Full-Closure-Announcement-102226"
+  },
+  {
+   "id": "caltrans-vtb-2026-09-25",
+   "publisher": "California Department of Transportation (Caltrans), District 7",
+   "title": "16-month closure of Vincent Thomas Bridge now set for November 7",
+   "url": "https://dot.ca.gov/caltrans-near-me/district-7/district-7-projects/d7-overnight-and-daytime-closures-of-vincent-thomas-bridge-5_7/vtb-full-closure-new-date",
+   "year": "2026, September 25",
+   "kind": "Press release",
+   "query": null,
+   "vintage": null,
+   "accessed": "2026-11-27",
+   "notes": null,
+   "apa": "California Department of Transportation (Caltrans), District 7. (2026, September 25). 16-month closure of Vincent Thomas Bridge now set for November 7 [Press release]. Retrieved November 27, 2026, from https://dot.ca.gov/caltrans-near-me/district-7/district-7-projects/d7-overnight-and-daytime-closures-of-vincent-thomas-bridge-5_7/vtb-full-closure-new-date"
+  },
+  {
+   "id": "caltrans-vtb-2026-03-11",
+   "publisher": "California Department of Transportation (Caltrans), District 7",
+   "title": "Caltrans to begin Vincent Thomas Bridge deck replacement project on March 23",
+   "url": "https://dot.ca.gov/caltrans-near-me/district-7/district-7-projects/caltrans-to-begin-vtb-deck-replacement-project",
+   "year": "2026, March 11",
+   "kind": "Press release",
+   "query": null,
+   "vintage": null,
+   "accessed": "2026-11-27",
+   "notes": null,
+   "apa": "California Department of Transportation (Caltrans), District 7. (2026, March 11). Caltrans to begin Vincent Thomas Bridge deck replacement project on March 23 [Press release]. Retrieved November 27, 2026, from https://dot.ca.gov/caltrans-near-me/district-7/district-7-projects/caltrans-to-begin-vtb-deck-replacement-project"
+  }
+ ],
+ "district": "ca-44",
+ "source_module": "projects",
+ "data": {
+  "projects": [
+   {
+    "id": "vincent-thomas-bridge",
+    "title": "Vincent Thomas Bridge deck replacement",
+    "place": "San Pedro to Terminal Island, Los Angeles",
+    "county": "Los Angeles",
+    "dates": {
+     "closed": "2026-11-07",
+     "expected_reopening": "2028-03-01"
+    },
+    "summary": "The Vincent Thomas Bridge carries State Route 47 across the Main Channel between San Pedro and Terminal Island, at the Port of Los Angeles. Caltrans closed the bridge to all traffic to replace its concrete deck. Caltrans says the bridge is structurally sound but the deck is deteriorating from heavy traffic and the marine environment.",
+    "links": [
+     {
+      "label": "Project website (Caltrans)",
+      "url": "http://vtbproject.com"
+     },
+     {
+      "label": "Caltrans QuickMap (current traffic and closures)",
+      "url": "https://quickmap.dot.ca.gov/"
+     },
+     {
+      "label": "Caltrans release, Nov. 3, 2026",
+      "url": "https://dot.ca.gov/caltrans-near-me/district-7/district-7-projects/d7-daytime-lane-closure-vtb-pothole-repairs-2--12/vtb-full-closure-release-11-4-26"
+     }
+    ],
+    "facts": [
+     {
+      "label": "Closed to traffic",
+      "value": "Nov. 7, 2026, 12:01 a.m.",
+      "note": "Both directions of SR-47 between Harbor Boulevard and Ferry Street, with its on-ramps and connectors.",
+      "source": "caltrans-vtb-2026-11-03"
+     },
+     {
+      "label": "Expected to reopen",
+      "value": "March 1, 2028",
+      "note": "Earlier releases said early March 2028.",
+      "source": "caltrans-vtb-2026-11-03"
+     },
+     {
+      "label": "Cost",
+      "value": "$752.8 million",
+      "note": "The Oct. 22 release rounds this to $750 million.",
+      "source": "caltrans-vtb-2026-11-03"
+     },
+     {
+      "label": "Vehicles a day",
+      "value": "About 53,000",
+      "note": "Nearly 9 percent heavy trucks.",
+      "source": "caltrans-vtb-2026-10-22"
+     },
+     {
+      "label": "Detour routes",
+      "value": "I-710, I-110, SR-103, Harry Bridges Blvd.",
+      "note": null,
+      "source": "caltrans-vtb-2026-11-03"
+     },
+     {
+      "label": "Traffic control",
+      "value": "Officers at 18 key intersections",
+      "note": "Local police are expanding commercial truck enforcement.",
+      "source": "caltrans-vtb-2026-11-03"
+     },
+     {
+      "label": "Contractor",
+      "value": "Skanska-CEC Joint Venture",
+      "note": null,
+      "source": "caltrans-vtb-2026-11-03"
+     },
+     {
+      "label": "Scope",
+      "value": "Whole deck replaced",
+      "note": "Also railing and fencing, center median, lighting and signs, and seismic sensors.",
+      "source": "caltrans-vtb-2026-11-03"
+     }
+    ],
+    "timeline": [
+     {
+      "date": "More than 60 years ago",
+      "text": "The bridge entered service.",
+      "source": "caltrans-vtb-2026-09-25"
+     },
+     {
+      "date": "March 23, 2026",
+      "text": "Preliminary construction began, with overnight closures in one direction at a time.",
+      "source": "caltrans-vtb-2026-03-11"
+     },
+     {
+      "date": "Sept. 25, 2026",
+      "text": "Caltrans moved the start of the full closure six days later, to Nov. 7, without changing the reopening target.",
+      "source": "caltrans-vtb-2026-09-25"
+     },
+     {
+      "date": "Before the closure",
+      "text": "Caltrans resurfaced and restriped detour roads and intersections, installed traffic cameras, and placed temporary traffic signals.",
+      "source": "caltrans-vtb-2026-11-03"
+     },
+     {
+      "date": "Nov. 7, 2026",
+      "text": "Full closure began at 12:01 a.m.",
+      "source": "caltrans-vtb-2026-11-03"
+     },
+     {
+      "date": "March 1, 2028",
+      "text": "Date by which Caltrans expects to reopen the bridge to traffic.",
+      "source": "caltrans-vtb-2026-11-03"
+     }
+    ],
+    "sources": [
+     "caltrans-vtb-2026-03-11",
+     "caltrans-vtb-2026-09-25",
+     "caltrans-vtb-2026-10-22",
+     "caltrans-vtb-2026-11-03"
+    ]
+   }
+  ],
+  "verified_on": "2026-11-26",
+  "review_by": "2027-02-28",
+  "note": "Dates and costs are the agencies' published plans as of the date read, and can change."
+ }
+}

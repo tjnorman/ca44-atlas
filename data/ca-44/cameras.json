@@ -1,0 +1,1109 @@
+{
+ "generated_at": "2026-11-27T01:09:31+00:00",
+ "sources": [
+  {
+   "id": "caltrans-cctv",
+   "publisher": "California Department of Transportation (Caltrans)",
+   "title": "Commercial Wholesale Web Portal 2: CCTV status, District 7",
+   "url": "https://cwwp2.dot.ca.gov/documentation/cctv/cctv.htm",
+   "year": "2026",
+   "kind": "Data set",
+   "query": "https://cwwp2.dot.ca.gov/data/d7/cctv/cctvStatusD07.json",
+   "vintage": null,
+   "accessed": "2026-11-27",
+   "notes": "Camera locations, status, and image links for the state highway network.",
+   "apa": "California Department of Transportation (Caltrans). (2026). Commercial Wholesale Web Portal 2: CCTV status, District 7 [Data set]. Retrieved November 27, 2026, from https://cwwp2.dot.ca.gov/documentation/cctv/cctv.htm"
+  }
+ ],
+ "district": "ca-44",
+ "source_module": "cameras",
+ "data": {
+  "cameras": [
+   {
+    "id": "1250",
+    "name": "I-105 : (315) Atlantic Ave",
+    "nearby": "Paramount",
+    "route": "I-105",
+    "direction": "West",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i105315atlanticave/i105315atlanticave.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-315.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.9158,
+    "lon": -118.1896,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "1146",
+    "name": "I-105 : (316) Garfield Ave",
+    "nearby": "Paramount",
+    "route": "I-105",
+    "direction": "East",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i105316garfieldave/i105316garfieldave.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-316.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.9108,
+    "lon": -118.1705,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "317",
+    "name": "I-105 : (317) Downey Ave",
+    "nearby": "Paramount",
+    "route": "I-105",
+    "direction": "West",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i105317downeyave/i105317downeyave.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-317.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.91295,
+    "lon": -118.1516,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "1066",
+    "name": "I-110 : (158) PCH Off-Ramp",
+    "nearby": "Wilmington",
+    "route": "I-110",
+    "direction": "North",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i110158pchofframp/i110158pchofframp.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-158.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.78905,
+    "lon": -118.28126,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "1070",
+    "name": "I-110 : (159) Sepulveda Blvd",
+    "nearby": "West Carson",
+    "route": "I-110",
+    "direction": "South",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i110159sepulvedablvd/i110159sepulvedablvd.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-159.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.81075,
+    "lon": -118.28764,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "1071",
+    "name": "I-110 : (160) N/O Sepulveda Blvd",
+    "nearby": "West Carson",
+    "route": "I-110",
+    "direction": "North",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i110160nosepulvedablvd/i110160nosepulvedablvd.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-160.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.81973,
+    "lon": -118.28712,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "1072",
+    "name": "I-110 : (161) S/O Carson St",
+    "nearby": "UCLA Medical Center",
+    "route": "I-110",
+    "direction": "North",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i110161socarsonst/i110161socarsonst.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-161.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.83099,
+    "lon": -118.28727,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "1076",
+    "name": "I-110 : (162) N/O Carson St",
+    "nearby": "Carson",
+    "route": "I-110",
+    "direction": "South",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i110162nocarsonst/i110162nocarsonst.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-162.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.83944,
+    "lon": -118.28701,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "1145",
+    "name": "I-110 : (341) South of I-405",
+    "nearby": "Gardena",
+    "route": "I-110",
+    "direction": "South",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i110341southofi405/i110341southofi405.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-341.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.84896,
+    "lon": -118.28529,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "342",
+    "name": "I-110 : (342) North of I-405",
+    "nearby": "Gardena",
+    "route": "I-110",
+    "direction": "South",
+    "county": "Los Angeles",
+    "in_service": false,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i110342northofi405/i110342northofi405.jpg",
+    "video_url": null,
+    "image_minutes": "60",
+    "lat": 33.85916,
+    "lon": -118.28503,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "396",
+    "name": "I-110 : (396) 190th St",
+    "nearby": "Gardena",
+    "route": "I-110",
+    "direction": "South",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i110396190thst/i110396190thst.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-396.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.86832,
+    "lon": -118.28524,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "1059",
+    "name": "I-110 : (791) Gaffey St",
+    "nearby": "San Pedro",
+    "route": "I-110",
+    "direction": "South",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i110791gaffeyst/i110791gaffeyst.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-791.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.74697,
+    "lon": -118.29213,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "1060",
+    "name": "I-110 : (792) Channel St Off-Ramp",
+    "nearby": "San Pedro",
+    "route": "I-110",
+    "direction": "South",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i110792channelstofframp/i110792channelstofframp.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-792.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.75295,
+    "lon": -118.29176,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "1065",
+    "name": "I-110 : (793) John Gibson Bl On-Ramp",
+    "nearby": "San Pedro",
+    "route": "I-110",
+    "direction": "North",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i110793johngibsonblonramp/i110793johngibsonblonramp.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-793.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.7568,
+    "lon": -118.29016,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "1067",
+    "name": "I-110 : (794) PCH On-Ramp",
+    "nearby": "Harbor City",
+    "route": "I-110",
+    "direction": "South",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i110794pchonramp/i110794pchonramp.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-794.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.79038,
+    "lon": -118.28253,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "1068",
+    "name": "I-110 : (795) PCH On-Ramp",
+    "nearby": "Wilmington",
+    "route": "I-110",
+    "direction": "North",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i110795pchonramp/i110795pchonramp.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-795.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.79109,
+    "lon": -118.28174,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "1069",
+    "name": "I-110 : (796) Sepulveda Blvd",
+    "nearby": "Carson",
+    "route": "I-110",
+    "direction": "South",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i110796sepulvedablvd/i110796sepulvedablvd.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-796.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.80748,
+    "lon": -118.28733,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "1073",
+    "name": "I-110 : (797) 223rd St On-Ramp",
+    "nearby": "Torrance",
+    "route": "I-110",
+    "direction": "South",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i110797223rdstonramp/i110797223rdstonramp.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-797.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.8245,
+    "lon": -118.28769,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "1074",
+    "name": "I-110 : (798) Carson St Off-Ramp",
+    "nearby": "Torrance",
+    "route": "I-110",
+    "direction": "",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i110798carsonstofframp/i110798carsonstofframp.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-798.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.82789,
+    "lon": -118.28655,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "1075",
+    "name": "I-110 : (799) Carson St On-Ramp",
+    "nearby": "Torrance",
+    "route": "I-110",
+    "direction": "",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i110799carsonstonramp/i110799carsonstonramp.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-799.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.83066,
+    "lon": -118.28773,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "1077",
+    "name": "I-110 : (800) Torrance Blvd On-Ramp",
+    "nearby": "Torrance",
+    "route": "I-110",
+    "direction": "North",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i110800torranceblvdonramp/i110800torranceblvdonramp.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-800.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.84439,
+    "lon": -118.2849,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "1078",
+    "name": "I-110 : (801) Torrance Blvd On-Ramp",
+    "nearby": "Torrance",
+    "route": "I-110",
+    "direction": "South",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i110801torranceblvdonramp/i110801torranceblvdonramp.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-801.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.84398,
+    "lon": -118.28617,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "330",
+    "name": "I-405 : (330) Atlantic Ave",
+    "nearby": "Carson",
+    "route": "I-405",
+    "direction": "South",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i405330atlanticave/i405330atlanticave.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-330.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.816,
+    "lon": -118.1866,
+    "in_plans": [
+     "cd119"
+    ]
+   },
+   {
+    "id": "332",
+    "name": "I-405 : (332) West of Pacific Place",
+    "nearby": "Los Angeles",
+    "route": "I-405",
+    "direction": "North",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i405332westofpacificplace/i405332westofpacificplace.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-332.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.8257,
+    "lon": -118.20413,
+    "in_plans": [
+     "cd119"
+    ]
+   },
+   {
+    "id": "333",
+    "name": "I-405 : (333) Sante Fe Ave",
+    "nearby": "Long Beach",
+    "route": "I-405",
+    "direction": "South",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i405333santefeave/i405333santefeave.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-333.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.82529,
+    "lon": -118.21538,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "334",
+    "name": "I-405 : (334) East of Alameda St",
+    "nearby": "Long Beach",
+    "route": "I-405",
+    "direction": "South",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i405334eastofalamedast/i405334eastofalamedast.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-334.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.82513,
+    "lon": -118.22541,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "335",
+    "name": "I-405 : (335) Wilmington Ave",
+    "nearby": "Carson",
+    "route": "I-405",
+    "direction": "South",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i405335wilmingtonave/i405335wilmingtonave.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-335.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.82565,
+    "lon": -118.24335,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "336",
+    "name": "I-405 : (336) Carson St",
+    "nearby": "Carson",
+    "route": "I-405",
+    "direction": "South",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i405336carsonst/i405336carsonst.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-336.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.83029,
+    "lon": -118.25489,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "337",
+    "name": "I-405 : (337) 213th Street",
+    "nearby": "Carson",
+    "route": "I-405",
+    "direction": "North",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i405337213thstreet/i405337213thstreet.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-337.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.83696,
+    "lon": -118.26075,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "339",
+    "name": "I-405 : (339) North of Avalon Blvd",
+    "nearby": "Gardena",
+    "route": "I-405",
+    "direction": "North",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i405339northofavalonblvd/i405339northofavalonblvd.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-339.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.8434,
+    "lon": -118.26698,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "1023",
+    "name": "I-405 : (340) Main St",
+    "nearby": "Long Beach",
+    "route": "I-405",
+    "direction": "South",
+    "county": "Alameda",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i405340mainst/i405340mainst.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-340.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.8503,
+    "lon": -118.2772,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "343",
+    "name": "I-405 : (343) West of I-110",
+    "nearby": "Gardena",
+    "route": "I-405",
+    "direction": "North",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i405343westofi110/i405343westofi110.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-343.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.85843,
+    "lon": -118.28737,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "344",
+    "name": "I-405 : (344) Normandie Ave",
+    "nearby": "Gardena",
+    "route": "I-405",
+    "direction": "North",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i405344normandieave/i405344normandieave.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-344.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.86005,
+    "lon": -118.29837,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "1144",
+    "name": "I-710 : (261) N/O Willow St",
+    "nearby": "Long Beach",
+    "route": "I-710",
+    "direction": "South",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i710261nowillowst/i710261nowillowst.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-261.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.8135,
+    "lon": -118.2071,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "263",
+    "name": "I-710 : (263) South of Willow Street",
+    "nearby": "Long Beach",
+    "route": "I-710",
+    "direction": "North",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i710263southofwillowstreet/i710263southofwillowstreet.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-263.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.7977,
+    "lon": -118.20671,
+    "in_plans": [
+     "cd119"
+    ]
+   },
+   {
+    "id": "264",
+    "name": "I-710 : (264) Willow St",
+    "nearby": "Long Beach",
+    "route": "I-710",
+    "direction": "North",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i710264willowst/i710264willowst.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-264.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.80632,
+    "lon": -118.20699,
+    "in_plans": [
+     "cd119"
+    ]
+   },
+   {
+    "id": "265",
+    "name": "I-710 : (265) North of I-710 / I-405",
+    "nearby": "Long Beach",
+    "route": "I-710",
+    "direction": "North",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i710265northofi710i405/i710265northofi710i405.jpg",
+    "video_url": null,
+    "image_minutes": "2",
+    "lat": 33.8281,
+    "lon": -118.2076,
+    "in_plans": [
+     "cd119"
+    ]
+   },
+   {
+    "id": "267",
+    "name": "I-710 : (267) North of I-405",
+    "nearby": "xxx",
+    "route": "I-710",
+    "direction": "South",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i710267northofi405/i710267northofi405.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-267.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.8317,
+    "lon": -118.2089,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "268",
+    "name": "I-710 : (268) Del Amo Bl",
+    "nearby": "Long Beach",
+    "route": "I-710",
+    "direction": "South",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i710268delamobl/i710268delamobl.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-268.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.84841,
+    "lon": -118.20564,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "269",
+    "name": "I-710 : (269) Long Beach Blvd",
+    "nearby": "Long Beach",
+    "route": "I-710",
+    "direction": "South",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i710269longbeachblvd/i710269longbeachblvd.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-269.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.86191,
+    "lon": -118.20004,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "270",
+    "name": "I-710 : (270) Artesia Bl",
+    "nearby": "Long Beach",
+    "route": "I-710",
+    "direction": "North",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i710270artesiabl/i710270artesiabl.jpg",
+    "video_url": null,
+    "image_minutes": "2",
+    "lat": 33.87299,
+    "lon": -118.19332,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "960",
+    "name": "I-710 : (271) N/O Route 91",
+    "nearby": "Lynwood",
+    "route": "I-710",
+    "direction": "North",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i710271noroute91/i710271noroute91.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-271.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.87816,
+    "lon": -118.19218,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "1022",
+    "name": "I-710 : (274) S/O Rte 105",
+    "nearby": "Long Beach",
+    "route": "I-710",
+    "direction": "North",
+    "county": "Alameda",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i710274sorte105/i710274sorte105.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-274.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.90717,
+    "lon": -118.18153,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "275",
+    "name": "I-710 : (275) North of I-105",
+    "nearby": "Lynwood",
+    "route": "I-710",
+    "direction": "North",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i710275northofi105/i710275northofi105.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-275.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.91718,
+    "lon": -118.17883,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "276",
+    "name": "I-710 : (276) Southbound I-710 Imperial Hwy",
+    "nearby": "Lynwood",
+    "route": "I-710",
+    "direction": "South",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i710276southboundi710imperialhwy/i710276southboundi710imperialhwy.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-276.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.93013,
+    "lon": -118.17929,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "277",
+    "name": "I-710 : (277) Firestone Blvd.",
+    "nearby": "South Gate",
+    "route": "I-710",
+    "direction": "North",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i710277firestoneblvd/i710277firestoneblvd.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-277.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.94999,
+    "lon": -118.17011,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "221",
+    "name": "SR-213 : (221) Summerland Ave",
+    "nearby": "San Pedro",
+    "route": "SR-213",
+    "direction": "North",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/sr213221summerlandave/sr213221summerlandave.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-221.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.74714,
+    "lon": -118.30942,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "950",
+    "name": "SR-47 : (950) I-110",
+    "nearby": "San Pedro",
+    "route": "SR-47",
+    "direction": "South",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/sr47950i110/sr47950i110.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-950.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.74914,
+    "lon": -118.28975,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "951",
+    "name": "SR-47 : (951) West of Harbor Blvd",
+    "nearby": "San Pedro",
+    "route": "SR-47",
+    "direction": "North",
+    "county": "Los Angeles",
+    "in_service": false,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/sr47951westofharborblvd/sr47951westofharborblvd.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-159.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.74897,
+    "lon": -118.28307,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "952",
+    "name": "SR-47 : (952) West Tower",
+    "nearby": "San Pedro",
+    "route": "SR-47",
+    "direction": "North",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/sr47952westtower/sr47952westtower.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-952.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.7499,
+    "lon": -118.27385,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "953",
+    "name": "SR-47 : (953) East of Ferry",
+    "nearby": "San Pedro",
+    "route": "SR-47",
+    "direction": "North",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/sr47953eastofferry/sr47953eastofferry.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-953.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.74966,
+    "lon": -118.26068,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "962",
+    "name": "SR-47 : (959) Pier AWay",
+    "nearby": "Long Beach",
+    "route": "SR-47",
+    "direction": "North",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/sr47959pieraway/sr47959pieraway.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-959.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.77405,
+    "lon": -118.24026,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "1100",
+    "name": "SR-91 : (251) W/O Main St",
+    "nearby": "West Rancho Dominguez",
+    "route": "SR-91",
+    "direction": "East",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/sr91251womainst/sr91251womainst.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-251.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.8725,
+    "lon": -118.2785,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "252",
+    "name": "SR-91 : (252) East of Avalon Blvd",
+    "nearby": "Stevenson Park",
+    "route": "SR-91",
+    "direction": "West",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/sr91252eastofavalonblvd/sr91252eastofavalonblvd.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-252.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.8737,
+    "lon": -118.26304,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "253",
+    "name": "SR-91 : (253) West of Central Ave",
+    "nearby": "CSUDH",
+    "route": "SR-91",
+    "direction": "West",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/sr91253westofcentralave/sr91253westofcentralave.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-253.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.8738,
+    "lon": -118.25134,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "1018",
+    "name": "SR-91 : (256) E/O Long Beach",
+    "nearby": "Compton",
+    "route": "SR-91",
+    "direction": "East",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/sr91256eolongbeach/sr91256eolongbeach.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-256.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.8724,
+    "lon": -118.2022,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "1019",
+    "name": "SR-91 : (257) E/O Atlantic Blvd",
+    "nearby": "Paramount",
+    "route": "SR-91",
+    "direction": "West",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/sr91257eoatlanticblvd/sr91257eoatlanticblvd.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-257.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.87713,
+    "lon": -118.18063,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "258",
+    "name": "SR-91 : (258) Paramount",
+    "nearby": "Long Beach",
+    "route": "SR-91",
+    "direction": "East",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/sr91258paramount/sr91258paramount.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-258.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.87578,
+    "lon": -118.16403,
+    "in_plans": [
+     "cd120",
+     "cd119"
+    ]
+   },
+   {
+    "id": "259",
+    "name": "SR-91 : (259) Downey Ave",
+    "nearby": "Bellflower",
+    "route": "SR-91",
+    "direction": "West",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/sr91259downeyave/sr91259downeyave.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-259.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.87729,
+    "lon": -118.15084,
+    "in_plans": [
+     "cd119"
+    ]
+   },
+   {
+    "id": "1021",
+    "name": "SR-91 : (536) W/O Clark Ave",
+    "nearby": "Bellflower",
+    "route": "SR-91",
+    "direction": "West",
+    "county": "Los Angeles",
+    "in_service": true,
+    "image_url": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/sr91536woclarkave/sr91536woclarkave.jpg",
+    "video_url": "https://wzmedia.dot.ca.gov/D7/CCTV-536.stream/playlist.m3u8",
+    "image_minutes": "2",
+    "lat": 33.8774,
+    "lon": -118.1376,
+    "in_plans": [
+     "cd119"
+    ]
+   }
+  ],
+  "total_in_file": 591,
+  "by_route": {
+   "I-105": 3,
+   "I-110": 19,
+   "I-405": 11,
+   "I-710": 13,
+   "SR-213": 1,
+   "SR-47": 5,
+   "SR-91": 8
+  },
+  "note": "Caltrans highway cameras only. Images refresh every few minutes on Caltrans's servers; the atlas stores links, not pictures. Cameras that Caltrans installed on local detour streets for the bridge closure are not in this file unless Caltrans added them to it.",
+  "as_of": "2026-11-27"
+ }
+}

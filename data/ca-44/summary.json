@@ -392,7 +392,7 @@
   "live_proxy": null,
   "congress": 119
  },
- "built_at": "2026-11-27T00:54:09+00:00",
+ "built_at": "2026-11-27T01:09:31+00:00",
  "headline": [
   {
    "id": "population",
@@ -526,6 +526,84 @@
  },
  "counties": [],
  "sources": [
+  {
+   "id": "caltrans-cctv",
+   "publisher": "California Department of Transportation (Caltrans)",
+   "title": "Commercial Wholesale Web Portal 2: CCTV status, District 7",
+   "url": "https://cwwp2.dot.ca.gov/documentation/cctv/cctv.htm",
+   "year": "2026",
+   "kind": "Data set",
+   "query": "https://cwwp2.dot.ca.gov/data/d7/cctv/cctvStatusD07.json",
+   "vintage": null,
+   "accessed": "2026-11-27",
+   "notes": "Camera locations, status, and image links for the state highway network.",
+   "apa": "California Department of Transportation (Caltrans). (2026). Commercial Wholesale Web Portal 2: CCTV status, District 7 [Data set]. Retrieved November 27, 2026, from https://cwwp2.dot.ca.gov/documentation/cctv/cctv.htm"
+  },
+  {
+   "id": "caltrans-vtb-2026-09-25",
+   "publisher": "California Department of Transportation (Caltrans), District 7",
+   "title": "16-month closure of Vincent Thomas Bridge now set for November 7",
+   "url": "https://dot.ca.gov/caltrans-near-me/district-7/district-7-projects/d7-overnight-and-daytime-closures-of-vincent-thomas-bridge-5_7/vtb-full-closure-new-date",
+   "year": "2026, September 25",
+   "kind": "Press release",
+   "query": null,
+   "vintage": null,
+   "accessed": "2026-11-27",
+   "notes": null,
+   "apa": "California Department of Transportation (Caltrans), District 7. (2026, September 25). 16-month closure of Vincent Thomas Bridge now set for November 7 [Press release]. Retrieved November 27, 2026, from https://dot.ca.gov/caltrans-near-me/district-7/district-7-projects/d7-overnight-and-daytime-closures-of-vincent-thomas-bridge-5_7/vtb-full-closure-new-date"
+  },
+  {
+   "id": "caltrans-vtb-2026-10-22",
+   "publisher": "California Department of Transportation (Caltrans), District 7",
+   "title": "16-month closure of Vincent Thomas Bridge set for Nov. 7",
+   "url": "https://dot.ca.gov/caltrans-near-me/district-7/district-7-projects/d7vtbmarch26openhouse/VTB-Full-Closure-Announcement-102226",
+   "year": "2026, October 22",
+   "kind": "Press release",
+   "query": null,
+   "vintage": null,
+   "accessed": "2026-11-27",
+   "notes": null,
+   "apa": "California Department of Transportation (Caltrans), District 7. (2026, October 22). 16-month closure of Vincent Thomas Bridge set for Nov. 7 [Press release]. Retrieved November 27, 2026, from https://dot.ca.gov/caltrans-near-me/district-7/district-7-projects/d7vtbmarch26openhouse/VTB-Full-Closure-Announcement-102226"
+  },
+  {
+   "id": "caltrans-vtb-2026-11-03",
+   "publisher": "California Department of Transportation (Caltrans), District 7",
+   "title": "16-month full closure of Vincent Thomas Bridge to begin this weekend",
+   "url": "https://dot.ca.gov/caltrans-near-me/district-7/district-7-projects/d7-daytime-lane-closure-vtb-pothole-repairs-2--12/vtb-full-closure-release-11-4-26",
+   "year": "2026, November 3",
+   "kind": "Press release",
+   "query": null,
+   "vintage": null,
+   "accessed": "2026-11-27",
+   "notes": null,
+   "apa": "California Department of Transportation (Caltrans), District 7. (2026, November 3). 16-month full closure of Vincent Thomas Bridge to begin this weekend [Press release]. Retrieved November 27, 2026, from https://dot.ca.gov/caltrans-near-me/district-7/district-7-projects/d7-daytime-lane-closure-vtb-pothole-repairs-2--12/vtb-full-closure-release-11-4-26"
+  },
+  {
+   "id": "caltrans-vtb-2026-03-11",
+   "publisher": "California Department of Transportation (Caltrans), District 7",
+   "title": "Caltrans to begin Vincent Thomas Bridge deck replacement project on March 23",
+   "url": "https://dot.ca.gov/caltrans-near-me/district-7/district-7-projects/caltrans-to-begin-vtb-deck-replacement-project",
+   "year": "2026, March 11",
+   "kind": "Press release",
+   "query": null,
+   "vintage": null,
+   "accessed": "2026-11-27",
+   "notes": null,
+   "apa": "California Department of Transportation (Caltrans), District 7. (2026, March 11). Caltrans to begin Vincent Thomas Bridge deck replacement project on March 23 [Press release]. Retrieved November 27, 2026, from https://dot.ca.gov/caltrans-near-me/district-7/district-7-projects/caltrans-to-begin-vtb-deck-replacement-project"
+  },
+  {
+   "id": "faa-ntad-aviation",
+   "publisher": "Federal Aviation Administration; Bureau of Transportation Statistics",
+   "title": "Aviation Facilities, National Transportation Atlas Database",
+   "url": "https://services.arcgis.com/xOi1kZaI0eWDREZv/arcgis/rest/services/NTAD_Aviation_Facilities/FeatureServer/0",
+   "year": "2026",
+   "kind": "Data set",
+   "query": "https://services.arcgis.com/xOi1kZaI0eWDREZv/arcgis/rest/services/NTAD_Aviation_Facilities/FeatureServer/0/query (STATE_CODE=CA, COUNTY_NAME=LOS ANGELES)",
+   "vintage": null,
+   "accessed": "2026-11-27",
+   "notes": "FAA landing facility records, updated every 28 days.",
+   "apa": "Federal Aviation Administration; Bureau of Transportation Statistics. (2026). Aviation Facilities, National Transportation Atlas Database [Data set]. Retrieved November 27, 2026, from https://services.arcgis.com/xOi1kZaI0eWDREZv/arcgis/rest/services/NTAD_Aviation_Facilities/FeatureServer/0"
+  },
   {
    "id": "fcc-queries",
    "publisher": "Federal Communications Commission, Media Bureau",
@@ -853,8 +931,9 @@
   }
  ],
  "integrity": {
-  "total": 33,
-  "pass": 33,
+  "total": 36,
+  "pass": 35,
+  "warn": 1,
   "ok": true
  },
  "freshness": {
@@ -870,7 +949,10 @@
   "colleges": "2026-11-26T23:25:44+00:00",
   "broadcast": "2026-11-26T23:25:48+00:00",
   "laus": "2026-11-27T00:54:08+00:00",
-  "ports": "2026-11-26T23:35:13+00:00"
+  "ports": "2026-11-26T23:35:13+00:00",
+  "projects": "2026-11-27T01:09:29+00:00",
+  "cameras": "2026-11-27T01:09:29+00:00",
+  "airports": "2026-11-27T01:09:31+00:00"
  },
  "status": {
   "plans": "ok",
@@ -885,6 +967,9 @@
   "colleges": "ok",
   "broadcast": "ok",
   "laus": "ok",
-  "ports": "ok"
+  "ports": "ok",
+  "projects": "ok",
+  "cameras": "ok",
+  "airports": "ok"
  }
 }

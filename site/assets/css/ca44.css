@@ -45,3 +45,12 @@ td { overflow-wrap: break-word; }
 .spark { display: block; }
 .spark path { fill: none; stroke: var(--accent); stroke-width: 1.5; }
 .ports-kpis { max-width: var(--max); }
+.ca-map .cam { fill: #d35400; stroke: var(--panel); stroke-width: 0.6; }
+.ca-map .apt { fill: #2c3e50; stroke: var(--panel); stroke-width: 0.8; }
+.dot-k.cam-k { background: #d35400; border-radius: 1px; }
+.tri-k { display: inline-block; width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-bottom: 9px solid #2c3e50; margin-right: 6px; }
+.timeline { list-style: none; padding: 0; margin: 0; }
+.timeline li { padding: 8px 0; border-bottom: 1px solid var(--line); font-size: 14px; color: var(--ink-2); }
+.timeline li b { display: block; color: var(--ink); font-size: 13px; }
+.linklist { padding-left: 18px; margin: 6px 0; font-size: 14px; }
+.linklist li { margin: 4px 0; }

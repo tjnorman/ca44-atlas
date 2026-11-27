@@ -15,9 +15,9 @@ from . import checks as checks_mod
 from .config import DATA_ROOT, ROOT, District
 from .http import Fetcher
 from .provenance import dataset
-from .sources import acs, acs_plan, broadcast, colleges, elections, fec, irs, laus, legislators, plans, ports, usaspending, votes
+from .sources import acs, acs_plan, airports, broadcast, cameras, colleges, elections, fec, irs, laus, legislators, plans, ports, projects, usaspending, votes
 
-DEFAULT_ORDER = ["plans", "legislators", "acs", "acs_plan", "laus", "ports", "usaspending", "irs", "elections", "fec", "votes", "colleges", "broadcast"]
+DEFAULT_ORDER = ["plans", "legislators", "acs", "acs_plan", "laus", "ports", "projects", "cameras", "airports", "usaspending", "irs", "elections", "fec", "votes", "colleges", "broadcast"]
 
 
 def data_dir(d: District) -> pathlib.Path:
@@ -141,6 +141,9 @@ def run(d: District, only: list[str] | None = None) -> dict:
 
         "laus": lambda: laus.fetch(f, d, plans_data()),
         "ports": lambda: ports.fetch(f, d, out / "geo" / "district.full.geojson.json"),
+        "projects": lambda: projects.fetch(f, d),
+        "cameras": lambda: cameras.fetch(f, d, out / "geo" / "district.full.geojson.json"),
+        "airports": lambda: airports.fetch(f, d, out / "geo" / "district.full.geojson.json"),
         "elections": lambda: elections.fetch(f, d),
         "fec": lambda: fec.fetch(f, d),
         "votes": lambda: votes.fetch(f, d, (data.get("legislators") or {}).get("data", {}).get("terms", [])),
@@ -194,7 +197,10 @@ def run(d: District, only: list[str] | None = None) -> dict:
                (c["id"].startswith("acs-method") and "acs_plan" not in (only or [])) or \
                (c["id"] in ("election-sources-agree", "election-names") and "elections" not in (only or [])) or \
                (c["id"] == "laus-current" and "laus" not in (only or [])) or \
-               (c["id"].split("-")[0] in ("pola", "polb") and "ports" not in (only or []))
+               (c["id"].split("-")[0] in ("pola", "polb") and "ports" not in (only or [])) or \
+               (c["id"] == "projects-sourced" and "projects" not in (only or [])) or \
+               (c["id"] == "cameras-inside" and "cameras" not in (only or [])) or \
+               (c["id"] == "faa-layout" and "airports" not in (only or []))
         if c["id"] not in run_ids and only and kept:
             results.insert(0, c)
     integrity = {"generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),

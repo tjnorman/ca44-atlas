@@ -156,3 +156,32 @@ def test_read_state_bef_no_header_with_bom():
 def test_read_state_bef_rejects_other_layouts():
     with pytest.raises(ValueError):
         plans.read_state_bef(zip_of("AB604.csv", "GEOID,CDFP\n060370001001000,44\n"), "AB604.csv", "44")
+
+
+def test_projects_every_fact_sourced():
+    from pipeline import config
+    from pipeline.sources import projects
+    payload, sources, checks = projects.fetch(None, config.load("ca-44"))
+    p = payload["projects"][0]
+    assert p["id"] == "vincent-thomas-bridge" and checks[0]["status"] in ("pass", "warn")
+    ids = {s.id for s in sources}
+    assert all(f["source"] in ids for f in p["facts"] + p["timeline"])
+
+
+def test_cameras_parse_cwwp2_layout():
+    from pipeline.sources.cameras import parse
+    raw = {"data": [{"cctv": {"index": "950", "inService": "true",
+                              "location": {"locationName": "SR-47 : (950) I-110", "nearbyPlace": "San Pedro", "route": "SR-47",
+                                           "latitude": "33.75", "longitude": "-118.27", "county": "Los Angeles", "direction": "East"},
+                              "imageData": {"streamingVideoURL": "https://wzmedia.dot.ca.gov/D7/CCTV-950.stream/playlist.m3u8",
+                                            "static": {"currentImageURL": "https://cwwp2.dot.ca.gov/x.jpg", "currentImageUpdateFrequency": "2"}}}}]}
+    c = parse(raw)[0]
+    assert c["id"] == "950" and c["in_service"] and c["route"] == "SR-47" and c["lat"] == 33.75
+    import pytest
+    with pytest.raises(ValueError):
+        parse({"data": [{"camera": {}}]})
+
+
+def test_airports_dms():
+    from pipeline.sources.airports import dms
+    assert abs(dms(34, 29, 12.3) - 34.48675) < 1e-5

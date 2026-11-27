@@ -67,6 +67,16 @@ whole city. The latest month is preliminary.
   calendar-year and 25-month tables). Checks: months sum to each port's year totals, and the two Long Beach
   tables agree. Long Beach calls its latest figures preliminary.
 
+## Bridge, cameras, and airports
+
+- **Vincent Thomas Bridge:** facts read by hand from Caltrans District 7 releases and project pages, each tied to its
+  page in `data/curated/projects.yaml`, with a review date. News reports are not used for facts. Day counts on the
+  page are computed from Caltrans's closure and reopening dates.
+- **Cameras:** Caltrans's CWWP2 camera status file for District 7. Cameras inside either plan's outline are listed with
+  links to the current image and live video. City, port, and private cameras are not included.
+- **Airports and heliports:** FAA landing facility records (BTS National Transportation Atlas Database), tested against
+  both plans. Includes private-use heliports.
+
 ## Representation, elections, and money
 
 - **Member:** congress-legislators (unitedstates project) checked against the Clerk of the House.

@@ -23,6 +23,8 @@ comparable_acs1_years_from: 2022
 
 geography: plans
 county_fips: ["037"]
+county_name: LOS ANGELES
+caltrans_district: 7
 
 # The two maps of the seat. The first listed is compared with the second for "who moves".
 plans:
@@ -129,4 +131,4 @@ trends:
         the FEC compilation matches the Statement of Vote.
 
 # Sources run for this district, in order.
-sources: [plans, legislators, acs, acs_plan, laus, ports, usaspending, irs, elections, fec, votes, colleges, broadcast]
+sources: [plans, legislators, acs, acs_plan, laus, ports, projects, cameras, airports, usaspending, irs, elections, fec, votes, colleges, broadcast]

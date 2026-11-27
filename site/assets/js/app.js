@@ -22,7 +22,7 @@ function srcLink(id) {
 }
 
 async function main() {
-  const names = ["summary", "plans", "acs", "acs_plan", "laus", "ports", "integrity", "legislators", "elections", "fec", "votes", "usaspending", "irs", "colleges", "broadcast", "manifest"];
+  const names = ["summary", "plans", "acs", "acs_plan", "laus", "ports", "projects", "cameras", "airports", "integrity", "legislators", "elections", "fec", "votes", "usaspending", "irs", "colleges", "broadcast", "manifest"];
   const raw = Object.fromEntries(await Promise.all(names.map(async (n) => [n, await get(n)])));
   const topo = await fetch(`${BASE}geo/district.topo.json`).then((r) => (r.ok ? r.json() : null)).catch(() => null);
   const S = raw.summary || {};
@@ -38,13 +38,15 @@ async function main() {
   const label = (pid) => (pid === primary ? "New lines" : "2021 lines");
 
   drawGlance(S, P, D(raw.acs), D(raw.legislators));
-  drawMap(topo, P, D(raw.ports));
+  drawBridge(D(raw.projects), D(raw.cameras));
+  drawMap(topo, P, D(raw.ports), D(raw.cameras), D(raw.airports));
   drawOverlap(P);
   drawPlans(P);
   drawPlaces(P);
   drawPeople(D(raw.acs), D(raw.acs_plan), P);
   drawWork(D(raw.laus));
   drawPorts(D(raw.ports));
+  drawAround(D(raw.cameras), D(raw.airports));
   drawSeat(D(raw.legislators), D(raw.elections), D(raw.votes), D(raw.fec));
   drawMoney(D(raw.usaspending), D(raw.irs));
   drawInstitutions(D(raw.colleges), D(raw.broadcast), P);
@@ -66,7 +68,7 @@ async function main() {
     $("#glance").innerHTML = cells.slice(0, 4).map(([n, l, s]) => `<div class="stat"><div class="num">${n}</div><div class="lab">${l}</div><div class="moe">${s}</div></div>`).join("");
   }
 
-  function drawMap(topo, P, ports) {
+  function drawMap(topo, P, ports, cams, airports) {
     const el = $("#map");
     if (!topo || !window.d3 || !window.topojson) { el.innerHTML = '<p class="sub">Map data unavailable.</p>'; return; }
     const W = 900, H = 820;
@@ -107,7 +109,19 @@ async function main() {
         .attr("cx", (x) => proj([x.lon, x.lat])[0]).attr("cy", (x) => proj([x.lon, x.lat])[1])
         .append("title").text((x) => `${x.name} (${x.port === "pola" ? "Port of Los Angeles" : "Port of Long Beach"})`);
     }
-    $("#map-legend").innerHTML = (ports?.docks?.length ? `<span><i class="dot-k pola"></i>Port of Los Angeles docks</span><span><i class="dot-k polb"></i>Port of Long Beach docks</span>` : "") + `<span><i class="swatch"></i>New lines (from Jan. 3, 2027)</span><span><i class="swatch old"></i>2021 lines (through Jan. 3, 2027)</span><span>Gray lines: city and place boundaries (Census cartographic boundary file). Each label sits at the population center of that place\'s part of the district; places with more than 10,000 residents in either version.</span>`;
+    if (cams?.cameras?.length) {
+      svg.append("g").selectAll("rect").data(cams.cameras).join("rect").attr("class", "cam")
+        .attr("width", 4).attr("height", 4).attr("x", (c) => proj([c.lon, c.lat])[0] - 2).attr("y", (c) => proj([c.lon, c.lat])[1] - 2)
+        .append("title").text((c) => `Caltrans camera: ${c.name}`);
+    }
+    if (airports?.facilities?.length) {
+      svg.append("g").selectAll("path.apt").data(airports.facilities).join("path").attr("class", "apt")
+        .attr("d", (a) => { const [x, y] = proj([a.lon, a.lat]); return `M${x},${y - 5}L${x + 4.5},${y + 3.5}L${x - 4.5},${y + 3.5}Z`; })
+        .append("title").text((a) => `${a.type}: ${a.name}`);
+    }
+    $("#map-legend").innerHTML = (cams?.cameras?.length ? `<span><i class="dot-k cam-k"></i>Caltrans cameras</span>` : "")
+      + (airports?.facilities?.length ? `<span><i class="tri-k"></i>Airports and heliports</span>` : "")
+      + (ports?.docks?.length ? `<span><i class="dot-k pola"></i>Port of Los Angeles docks</span><span><i class="dot-k polb"></i>Port of Long Beach docks</span>` : "") + `<span><i class="swatch"></i>New lines (from Jan. 3, 2027)</span><span><i class="swatch old"></i>2021 lines (through Jan. 3, 2027)</span><span>Gray lines: city and place boundaries (Census cartographic boundary file). Each label sits at the population center of that place\'s part of the district; places with more than 10,000 residents in either version.</span>`;
     document.querySelectorAll("#plan-toggle button").forEach((b) => b.addEventListener("click", () => {
       document.querySelectorAll("#plan-toggle button").forEach((x) => x.classList.toggle("on", x === b));
       const show = b.dataset.show;
@@ -220,6 +234,52 @@ async function main() {
       + (np.length ? ` BLS publishes no monthly series for ${np.join(", ")}.` : "")
       + (laus.gap_months?.length ? ` No estimates exist for ${laus.gap_months.join(", ")}. ${Object.values(laus.gap_notes || {}).map(esc).join(" ")}` : "")
       + " The latest month is preliminary.";
+  }
+
+  function drawBridge(pj, cams) {
+    const p = (pj?.projects || [])[0];
+    if (!p) { $("#bridge-lede").textContent = "Bridge data not available in this build."; return; }
+    const f = Object.fromEntries(p.facts.map((x) => [x.label, x]));
+    const srcs = (id) => srcLink(id);
+    // Days closed and days to go, counted from today's date in Los Angeles against Caltrans's dates.
+    const today = new Date(new Date().toLocaleString("en-US", { timeZone: "America/Los_Angeles" }));
+    const ymd = (v) => { const [y, m, dd] = String(v || "").split("-").map(Number); return y ? new Date(y, m - 1, dd) : null; };
+    const closed = ymd(p.dates?.closed), reopen = ymd(p.dates?.expected_reopening);
+    if (!closed || !reopen) { $("#bridge-kpis").innerHTML = ""; }
+    const day = 86400000;
+    const since = Math.max(0, Math.floor((today - closed) / day)), left = Math.max(0, Math.ceil((reopen - today) / day));
+    $("#bridge-lede").innerHTML = `${esc(p.summary)}`;
+    $("#bridge-kpis").innerHTML = [
+      [String(since), "Days closed", `Since ${esc(f["Closed to traffic"]?.value || "")}`],
+      [String(left), "Days to expected reopening", esc(f["Expected to reopen"]?.value || "")],
+      [esc(f["Vehicles a day"]?.value || ""), "Vehicles a day before the closure", esc(f["Vehicles a day"]?.note || "")],
+    ].map(([n, l, s]) => `<div class="stat"><div class="num">${n}</div><div class="lab">${l}</div><div class="moe">${s}</div></div>`).join("");
+    $("#bridge-facts").innerHTML = table(["", "", "Source"], p.facts.map((x) => [`<b>${esc(x.label)}</b>`, `${esc(x.value)}${x.note ? `<div class="sub">${esc(x.note)}</div>` : ""}`, srcs(x.source)]));
+    $("#bridge-timeline").innerHTML = p.timeline.map((t) => `<li><b>${esc(t.date)}</b> ${esc(t.text)} ${srcs(t.source)}</li>`).join("");
+    $("#bridge-links").innerHTML = (p.links || []).map((l) => `<li><a href="${esc(l.url)}">${esc(l.label)}</a></li>`).join("");
+    const bc = (cams?.cameras || []).filter((c) => c.route === "SR-47");
+    $("#bridge-cams").innerHTML = bc.length ? bc.map((c) => `<li>${esc(c.name)}${c.in_service ? "" : " (out of service)"}: `
+      + `${c.image_url ? `<a href="${esc(c.image_url)}">current image</a>` : ""}${c.video_url ? ` · <a href="${esc(c.video_url)}">live video</a>` : ""}</li>`).join("")
+      : '<li class="sub">No Route 47 cameras in this build.</li>';
+    $("#bridge-note").innerHTML = `Every fact above comes from a Caltrans release or project page, read ${longDate(pj.verified_on)}; schedules can change. `
+      + "Day counts are computed on this page from today's date and Caltrans's dates. Caltrans highway camera links "
+      + srcLink("caltrans-cctv") + "; the video links are HLS streams, which play in Safari and most video players.";
+  }
+
+  function drawAround(cams, airports) {
+    const cs = cams?.cameras || [];
+    const af = airports?.facilities || [];
+    const nA = af.filter((a) => a.type === "Airport").length, nH = af.filter((a) => a.type === "Heliport").length;
+    $("#around-lede").innerHTML = `${int(cs.length)} Caltrans highway cameras and ${int(af.length)} FAA-listed landing facilities `
+      + `(${nA} airport${nA === 1 ? "" : "s"}, ${nH} heliport${nH === 1 ? "" : "s"}) lie inside either version of the district.`;
+    const tags = (r) => (r.in_plans || []).map((pid) => `<span class="tag ${pid === primary ? "new" : "old"}">${label(pid)}</span>`).join("");
+    $("#cams-table").innerHTML = table(["Camera", "Route", "Near", "Links", "In"], cs.map((c) => [
+      esc(c.name) + (c.in_service ? "" : ' <span class="sub">(out of service)</span>'), esc(c.route || ""), esc(c.nearby || ""),
+      `${c.image_url ? `<a href="${esc(c.image_url)}">image</a>` : ""}${c.video_url ? ` · <a href="${esc(c.video_url)}">video</a>` : ""}`, tags(c)]));
+    $("#cams-note").innerHTML = cams ? `Caltrans Commercial Wholesale Web Portal ${srcLink("caltrans-cctv")}. ${esc(cams.note)}` : "";
+    $("#airports-table").innerHTML = table(["Facility", "Type", "FAA ID", "Ownership and use", "Status", "In"], af.map((a) => [
+      esc(a.name), esc(a.type), esc(a.id || ""), `${esc(a.ownership || "")}; ${esc(a.use || "")}`, esc(a.status || ""), tags(a)]));
+    $("#airports-note").innerHTML = airports ? `FAA records through the National Transportation Atlas Database ${srcLink("faa-ntad-aviation")}, record date ${esc(airports.faa_record_date || "")}. ${esc(airports.note)}` : "";
   }
 
   function drawPorts(pd) {

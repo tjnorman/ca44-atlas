@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.3.0 — Nov. 26, 2026 (private draft)
+
+- Bridge update: the Vincent Thomas Bridge deck replacement (closed Nov. 7, 2026; expected to reopen March 1, 2028),
+  every fact read from Caltrans releases and project pages (`data/curated/projects.yaml`), with day counts and the
+  Route 47 highway cameras.
+- New `cameras` source: Caltrans highway cameras inside either plan, from the CWWP2 District 7 status file, with links to
+  current images and live video.
+- New `airports` source: FAA airports and heliports inside either plan (BTS NTAD), with a position layout check.
+
 ## 0.2.1 — Nov. 26, 2026 (private draft)
 
 - New check `bef-state-cd120`: the state's own AB 604 block file (Statewide Database) must assign the same

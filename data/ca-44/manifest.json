@@ -129,7 +129,7 @@
   },
   "cameras": {
    "status": "ok",
-   "updated": "2026-11-27T01:09:29+00:00",
+   "updated": "2026-11-27T01:11:02+00:00",
    "error": null,
    "sources": [
     "caltrans-cctv"
@@ -146,7 +146,7 @@
  },
  "district": "ca-44",
  "name": "California's 44th Congressional District",
- "built_at": "2026-11-27T01:09:31+00:00",
- "requests": 3,
+ "built_at": "2026-11-27T01:11:06+00:00",
+ "requests": 1,
  "requests_from_cache": 0
 }

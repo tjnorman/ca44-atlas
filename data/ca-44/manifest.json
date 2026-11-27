@@ -2,9 +2,10 @@
  "sources": {
   "plans": {
    "status": "ok",
-   "updated": "2026-11-26T23:20:47+00:00",
+   "updated": "2026-11-27T00:27:18+00:00",
    "error": null,
    "sources": [
+    "state-bef-cd120",
     "census-bef-120",
     "census-bef-119",
     "census-pl",
@@ -117,7 +118,7 @@
  },
  "district": "ca-44",
  "name": "California's 44th Congressional District",
- "built_at": "2026-11-26T23:35:24+00:00",
- "requests": 12,
+ "built_at": "2026-11-27T00:27:38+00:00",
+ "requests": 9,
  "requests_from_cache": 0
 }

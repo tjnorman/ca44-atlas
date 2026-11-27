@@ -1,6 +1,19 @@
 {
- "generated_at": "2026-11-26T23:21:17+00:00",
+ "generated_at": "2026-11-27T00:27:38+00:00",
  "sources": [
+  {
+   "id": "state-bef-cd120",
+   "publisher": "Statewide Database, University of California, Berkeley",
+   "title": "AB 604 block equivalency file",
+   "url": "https://statewidedatabase.org/",
+   "year": "2025",
+   "kind": "Data set",
+   "query": "https://statewidedatabase.org/pub/data/d25/AB604.zip (AB604.csv)",
+   "vintage": "AB 604 as of Aug. 17, 2025",
+   "accessed": "2026-11-27",
+   "notes": "The state's block equivalency file for the plan, used only to confirm the Census file.",
+   "apa": "Statewide Database, University of California, Berkeley. (2025). AB 604 block equivalency file [Data set]. Retrieved November 27, 2026, from https://statewidedatabase.org/"
+  },
   {
    "id": "census-bef-120",
    "publisher": "U.S. Census Bureau",
@@ -10,9 +23,9 @@
    "kind": "Data set",
    "query": "https://www2.census.gov/programs-surveys/decennial/rdo/mapping-files/2027/120-congressional-district-befs/cd120.zip (CD120_06.txt)",
    "vintage": "120th Congress",
-   "accessed": "2026-11-26",
+   "accessed": "2026-11-27",
    "notes": "Whole 2020 census blocks assigned to each district of the plan, as submitted by the state.",
-   "apa": "U.S. Census Bureau. (2026). 120th Congressional District block equivalency files [Data set]. Retrieved November 26, 2026, from https://www.census.gov/geographies/mapping-files/2027/dec/rdo/120-congressional-district-bef.html"
+   "apa": "U.S. Census Bureau. (2026). 120th Congressional District block equivalency files [Data set]. Retrieved November 27, 2026, from https://www.census.gov/geographies/mapping-files/2027/dec/rdo/120-congressional-district-bef.html"
   },
   {
    "id": "census-bef-119",
@@ -23,9 +36,9 @@
    "kind": "Data set",
    "query": "https://www2.census.gov/programs-surveys/decennial/rdo/mapping-files/2025/119-congressional-district-befs/cd119.zip (NationalCD119.txt)",
    "vintage": "119th Congress",
-   "accessed": "2026-11-26",
+   "accessed": "2026-11-27",
    "notes": "Whole 2020 census blocks assigned to each district of the plan, as submitted by the state.",
-   "apa": "U.S. Census Bureau. (2024). 119th Congressional District block equivalency files [Data set]. Retrieved November 26, 2026, from https://www.census.gov/geographies/mapping-files/2025/dec/rdo/119-congressional-district-bef.html"
+   "apa": "U.S. Census Bureau. (2024). 119th Congressional District block equivalency files [Data set]. Retrieved November 27, 2026, from https://www.census.gov/geographies/mapping-files/2025/dec/rdo/119-congressional-district-bef.html"
   },
   {
    "id": "census-pl",
@@ -36,9 +49,9 @@
    "kind": "Data set",
    "query": "https://www2.census.gov/programs-surveys/decennial/2020/data/01-Redistricting_File--PL_94-171/California/ca2020.pl.zip",
    "vintage": "2020 Census",
-   "accessed": "2026-11-26",
+   "accessed": "2026-11-27",
    "notes": "Block, place, county, and state population counts as of April 1, 2020.",
-   "apa": "U.S. Census Bureau. (2021). 2020 Census Redistricting Data (Public Law 94-171) Summary File [Data set]. Retrieved November 26, 2026, from https://www2.census.gov/programs-surveys/decennial/2020/data/01-Redistricting_File--PL_94-171/California/ca2020.pl.zip"
+   "apa": "U.S. Census Bureau. (2021). 2020 Census Redistricting Data (Public Law 94-171) Summary File [Data set]. Retrieved November 27, 2026, from https://www2.census.gov/programs-surveys/decennial/2020/data/01-Redistricting_File--PL_94-171/California/ca2020.pl.zip"
   },
   {
    "id": "census-tiger-blocks",
@@ -49,9 +62,9 @@
    "kind": "Data set",
    "query": "https://www2.census.gov/geo/tiger/TIGER2020PL/LAYER/TABBLOCK/2020/tl_2020_06037_tabblock20.zip",
    "vintage": "2020",
-   "accessed": "2026-11-26",
+   "accessed": "2026-11-27",
    "notes": "Block outlines with land and water area; district outlines are these blocks dissolved.",
-   "apa": "U.S. Census Bureau. (2020). TIGER/Line Shapefiles, 2020 census tabulation blocks (P.L. 94-171 release) [Data set]. Retrieved November 26, 2026, from https://www2.census.gov/geo/tiger/TIGER2020PL/LAYER/TABBLOCK/2020/tl_2020_06037_tabblock20.zip"
+   "apa": "U.S. Census Bureau. (2020). TIGER/Line Shapefiles, 2020 census tabulation blocks (P.L. 94-171 release) [Data set]. Retrieved November 27, 2026, from https://www2.census.gov/geo/tiger/TIGER2020PL/LAYER/TABBLOCK/2020/tl_2020_06037_tabblock20.zip"
   },
   {
    "id": "census-cb",
@@ -62,9 +75,9 @@
    "kind": "Data set",
    "query": "https://www2.census.gov/geo/tiger/GENZ2025/shp/cb_2025_06_place_500k.zip",
    "vintage": "2025",
-   "accessed": "2026-11-26",
+   "accessed": "2026-11-27",
    "notes": "City and county outlines for the map.",
-   "apa": "U.S. Census Bureau. (2025). Cartographic Boundary Files, 2025: places and counties (1:500,000) [Data set]. Retrieved November 26, 2026, from https://www2.census.gov/geo/tiger/GENZ2025/shp/cb_2025_06_place_500k.zip"
+   "apa": "U.S. Census Bureau. (2025). Cartographic Boundary Files, 2025: places and counties (1:500,000) [Data set]. Retrieved November 27, 2026, from https://www2.census.gov/geo/tiger/GENZ2025/shp/cb_2025_06_place_500k.zip"
   },
   {
    "id": "census-cd119",
@@ -75,9 +88,9 @@
    "kind": "Data set",
    "query": "https://api.census.gov/data/2020/dec/cd119?get=P1_001N",
    "vintage": "2020 Census",
-   "accessed": "2026-11-26",
+   "accessed": "2026-11-27",
    "notes": "Population as tabulated by the Census Bureau for the plan.",
-   "apa": "U.S. Census Bureau. (2023). 2020 Census, 119th Congressional District Summary File [Data set]. Retrieved November 26, 2026, from https://api.census.gov/data/2020/dec/cd119"
+   "apa": "U.S. Census Bureau. (2023). 2020 Census, 119th Congressional District Summary File [Data set]. Retrieved November 27, 2026, from https://api.census.gov/data/2020/dec/cd119"
   },
   {
    "id": "census-gaz",
@@ -88,9 +101,9 @@
    "kind": "Data set",
    "query": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_119CDs_national.zip",
    "vintage": null,
-   "accessed": "2026-11-26",
+   "accessed": "2026-11-27",
    "notes": "Land and water area by district.",
-   "apa": "U.S. Census Bureau. (2025). Gazetteer Files: 119th Congressional Districts [Data set]. Retrieved November 26, 2026, from https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_119CDs_national.zip"
+   "apa": "U.S. Census Bureau. (2025). Gazetteer Files: 119th Congressional Districts [Data set]. Retrieved November 27, 2026, from https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_119CDs_national.zip"
   }
  ],
  "district": "ca-44",
@@ -2727,6 +2740,6 @@
   "county_names": {
    "037": "Los Angeles County"
   },
-  "as_of": "2026-11-26"
+  "as_of": "2026-11-27"
  }
 }

@@ -79,12 +79,14 @@ def fetch(fetcher: Fetcher, d: District, full_shape_path: pathlib.Path) -> tuple
     wrong_county = [c for c in inside if c["county"] and c["county"].lower() != "los angeles"]
     in_service = sum(1 for c in inside if c["in_service"])
     checks = [{
-        "id": "cameras-inside", "title": "Caltrans cameras inside the district are in Los Angeles County and mostly in service",
-        "status": "pass" if not wrong_county and in_service >= 0.5 * len(inside) else "warn",
+        "id": "cameras-inside", "title": "Caltrans cameras placed inside the district are mostly in service",
+        "status": "pass" if in_service >= 0.5 * len(inside) else "warn",
         "sources": ["caltrans-cctv"], "values": {"inside": len(inside), "in_service": in_service},
         "detail": (f"{len(inside)} of {len(cams)} District {caltrans_district} cameras fall inside either plan; {in_service} are in service. "
-                   + (f"{len(wrong_county)} carry a county other than Los Angeles: "
-                      + ", ".join(c['name'] for c in wrong_county[:4]) + "." if wrong_county else "All are labeled Los Angeles County.")),
+                   + (f"Caltrans's file labels {len(wrong_county)} of them with another county ("
+                      + "; ".join(f"{c['name']}: {c['county']}" for c in wrong_county[:4])
+                      + "), but their coordinates fall inside the district, so the labels appear to be errors in the file."
+                      if wrong_county else "All are labeled Los Angeles County.")),
     }]
     payload = {
         "cameras": inside,

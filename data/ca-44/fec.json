@@ -1,0 +1,75 @@
+{
+ "generated_at": "2026-11-27T00:45:48+00:00",
+ "sources": [
+  {
+   "id": "fec",
+   "publisher": "Federal Election Commission",
+   "title": "Candidate financial totals, U.S. House",
+   "url": "https://www.fec.gov/data/elections/house/CA/44/2026/",
+   "year": "2026",
+   "kind": "Data set",
+   "query": "https://api.open.fec.gov/v1/candidates/totals/?election_year=...&office=H&state=CA&district=44",
+   "vintage": null,
+   "accessed": "2026-11-27",
+   "notes": "Totals cover each candidate's principal campaign committee for the two-year cycle, through its latest report.",
+   "apa": "Federal Election Commission. (2026). Candidate financial totals, U.S. House [Data set]. Retrieved November 27, 2026, from https://www.fec.gov/data/elections/house/CA/44/2026/"
+  }
+ ],
+ "district": "ca-44",
+ "source_module": "fec",
+ "data": {
+  "cycles": {
+   "2022": [
+    {
+     "candidate_id": "H6CA44103",
+     "name": "BARRAGAN, NANETTE",
+     "party": "DEMOCRATIC PARTY",
+     "status": "Incumbent",
+     "receipts": 1212156.11,
+     "disbursements": 759136.83,
+     "cash_on_hand": 1503771.14,
+     "coverage_end": "2022-12-31",
+     "url": "https://www.fec.gov/data/candidate/H6CA44103/?cycle=2022"
+    }
+   ],
+   "2024": [
+    {
+     "candidate_id": "H6CA44103",
+     "name": "BARRAGAN, NANETTE",
+     "party": "DEMOCRATIC PARTY",
+     "status": "Incumbent",
+     "receipts": 1269280.49,
+     "disbursements": 1291497.72,
+     "cash_on_hand": 1481553.91,
+     "coverage_end": "2024-12-31",
+     "url": "https://www.fec.gov/data/candidate/H6CA44103/?cycle=2024"
+    }
+   ],
+   "2026": [
+    {
+     "candidate_id": "H6CA44103",
+     "name": "BARRAGAN, NANETTE",
+     "party": "DEMOCRATIC PARTY",
+     "status": "Incumbent",
+     "receipts": 1021920.79,
+     "disbursements": 1419676.46,
+     "cash_on_hand": 1083798.24,
+     "coverage_end": "2026-10-14",
+     "url": "https://www.fec.gov/data/candidate/H6CA44103/?cycle=2026"
+    },
+    {
+     "candidate_id": "H6CA44210",
+     "name": "ANGEL, GENEVIEVE",
+     "party": "REPUBLICAN PARTY",
+     "status": "Challenger",
+     "receipts": 21826.25,
+     "disbursements": 10882.23,
+     "cash_on_hand": 10944.02,
+     "coverage_end": "2026-10-14",
+     "url": "https://www.fec.gov/data/candidate/H6CA44210/?cycle=2026"
+    }
+   ]
+  },
+  "as_of": "2026-11-27"
+ }
+}

@@ -392,7 +392,7 @@
   "live_proxy": null,
   "congress": 119
  },
- "built_at": "2026-11-27T00:27:38+00:00",
+ "built_at": "2026-11-27T00:45:48+00:00",
  "headline": [
   {
    "id": "population",
@@ -538,6 +538,19 @@
    "accessed": "2026-11-26",
    "notes": "Licensing records as of the retrieval date; the FCC updates them continuously. The output has no column names, so each row's layout is checked before use. Coordinates are transmitter sites.",
    "apa": "Federal Communications Commission, Media Bureau. (2026). AM Query, FM Query, and TV Query: licensed broadcast stations [Data set]. Retrieved November 26, 2026, from https://www.fcc.gov/media/radio/am-query"
+  },
+  {
+   "id": "fec",
+   "publisher": "Federal Election Commission",
+   "title": "Candidate financial totals, U.S. House",
+   "url": "https://www.fec.gov/data/elections/house/CA/44/2026/",
+   "year": "2026",
+   "kind": "Data set",
+   "query": "https://api.open.fec.gov/v1/candidates/totals/?election_year=...&office=H&state=CA&district=44",
+   "vintage": null,
+   "accessed": "2026-11-27",
+   "notes": "Totals cover each candidate's principal campaign committee for the two-year cycle, through its latest report.",
+   "apa": "Federal Election Commission. (2026). Candidate financial totals, U.S. House [Data set]. Retrieved November 27, 2026, from https://www.fec.gov/data/elections/house/CA/44/2026/"
   },
   {
    "id": "fec-results",
@@ -841,8 +854,7 @@
  ],
  "integrity": {
   "total": 33,
-  "pass": 32,
-  "skip": 1,
+  "pass": 33,
   "ok": true
  },
  "freshness": {
@@ -853,7 +865,7 @@
   "usaspending": "2026-11-26T23:23:09+00:00",
   "irs": "2026-11-26T23:23:11+00:00",
   "elections": "2026-11-26T23:23:13+00:00",
-  "fec": null,
+  "fec": "2026-11-27T00:45:46+00:00",
   "votes": "2026-11-26T23:23:17+00:00",
   "colleges": "2026-11-26T23:25:44+00:00",
   "broadcast": "2026-11-26T23:25:48+00:00",
@@ -868,7 +880,7 @@
   "usaspending": "ok",
   "irs": "ok",
   "elections": "ok",
-  "fec": "missing",
+  "fec": "ok",
   "votes": "ok",
   "colleges": "ok",
   "broadcast": "ok",

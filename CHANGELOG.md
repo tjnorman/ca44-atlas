@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.4.0 — Nov. 27, 2026 (public launch)
+
+- The repository is public and the atlas is served at https://ca-44.com through Cloudflare Pages;
+  ca-44thcd.com redirects there.
+- Before launch, the full commit history was checked for API keys, home addresses, records about private
+  people, and campaign language. None were found; request logs carry `REDACTED` in place of every key.
+- Publisher statement added to the site (About section and footer) and the README: a personal, nonpartisan
+  project of Thomas J. Norman, not a product of the Northwest San Pedro Neighborhood Council, California
+  State University, Dominguez Hills, or any campaign, party, or officeholder.
+- Removed the private-draft banner and the instruction that told search engines not to index the page.
+- `scripts/build-site.sh` assembles the published folder (`site/` plus `data/ca-44/`).
+- The pipeline now identifies itself to data publishers as `ca44-atlas` (it had kept the WI-7 Atlas name).
+
 ## 0.3.0 — Nov. 26, 2026 (private draft)
 
 - Bridge update: the Vincent Thomas Bridge deck replacement (closed Nov. 7, 2026; expected to reopen March 1, 2028),

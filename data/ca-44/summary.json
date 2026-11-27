@@ -387,12 +387,12 @@
   "tagline": "California's 44th Congressional District, counted.",
   "state": "California",
   "publisher": "Thomas J. Norman",
-  "site_url": "",
+  "site_url": "https://ca-44.com",
   "repo": "tjnorman/ca44-atlas",
   "live_proxy": null,
   "congress": 119
  },
- "built_at": "2026-11-27T01:41:06+00:00",
+ "built_at": "2026-11-27T07:31:30+00:00",
  "headline": [
   {
    "id": "population",
@@ -590,6 +590,19 @@
    "accessed": "2026-11-27",
    "notes": null,
    "apa": "California Department of Transportation (Caltrans), District 7. (2026, March 11). Caltrans to begin Vincent Thomas Bridge deck replacement project on March 23 [Press release]. Retrieved November 27, 2026, from https://dot.ca.gov/caltrans-near-me/district-7/district-7-projects/caltrans-to-begin-vtb-deck-replacement-project"
+  },
+  {
+   "id": "lacounty-bos-motion-2026-11-17",
+   "publisher": "County of Los Angeles, Board of Supervisors",
+   "title": "Responding to the Vincent Thomas Bridge Closure",
+   "url": "https://file.lacounty.gov/SDSInter/bos/supdocs/223469.pdf",
+   "year": "2026, November 17",
+   "kind": "Board motion",
+   "query": null,
+   "vintage": null,
+   "accessed": "2026-11-27",
+   "notes": null,
+   "apa": "County of Los Angeles, Board of Supervisors. (2026, November 17). Responding to the Vincent Thomas Bridge Closure [Board motion]. Retrieved November 27, 2026, from https://file.lacounty.gov/SDSInter/bos/supdocs/223469.pdf"
   },
   {
    "id": "faa-ntad-aviation",
@@ -931,8 +944,8 @@
   }
  ],
  "integrity": {
-  "total": 36,
-  "pass": 36,
+  "total": 37,
+  "pass": 37,
   "ok": true
  },
  "freshness": {
@@ -949,7 +962,7 @@
   "broadcast": "2026-11-26T23:25:48+00:00",
   "laus": "2026-11-27T00:54:08+00:00",
   "ports": "2026-11-26T23:35:13+00:00",
-  "projects": "2026-11-27T01:09:29+00:00",
+  "projects": "2026-11-27T07:31:30+00:00",
   "cameras": "2026-11-27T01:11:02+00:00",
   "airports": "2026-11-27T01:09:31+00:00"
  },

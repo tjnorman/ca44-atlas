@@ -1,6 +1,6 @@
 # Major public works in the district. Every fact names the official page it was read from.
 # Re-read the pages by review_by and update the dates; project schedules move.
-verified_on: 2026-11-26
+verified_on: 2026-11-27
 review_by: 2027-02-28
 projects:
   - id: vincent-thomas-bridge
@@ -33,8 +33,32 @@ projects:
       - {date: "Sept. 25, 2026", text: "Caltrans moved the start of the full closure six days later, to Nov. 7, without changing the reopening target.", source: caltrans-vtb-2026-09-25}
       - {date: "Before the closure", text: "Caltrans resurfaced and restriped detour roads and intersections, installed traffic cameras, and placed temporary traffic signals.", source: caltrans-vtb-2026-11-03}
       - {date: "Nov. 7, 2026", text: "Full closure began at 12:01 a.m.", source: caltrans-vtb-2026-11-03}
+      - {date: "Nov. 17, 2026", text: "A motion by Supervisor Janice Hahn, dated Nov. 17 and titled \"Responding to the Vincent Thomas Bridge Closure,\" asks the Los Angeles County Board of Supervisors to direct County Public Works to declare the 16-month closure a major incident, to keep evaluating recurring high-tide flooding and its effect on County storm drains, and to coordinate daily with Caltrans and the City of Los Angeles. The motion document does not record a vote.", source: lacounty-bos-motion-2026-11-17}
       - {date: "March 1, 2028", text: "Date by which Caltrans expects to reopen the bridge to traffic.", source: caltrans-vtb-2026-11-03}
+    # News reports that point toward public records. They are NOT atlas facts: nothing in facts or
+    # timeline may cite them, and the page lists them apart under "In the news". Headlines are copied
+    # as the outlet printed them. Remove an entry once the official record it points to is cited above.
+    news:
+      read_on: 2026-11-27
+      review_by: 2026-12-31
+      note: >-
+        These reports about the detour and Los Angeles County's response are listed because they
+        point toward public records. Reports dated Nov. 17 say the Board of Supervisors approved
+        the motion in the timeline; the atlas has the motion's text from the County but has not yet
+        found the Board's own record of the vote.
+      items:
+        - {outlet: NBC Los Angeles, date: "2026-11-13", headline: "Morning rain floods part of Vincent Thomas Bridge construction detour route", url: "https://www.nbclosangeles.com/news/local/wilmington-flooding-vincent-thomas-bridge-detour/3970163/"}
+        - {outlet: Random Lengths News, date: "2026-11-17", headline: "UPDATE: Vincent Thomas Bridge Closure Declared Major Incident", url: "https://www.randomlengthsnews.com/archives/2026/11/17/vincent-thomas-bridge-closure/78597"}
+        - {outlet: MyNewsLA.com, date: "2026-11-17", headline: "Vincent Thomas Bridge to Close 16 Months", url: "https://mynewsla.com/traffic/2026/11/17/supervisors-declare-closure-of-vincent-thomas-bridge-a-major-incident/"}
+        - {outlet: Patch (Long Beach), date: "2026-11-17", headline: "Vincent Thomas Bridge Closure Declared 'Major Incident' After Detour Floods", url: "https://patch.com/california/longbeach-ca/vincent-thomas-bridge-closure-declared-major-incident-after-detour-floods"}
+        - {outlet: Random Lengths News, date: "2026-11-19", headline: "UPDATE: Hahn Urges Caltrans to Reroute VTB Detour Amid Flooding in Wilmington", url: "https://www.randomlengthsnews.com/archives/2026/11/19/harry-bridges-blvd-closed/78658"}
     sources:
+      - id: lacounty-bos-motion-2026-11-17
+        publisher: County of Los Angeles, Board of Supervisors
+        title: Responding to the Vincent Thomas Bridge Closure
+        year: "2026, November 17"
+        kind: Board motion
+        url: https://file.lacounty.gov/SDSInter/bos/supdocs/223469.pdf
       - id: caltrans-vtb-2026-11-03
         publisher: California Department of Transportation (Caltrans), District 7
         title: 16-month full closure of Vincent Thomas Bridge to begin this weekend

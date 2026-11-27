@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-27T01:41:06+00:00",
+ "generated_at": "2026-11-27T07:31:30+00:00",
  "summary": {
-  "total": 36,
-  "pass": 36,
+  "total": 37,
+  "pass": 37,
   "ok": true
  },
  "checks": [
@@ -350,21 +350,6 @@
    "detail": "10 months appear in both the calendar-year table and the 25-month table; all match."
   },
   {
-   "id": "projects-sourced",
-   "title": "Every project fact names an official source",
-   "status": "pass",
-   "sources": [
-    "caltrans-vtb-2026-03-11",
-    "caltrans-vtb-2026-09-25",
-    "caltrans-vtb-2026-10-22",
-    "caltrans-vtb-2026-11-03"
-   ],
-   "values": {
-    "projects": 1
-   },
-   "detail": "14 facts across 1 project(s), each tied to a listed page. Read on 2026-11-26; due for re-reading by 2027-02-28."
-  },
-  {
    "id": "faa-layout",
    "title": "FAA facility positions agree in decimal and in degrees, minutes, and seconds",
    "status": "pass",
@@ -376,6 +361,32 @@
     "agree": 149
    },
    "detail": "149 of 149 Los Angeles County records agree; 8 facilities fall inside either plan (1 airports, 7 heliports). FAA record date: 2026/10/29."
+  },
+  {
+   "id": "projects-sourced",
+   "title": "Every project fact names an official source",
+   "status": "pass",
+   "sources": [
+    "caltrans-vtb-2026-03-11",
+    "caltrans-vtb-2026-09-25",
+    "caltrans-vtb-2026-10-22",
+    "caltrans-vtb-2026-11-03",
+    "lacounty-bos-motion-2026-11-17"
+   ],
+   "values": {
+    "projects": 1
+   },
+   "detail": "15 facts across 1 project(s), each tied to a listed page. Read on 2026-11-27; due for re-reading by 2027-02-28."
+  },
+  {
+   "id": "projects-news-apart",
+   "title": "News links are listed apart from facts",
+   "status": "pass",
+   "sources": [],
+   "values": {
+    "news_links": 5
+   },
+   "detail": "5 news link(s), each with its outlet, date, headline, and address. None is used as the source of a fact. Due for review by 2026-12-31."
   },
   {
    "id": "acs-share",

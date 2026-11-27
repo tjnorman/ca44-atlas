@@ -54,3 +54,10 @@ td { overflow-wrap: break-word; }
 .timeline li b { display: block; color: var(--ink); font-size: 13px; }
 .linklist { padding-left: 18px; margin: 6px 0; font-size: 14px; }
 .linklist li { margin: 4px 0; }
+
+/* News links: set apart from sourced facts. */
+.news-panel { grid-column: 1 / -1; border-style: dashed; }
+.news-label { font-size: 13px; color: var(--ink-2); line-height: 1.5; margin: 4px 0 10px; }
+.newslist { list-style: none; padding: 0; margin: 0; font-size: 14px; }
+.newslist li { padding: 8px 0; border-top: 1px solid var(--line); }
+.newslist .when { display: block; font-size: 12px; color: var(--faint); }

@@ -168,6 +168,47 @@ def test_projects_every_fact_sourced():
     assert all(f["source"] in ids for f in p["facts"] + p["timeline"])
 
 
+def test_projects_news_is_labeled_and_apart():
+    from pipeline import config
+    from pipeline.sources import projects
+    payload, sources, checks = projects.fetch(None, config.load("ca-44"))
+    news = payload["projects"][0]["news"]
+    assert news["note"] and news["review_by"] and news["read_on"]
+    assert all(n["outlet"] and n["date"] and n["headline"] and n["url"].startswith("https://") for n in news["items"])
+    assert not {n["url"] for n in news["items"]} & {s.url for s in sources}
+    assert [c["status"] for c in checks if c["id"] == "projects-news-apart"] == ["pass"]
+
+
+def test_projects_news_rejects_bad_entries(tmp_path):
+    from datetime import date
+    from pipeline import config
+    from pipeline.sources import projects
+    base = """verified_on: 2026-11-27
+review_by: 2027-02-28
+projects:
+  - id: x
+    facts: [{label: A, value: B, source: s1}]
+    timeline: []
+    sources: [{id: s1, publisher: P, title: T, year: "2026", url: "https://example.gov/a"}]
+    news:
+      read_on: 2026-11-27
+      review_by: 2026-12-31
+      note: News reports, not atlas facts.
+      items:
+        - %s
+"""
+    d = config.load("ca-44")
+    path = tmp_path / "p.yaml"
+    for bad in ('{outlet: O, date: "2026-11-17", url: "https://example.com/n"}',
+                '{outlet: O, date: "2026-11-17", headline: H, url: "https://example.gov/a"}'):
+        path.write_text(base % bad, encoding="utf-8")
+        with pytest.raises(ValueError):
+            projects.fetch(None, d, path=path)
+    path.write_text(base % '{outlet: O, date: "2026-11-17", headline: H, url: "https://example.com/n"}', encoding="utf-8")
+    _, _, checks = projects.fetch(None, d, path=path, today=date(2027, 1, 5))
+    assert [c["status"] for c in checks if c["id"] == "projects-news-apart"] == ["warn"]
+
+
 def test_cameras_parse_cwwp2_layout():
     from pipeline.sources.cameras import parse
     raw = {"data": [{"cctv": {"index": "950", "inService": "true",

@@ -72,6 +72,13 @@ whole city. The latest month is preliminary.
 - **Vincent Thomas Bridge:** facts read by hand from Caltrans District 7 releases and project pages, each tied to its
   page in `data/curated/projects.yaml`, with a review date. News reports are not used for facts. Day counts on the
   page are computed from Caltrans's closure and reopening dates.
+- **County motion:** the Nov. 17, 2026 motion before the Los Angeles County Board of Supervisors is described from the
+  County's own copy of the motion. That document shows what was moved, not how the Board voted, so the atlas does
+  not state the vote until the Board's record of it (the Statement of Proceedings) is read.
+- **In the news:** a short list of news reports, shown apart from the facts and labeled as news. Each entry gives the
+  outlet, date, headline as printed, and link. The list points readers toward public records; no fact on the page
+  cites it. The build refuses a fact that cites a news link, and the list carries its own review date. An entry
+  comes off once the official record it points to is cited.
 - **Cameras:** Caltrans's CWWP2 camera status file for District 7. Cameras inside either plan's outline are listed with
   links to the current image and live video. City, port, and private cameras are not included.
 - **Airports and heliports:** FAA landing facility records (BTS National Transportation Atlas Database), tested against

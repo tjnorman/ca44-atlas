@@ -118,9 +118,10 @@
   },
   "projects": {
    "status": "ok",
-   "updated": "2026-11-27T01:09:29+00:00",
+   "updated": "2026-11-27T07:31:30+00:00",
    "error": null,
    "sources": [
+    "lacounty-bos-motion-2026-11-17",
     "caltrans-vtb-2026-11-03",
     "caltrans-vtb-2026-10-22",
     "caltrans-vtb-2026-09-25",
@@ -146,7 +147,7 @@
  },
  "district": "ca-44",
  "name": "California's 44th Congressional District",
- "built_at": "2026-11-27T01:41:06+00:00",
- "requests": 3,
+ "built_at": "2026-11-27T07:31:30+00:00",
+ "requests": 0,
  "requests_from_cache": 0
 }

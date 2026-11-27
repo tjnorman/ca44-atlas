@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.4.1 — Nov. 27, 2026
+
+- Bridge update: new timeline entry for Supervisor Janice Hahn's Nov. 17, 2026 motion before the Los Angeles County Board of Supervisors,
+  "Responding to the Vincent Thomas Bridge Closure," read from the County's copy of the motion. The motion document
+  does not record a vote, so the atlas does not state one.
+- Bridge update: new "In the news" list (five reports, Nov. 13 to Nov. 19, 2026) on the detour flooding and the
+  County's response. It is shown apart from the facts and labeled as news reports that point toward records; each
+  entry has its outlet, date, headline, and link, and the list is due for review by Dec. 31, 2026.
+- New check `projects-news-apart`: every news entry is complete, and no fact cites a news link.
+
 ## 0.4.0 — Nov. 27, 2026 (public launch)
 
 - The repository is public and the atlas is served at https://ca-44.com through Cloudflare Pages;

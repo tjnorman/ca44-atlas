@@ -263,7 +263,17 @@ async function main() {
     $("#bridge-cams").innerHTML = bc.length ? bc.map((c) => `<li>${esc(c.name)}${c.in_service ? "" : " (out of service)"}: `
       + `${c.image_url ? `<a href="${esc(c.image_url)}">current image</a>` : ""}${c.video_url ? ` · <a href="${esc(c.video_url)}">live video</a>` : ""}</li>`).join("")
       : '<li class="sub">No Route 47 cameras in this build.</li>';
-    $("#bridge-note").innerHTML = `Every fact above comes from a Caltrans release or project page, read ${longDate(pj.verified_on)}; schedules can change. `
+    // News links: shown apart from the facts, labeled, never cited as a source.
+    const nw = p.news, items = nw?.items || [];
+    $("#bridge-news-panel").hidden = !items.length;
+    if (items.length) {
+      $("#bridge-news-label").innerHTML = `<b>News reports, not atlas facts.</b> ${esc(nw.note || "")} `
+        + `Links read ${longDate(nw.read_on)}; this list is due for review by ${longDate(nw.review_by)}.`;
+      $("#bridge-news").innerHTML = items.map((n) => `<li><span class="when">${longDate(n.date)} · ${esc(n.outlet)}</span>`
+        + `<a href="${esc(n.url)}" rel="noopener">${esc(n.headline)}</a></li>`).join("");
+    }
+    $("#bridge-note").innerHTML = `Every fact above comes from a Caltrans release or project page, or from the Los Angeles County Board motion named in the timeline, read ${longDate(pj.verified_on)}; schedules can change. `
+      + (items.length ? "The news links are not sources for any fact. " : "")
       + "Day counts are computed on this page from today's date and Caltrans's dates. Caltrans highway camera links "
       + srcLink("caltrans-cctv") + "; the video links are HLS streams, which play in Safari and most video players.";
   }

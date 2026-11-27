@@ -190,7 +190,7 @@ def run(d: District, only: list[str] | None = None) -> dict:
                (c["id"].startswith("ipeds-") and "colleges" not in (only or [])) or \
                (c["id"] == "municipalities-cover" and "municipalities" not in (only or [])) or \
                (c["id"] in ("fcc-layout", "station-links") and "broadcast" not in (only or [])) or \
-               (c["id"] == "projects-sourced" and "projects" not in (only or [])) or \
+               (c["id"] in ("projects-sourced", "projects-news-apart") and "projects" not in (only or [])) or \
                (c["id"] == "wisdot-program" and "roads" not in (only or [])) or \
                (c["id"].startswith("ssa-") and "ssa" not in (only or [])) or \
                (c["id"].split("-")[0] in ("bef", "pop", "land", "equal", "places") and "plans" not in (only or [])) or \
@@ -198,7 +198,7 @@ def run(d: District, only: list[str] | None = None) -> dict:
                (c["id"] in ("election-sources-agree", "election-names") and "elections" not in (only or [])) or \
                (c["id"] == "laus-current" and "laus" not in (only or [])) or \
                (c["id"].split("-")[0] in ("pola", "polb") and "ports" not in (only or [])) or \
-               (c["id"] == "projects-sourced" and "projects" not in (only or [])) or \
+               (c["id"] in ("projects-sourced", "projects-news-apart") and "projects" not in (only or [])) or \
                (c["id"] == "cameras-inside" and "cameras" not in (only or [])) or \
                (c["id"] == "faa-layout" and "airports" not in (only or []))
         if c["id"] not in run_ids and only and kept:

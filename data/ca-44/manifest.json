@@ -100,7 +100,7 @@
   },
   "laus": {
    "status": "ok",
-   "updated": "2026-11-26T23:29:14+00:00",
+   "updated": "2026-11-27T00:54:08+00:00",
    "error": null,
    "sources": [
     "bls-laus"
@@ -119,7 +119,7 @@
  },
  "district": "ca-44",
  "name": "California's 44th Congressional District",
- "built_at": "2026-11-27T00:45:48+00:00",
- "requests": 3,
+ "built_at": "2026-11-27T00:54:09+00:00",
+ "requests": 1,
  "requests_from_cache": 0
 }

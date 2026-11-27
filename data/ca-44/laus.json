@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-26T23:29:15+00:00",
+ "generated_at": "2026-11-27T00:54:09+00:00",
  "sources": [
   {
    "id": "bls-laus",
@@ -8,11 +8,11 @@
    "url": "https://www.bls.gov/lau/",
    "year": "2026",
    "kind": "Data set",
-   "query": "https://api.bls.gov/publicAPI/v1/timeseries/data/ (series LAUCT064400000000003, LAUCT064400000000006, LAUCT064300000000003, ...)",
+   "query": "https://api.bls.gov/publicAPI/v2/timeseries/data/ (series LAUCT064400000000003, LAUCT064400000000006, LAUCT064300000000003, ...)",
    "vintage": null,
-   "accessed": "2026-11-26",
+   "accessed": "2026-11-27",
    "notes": "The most recent month is preliminary and is revised the following month.",
-   "apa": "U.S. Bureau of Labor Statistics. (2026). Local Area Unemployment Statistics: cities, county, state, and national, not seasonally adjusted [Data set]. Retrieved November 26, 2026, from https://www.bls.gov/lau/"
+   "apa": "U.S. Bureau of Labor Statistics. (2026). Local Area Unemployment Statistics: cities, county, state, and national, not seasonally adjusted [Data set]. Retrieved November 27, 2026, from https://www.bls.gov/lau/"
   }
  ],
  "district": "ca-44",

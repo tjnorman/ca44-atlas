@@ -392,7 +392,7 @@
   "live_proxy": null,
   "congress": 119
  },
- "built_at": "2026-11-27T00:45:48+00:00",
+ "built_at": "2026-11-27T00:54:09+00:00",
  "headline": [
   {
    "id": "population",
@@ -702,11 +702,11 @@
    "url": "https://www.bls.gov/lau/",
    "year": "2026",
    "kind": "Data set",
-   "query": "https://api.bls.gov/publicAPI/v1/timeseries/data/ (series LAUCT064400000000003, LAUCT064400000000006, LAUCT064300000000003, ...)",
+   "query": "https://api.bls.gov/publicAPI/v2/timeseries/data/ (series LAUCT064400000000003, LAUCT064400000000006, LAUCT064300000000003, ...)",
    "vintage": null,
-   "accessed": "2026-11-26",
+   "accessed": "2026-11-27",
    "notes": "The most recent month is preliminary and is revised the following month.",
-   "apa": "U.S. Bureau of Labor Statistics. (2026). Local Area Unemployment Statistics: cities, county, state, and national, not seasonally adjusted [Data set]. Retrieved November 26, 2026, from https://www.bls.gov/lau/"
+   "apa": "U.S. Bureau of Labor Statistics. (2026). Local Area Unemployment Statistics: cities, county, state, and national, not seasonally adjusted [Data set]. Retrieved November 27, 2026, from https://www.bls.gov/lau/"
   },
   {
    "id": "census-bef-119",
@@ -869,7 +869,7 @@
   "votes": "2026-11-26T23:23:17+00:00",
   "colleges": "2026-11-26T23:25:44+00:00",
   "broadcast": "2026-11-26T23:25:48+00:00",
-  "laus": "2026-11-26T23:29:14+00:00",
+  "laus": "2026-11-27T00:54:08+00:00",
   "ports": "2026-11-26T23:35:13+00:00"
  },
  "status": {

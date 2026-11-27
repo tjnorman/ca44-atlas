@@ -52,8 +52,10 @@ async function main() {
   drawInstitutions(D(raw.colleges), D(raw.broadcast), P);
   drawChecks(raw.integrity);
   drawSources(S.sources || []);
-  $("#footer").innerHTML = `CA-44 Atlas · Publisher: ${esc(S.district?.publisher || "")} · Built ${longDate(S.built_at)} · `
-    + `Private draft; not for distribution. Data: Census Bureau, Clerk of the House, FEC, IRS, USAspending.gov, NCES, FCC.`;
+  $("#footer").innerHTML = `CA-44 Atlas · Published by ${esc(S.district?.publisher || "Thomas J. Norman")} as a personal, nonpartisan project. `
+    + `Not a product of the Northwest San Pedro Neighborhood Council, California State University, Dominguez Hills, or any campaign, party, or officeholder. `
+    + `Data built ${longDate(S.built_at)} from the public records listed under <a href="#sources">Sources</a>. `
+    + `Code MIT; text and tables CC BY 4.0. <a href="#about">About</a> · <a href="https://github.com/tjnorman/ca44-atlas">Repository</a>.`;
 
   function drawGlance(S, P, acs, leg) {
     const pr = plans[primary], ol = plans[other];

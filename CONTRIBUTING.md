@@ -33,9 +33,7 @@ python -m pipeline build --district <id>
 
 ```bash
 pip install -r requirements.txt && npm install
-python -m pipeline all
+python -m pipeline build --district ca-44
 python -m pytest
-python -m http.server -d site 8000
+bash scripts/build-site.sh && python -m http.server -d _site 8000
 ```
-
-The README is generated: edit `docs/README.template.md`, not `README.md`.

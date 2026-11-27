@@ -3,8 +3,14 @@
 California's 44th Congressional District, counted. A nonpartisan, sourced record of the seat:
 who lives in it, what the federal government spends there, and how it is represented.
 
-**Status: private working draft (Nov. 26, 2026).** Nothing here is published. The publisher reviews
-the data and the site before the repository or any page is made public.
+**Site: [ca-44.com](https://ca-44.com)** (public since Nov. 27, 2026; ca-44thcd.com redirects there).
+
+## Publisher
+
+Thomas J. Norman publishes the atlas as a personal project and is responsible for its contents. It is
+nonpartisan: it endorses no candidate and takes no position on legislation. It is not a product of the
+Northwest San Pedro Neighborhood Council, of California State University, Dominguez Hills, or of any
+other government body, employer, campaign, party, or officeholder.
 
 ## Two maps of one seat
 
@@ -42,10 +48,18 @@ pip install -r requirements.txt
 npm install
 python -m pipeline build --district ca-44     # writes data/ca-44/
 python -m pytest -q
-python -m http.server -d site 8000            # after copying or linking data/ca-44 to site/data
+bash scripts/build-site.sh                    # copies site/ and data/ca-44 into _site/
+python -m http.server -d _site 8000
 ```
 
-Optional secrets for GitHub Actions: `CENSUS_API_KEY` and `FEC_API_KEY`.
+Secrets for GitHub Actions: `CENSUS_API_KEY`, `FEC_API_KEY`, and `BLS_API_KEY`. Keys are removed from
+every logged request.
+
+## How the site is served
+
+Cloudflare Pages builds the site from the `main` branch with `bash scripts/build-site.sh` (output
+folder `_site`), so each data refresh that changes a file publishes itself. No deploy secret is stored
+in this repository.
 
 ## Not yet built
 

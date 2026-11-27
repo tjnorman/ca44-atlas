@@ -1,5 +1,5 @@
 # Rebuild the CA-44 data from primary sources, run the cross-checks, and commit what changed.
-# The repository is private and the site is not published; there is no deploy step.
+# Cloudflare Pages publishes the site from main after each commit, so there is no deploy step here.
 name: Data refresh
 
 on:
